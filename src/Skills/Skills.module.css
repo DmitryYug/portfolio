@@ -1,21 +1,4 @@
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    background-color: aquamarine;
-    border: 1px solid;
-    height: 200px;
+.skillsBlock {
+    background: #343a40;
 }
 
-.text {
-    padding: 3em 0;
-    margin: 20px;
-    background-color: burlywood;
-    border: 1px solid;
-}
-
-.picture {
-    padding: 3em 0;
-    margin: 20px;
-    border: 1px solid;
-}

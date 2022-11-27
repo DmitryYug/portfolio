@@ -1,0 +1,15 @@
+.footer {
+    height: 80px;
+}
+.footerContainer {
+
+}
+.socialContainer {
+    width: 40%;
+    border: 1px solid;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #61dafb;
+}

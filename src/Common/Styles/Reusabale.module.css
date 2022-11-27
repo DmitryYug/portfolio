@@ -1,9 +1,99 @@
+.block {
+    min-height: 100vh;
+
+}
+
 .container {
     height: 100%;
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+.cardContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.cardTitle {
+    color: rgba(255,255,255, 1);
+
+}
+.cardDescription {
+    color: rgba(255,255,255, .5);
+}
+
+.flexColumnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexRawContainer {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid;
-    margin: 0   auto;
+}
+
+.spaceEvenly {
+    justify-content: space-evenly;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.flexStart {
+    justify-content: flex-start;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.blanchedalmond {
+    background-color: blanchedalmond;
+}
+
+.color2 {
+    background-color: #61dafb;
+}
+
+.title {
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: #20c997;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+.title h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.25rem;
+    color: rgba(255,255,255,1);
+    line-height: 1.5;
+    margin: 0;
 }

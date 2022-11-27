@@ -1,21 +1,15 @@
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    background-color: aquamarine;
-    border: 1px solid;
-    height: 200px;
+.mainBlock {
+    height: 100vh;
+    background: #212529;
 }
 
 .text {
-    padding: 3em 0;
-    margin: 20px;
-    background-color: burlywood;
-    border: 1px solid;
+    width: 300px;
+    background-color: lightcoral;
 }
 
 .picture {
-    padding: 3em 0;
-    margin: 20px;
-    border: 1px solid;
+    width: 300px;
+    /*min-height: ;*/
+    background-color: lightcoral;
 }
