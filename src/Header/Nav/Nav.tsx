@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Nav.module.css';
-import reusableStyles from '../../Common/Styles/Reusabale.module.css';
+import styles from './Nav.module.less';
+import reusableStyles from '../../Common/Styles/Reusabale.module.less';
 
 
 export const Nav = () => {

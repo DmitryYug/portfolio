@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './SkillCard.module.css';
-import reusableStyles from '../../Common/Styles/Reusabale.module.css';
+import styles from './SkillCard.module.less';
+import reusableStyles from '../../Common/Styles/Reusabale.module.less';
 
 
 type SkillCardPropsType = {

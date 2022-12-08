@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Main.module.css';
-import reusableStyles from '../Common/Styles/Reusabale.module.css';
+import styles from './Main.module.less';
+import reusableStyles from '../Common/Styles/Reusabale.module.less';
 
 export const Main = () => {
     return (
