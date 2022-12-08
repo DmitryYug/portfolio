@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Skills.module.css';
-import reusableStyles from '../Common/Styles/Reusabale.module.css';
+import styles from './Skills.module.less';
+import reusableStyles from '../Common/Styles/Reusabale.module.less';
 import {SkillCard} from "./SkillCard/SkillCard";
 import {Title} from "../Common/Title/Title";
 
