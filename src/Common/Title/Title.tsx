@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Title.module.less'
+import styles from '../Styles/Title.less'
 
 export const Title = (props: {title: string}) => {
     return (
