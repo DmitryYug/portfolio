@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../Common/Styles/Footer.less';
-import reusableStyles from '../Common/Styles/Common.less';
+import styles from '../../styles/Footer.less';
+import reusableStyles from '../../styles/Common.less';
 
 export const Footer = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../Common/Styles/OnlineJob.less';
-import reusableStyles from '../Common/Styles/Common.less';
-import {Title} from "../Common/Title/Title";
+import styles from '../../../styles/OnlineJob.less';
+import reusableStyles from '../../../styles/Common.less';
+import {Title} from "../../Title";
 
 
 export const OnlineJob = () => {

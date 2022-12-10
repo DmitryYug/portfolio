@@ -1,20 +1,20 @@
 import React from 'react';
 import './App.less';
-import {Sidebar} from "./Sidebar/Sidebar";
-import {Main} from "./Main/Main";
-import {Skills} from "./Skills/Skills";
-import {Projects} from "./Projects/Projects";
-import {OnlineJob} from "./OnlineJob/OnlineJob";
-import {Contacts} from "./Contacts/Contacts";
-import {Footer} from "./Footer/Footer";
+import {Sidebar} from "./components/Sidebar/Sidebar";
+import {AboutMe} from "./components/Pages/AboutMe/AboutMe";
+import {Skills} from "./components/Pages/Skills/Skills";
+import {Projects} from "./components/Pages/Projects/Projects";
+import {OnlineJob} from "./components/Pages/OnlineJob/OnlineJob";
+import {Contacts} from "./components/Pages/Contacts/Contacts";
+import {Footer} from "./components/Footer/Footer";
 
 function App() {
     return (
         <div className='layout'>
             <Sidebar/>
             <div>
-                <Main/>
-                {/*<Skills/>*/}
+                <AboutMe/>
+                <Skills/>
                 {/*<Projects/>*/}
                 {/*<OnlineJob/>*/}
                 {/*<Contacts/>*/}

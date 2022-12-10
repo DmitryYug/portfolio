@@ -1,8 +1,6 @@
 import React from 'react';
-import styles from '../Common/Styles/Skills.less';
-import reusableStyles from '../Common/Styles/Common.less';
 import {SkillCard} from "./SkillCard/SkillCard";
-import {Title} from "../Common/Title/Title";
+import {Title} from "../../Title";
 
 
 export const Skills = () => {
@@ -14,10 +12,10 @@ export const Skills = () => {
     ]
 
     return (
-        <div className={`${reusableStyles.block} ${styles.skillsBlock}`}>
-            <div className={`${reusableStyles.container} ${reusableStyles.flexColumn}`}>
-                <Title title={'Skills'}/>
-                <div className={reusableStyles.cardContainer}>
+        <div className='dark-block-wrapper full-screen-height with-background-image'>
+            <div className='content-block-container justify-center is-flex-column'>
+                <Title title='Skills'/>
+                <div className='card-wrapper'>
                     {skills.map((s, i) => {
                         return <SkillCard
                             key={i}
