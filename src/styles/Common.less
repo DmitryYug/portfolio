@@ -1,41 +1,51 @@
 @import "_variables";
 
 .layout {
-  display: grid;
-  grid-template-columns: @sidebar-width 1fr;
-  grid-template-rows: 5fr;
+  margin-left: 170px;
+  //display: grid;
+  //grid-template-columns: @sidebar-width 1fr;
+  //grid-template-rows: 5fr;
 }
 
+//main wrappers
 .light-block-wrapper {
   background: @main-background-light;
   &.full-screen-height {
     height: 100vh;
   }
-}
-
-.darkBlock {
-  background: @main-background-dark;
-  &-fullScreenHeight {
-    height: 100vh;
-
+  &.with-background-image {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ), url(@about-me-background-image);
+    background-size: cover;
   }
 }
 
-.commonContainer {
-  height: 100%;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 auto;
-  border: 1px solid;
+.dark-block-wrapper {
+  background: @main-background-dark;
+  &.full-screen-height {
+    height: 100vh;
+  }
+}
 
-  &-spaceEvenly {
+.content-block-container {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &.space-evenly {
     justify-content: space-evenly;
   }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.is-flex-column {
+    flex-direction: column;
+  }
 }
 
-.cardContainer {
+.card-wrapper {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +53,7 @@
   margin-top: 70px;
 }
 
-.card {
+.card-container {
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -53,14 +63,15 @@
   font-family: "Poppins", sans-serif;
 }
 
-.cardTitle {
+.card-title {
   color: rgba(255, 255, 255, 1);
-
 }
 
-.cardDescription {
+.card-description {
   color: rgba(255, 255, 255, .5);
 }
+
+
 
 .flexColumnContainer {
   display: flex;
@@ -75,49 +86,10 @@
   justify-content: space-between;
 }
 
-.spaceEvenly {
-  justify-content: space-evenly;
-}
-
-.spaceBetween {
-  justify-content: space-between;
-}
-
-.flexStart {
-  justify-content: flex-start;
-}
-
-.flexColumn {
-  flex-direction: column;
-}
-
 .blanchedalmond {
   background-color: blanchedalmond;
 }
 
 .color2 {
   background-color: #61dafb;
-}
-
-.title {
-  position: relative;
-}
-
-.title::before {
-  content: '';
-  width: 80px;
-  height: 2px;
-  background: #20c997;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translate(-50%, 10px);
-}
-
-.title h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.25rem;
-  color: rgba(255, 255, 255, 1);
-  line-height: 1.5;
-  margin: 0;
 }

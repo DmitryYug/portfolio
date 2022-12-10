@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../../Common/Styles/ProjectCard.less';
-import reusableStyles from "../../Common/Styles/Common.less";
+import styles from '../../../../styles/ProjectCard.less';
+import reusableStyles from "../../../../styles/Common.less";
 
 type ProjectCardPropsType = {
     title: string

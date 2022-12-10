@@ -1,11 +1,12 @@
 import React from 'react';
 import {Nav} from "./Nav/Nav";
-import classes from '../Common/Styles/Sidebar.less';
+import {PhotoBlock} from "./PhotoBlock/PhotoBlock";
 
 
 export const Sidebar = () => {
     return (
-        <div className={classes.sidebar}>
+        <div className='sidebar'>
+            <PhotoBlock/>
             <Nav/>
         </div>
     );

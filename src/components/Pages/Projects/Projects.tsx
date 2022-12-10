@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from '../Common/Styles/Projects.less';
-import reusableStyles from '../Common/Styles/Common.less';
+import styles from '../../../styles/Projects.less';
+import reusableStyles from '../../../styles/Common.less';
 import {ProjectCard} from "./ProjectCard/ProjectCard";
-import {Title} from "../Common/Title/Title";
+import {Title} from "../../Title";
 
 
 export const Projects = () => {
