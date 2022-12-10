@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './OnlineJob.module.less';
-import reusableStyles from '../Common/Styles/Reusabale.module.less';
+import styles from '../Common/Styles/OnlineJob.less';
+import reusableStyles from '../Common/Styles/Common.less';
 import {Title} from "../Common/Title/Title";
 
 

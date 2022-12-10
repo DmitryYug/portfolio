@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Nav.module.less';
-import reusableStyles from '../../Common/Styles/Reusabale.module.less';
+import styles from '../../Common/Styles/Nav.less';
+import reusableStyles from '../../Common/Styles/Common.less';
 
 
 export const Nav = () => {

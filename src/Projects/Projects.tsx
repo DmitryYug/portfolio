@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Projects.module.less';
-import reusableStyles from '../Common/Styles/Reusabale.module.less';
+import styles from '../Common/Styles/Projects.less';
+import reusableStyles from '../Common/Styles/Common.less';
 import {ProjectCard} from "./ProjectCard/ProjectCard";
 import {Title} from "../Common/Title/Title";
 
