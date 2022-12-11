@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {RefObject, useEffect} from 'react';
 
-export const AboutMe = () => {
+interface AboutMePropsType {
+    setAboutMeRef: (ref: RefObject<HTMLDivElement>) => void
+}
+
+export const AboutMe:React.FC<AboutMePropsType> = ({setAboutMeRef}) => {
+
+    const aboutMeRef = React.useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        setAboutMeRef(aboutMeRef)
+    }, [])
+
     return (
-        <div className='light-block-wrapper full-screen-height with-background-image'>
+        <div ref={aboutMeRef} className='light-block-wrapper full-screen-height with-background-image'>
             <div className='content-block-container justify-center'>
                 <div className='text-block'>
                     <span>Hi there</span>

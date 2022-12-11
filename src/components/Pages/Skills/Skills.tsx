@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {RefObject, useEffect} from 'react';
 import {SkillCard} from "./SkillCard/SkillCard";
 import {Title} from "../../Title";
 
+interface SkillsPropsType {
+    setSkillsRef: (ref: RefObject<HTMLDivElement>) => void
+}
 
-export const Skills = () => {
+export const Skills: React.FC<SkillsPropsType> = ({setSkillsRef}) => {
+
+    const skillsRef = React.useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        setSkillsRef(skillsRef)
+    }, [])
 
     const skills = [
         {title: 'JS', description: 'Lorem ipsum dolor sit amet.'},
@@ -12,7 +21,7 @@ export const Skills = () => {
     ]
 
     return (
-        <div className='dark-block-wrapper full-screen-height with-background-image'>
+        <div ref={skillsRef} className='dark-block-wrapper full-screen-height with-background-image'>
             <div className='content-block-container justify-center is-flex-column'>
                 <Title title='Skills'/>
                 <div className='card-wrapper'>

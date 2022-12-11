@@ -1,14 +1,20 @@
 import React from 'react';
 
+interface NavPropsType {
+    getCurrentRef: (value: string) => void
+}
 
-export const Nav = () => {
+export const Nav: React.FC<NavPropsType> = ({getCurrentRef}) => {
+
+    const setCurrentRef = (value: string) => {
+        getCurrentRef(value)
+    }
+
     return (
-        <div className='nav'>
-            <a href='src/components/Sidebar/Nav/Nav'>Main</a>
-            <a href='src/components/Sidebar/Nav/Nav'>Skills</a>
-            <a href='src/components/Sidebar/Nav/Nav'>Projects</a>
-            <a href='src/components/Sidebar/Nav/Nav'>Contacts</a>
-        </div>
+        <ul className='nav'>
+            <div className='nav-item' onClick={() => setCurrentRef('aboutMe')}>about me</div>
+            <div className='nav-item' onClick={() => setCurrentRef('skills')}>skills</div>
+        </ul>
     );
 }
 
