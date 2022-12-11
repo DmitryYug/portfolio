@@ -1,9 +1,17 @@
 @import "_variables";
 
 .title {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.title::before {
+
+.title h2 {
+    .basicText(8.25rem);
+    opacity: 0.1;
+}
+
+.title p::before {
     content: '';
     width: 80px;
     height: 2px;
@@ -13,6 +21,8 @@
     left: 50%;
     transform: translate(-50%, 10px);
 }
-.title h2 {
-    .basicText(2.25rem)
+
+.title p {
+    .basicText(2.25rem);
+    position: absolute;
 }

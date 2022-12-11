@@ -13,6 +13,7 @@ function App() {
     let [currentRefName, setCurrentRefName] = useState<string>()
     let [skillsRef, setSkillsRef] = useState<RefObject<HTMLDivElement>>()
     let [aboutMeRef, setAboutMeRef] = useState<RefObject<HTMLDivElement>>()
+    let [projectsRef, setProjectsRef] = useState<RefObject<HTMLDivElement>>()
 
     useEffect(() => {
         scrollToCurrentRef();
@@ -24,6 +25,9 @@ function App() {
         }
         if (currentRefName === 'aboutMe') {
             scrollTo(aboutMeRef)
+        }
+        if (currentRefName === 'projects') {
+            scrollTo(projectsRef)
         }
     }
 
@@ -40,7 +44,7 @@ function App() {
             <div>
                 <AboutMe setAboutMeRef={(ref) => setAboutMeRef(ref)}/>
                 <Skills setSkillsRef={(ref) => setSkillsRef(ref)}/>
-                {/*<Projects/>*/}
+                <Projects setProjectsRef={(ref) => setProjectsRef(ref)}/>
                 {/*<OnlineJob/>*/}
                 {/*<Contacts/>*/}
                 {/*<Footer/>*/}

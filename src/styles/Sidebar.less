@@ -23,6 +23,9 @@
     margin: 0 auto 20px auto;
     list-style-type: none;
   }
+  li:hover {
+    color: @sidebar-nav-item-hover-color
+  }
 }
 
 .side-photo {
@@ -40,4 +43,10 @@
 .avatar-subtitle {
   .basicText(1.25rem);
   margin-bottom: 50px;
+}
+.avatar-subtitle p:first-child {
+  margin: 0 0 0 -30px;
+}
+.avatar-subtitle p:nth-child(2) {
+  margin: 0 -40px 0 0;
 }

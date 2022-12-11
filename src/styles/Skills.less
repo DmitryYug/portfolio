@@ -4,3 +4,40 @@
     background: @main-background-light;
 }
 
+.card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.card-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.card-title {
+    color: rgba(255, 255, 255, 1);
+}
+
+.card-description {
+    color: rgba(255, 255, 255, .5);
+}
+
+
+.icon {
+    img {
+        width: 150px;
+        height: 150px;
+        //border-radius: 50%;
+        object-fit: contain;
+        object-position: center;
+        padding: 5px;
+    }
+}

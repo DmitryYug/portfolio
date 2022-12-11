@@ -8,7 +8,10 @@ export const PhotoBlock = () => {
             <div className='side-photo'>
                 <img src={avatar} alt=""/>
             </div>
-            <div className='avatar-subtitle'>Dmitriy Yuganiuk</div>
+            <div className='avatar-subtitle'>
+                <p>Dmitriy</p>
+                <p>Yuganiuk</p>
+            </div>
         </>
     );
 }
