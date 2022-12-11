@@ -1,7 +1,8 @@
+@import "_variables";
+
 .title {
     position: relative;
 }
-
 .title::before {
     content: '';
     width: 80px;
@@ -12,11 +13,6 @@
     left: 50%;
     transform: translate(-50%, 10px);
 }
-
 .title h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.25rem;
-    color: rgba(255,255,255,1);
-    line-height: 1.5;
-    margin: 0;
+    .basicText(2.25rem)
 }

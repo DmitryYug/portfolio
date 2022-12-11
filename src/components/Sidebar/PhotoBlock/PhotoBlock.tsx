@@ -1,9 +1,15 @@
 import React from 'react';
-import {Title} from "../../Title";
+import avatar from '../../../assets/test-sidebar-avatar.jpeg'
 
 export const PhotoBlock = () => {
+
     return (
-       <Title title='My photo'/>
+        <>
+            <div className='side-photo'>
+                <img src={avatar} alt=""/>
+            </div>
+            <div className='avatar-subtitle'>Dmitriy Yuganiuk</div>
+        </>
     );
 }
 
