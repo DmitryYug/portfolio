@@ -1,6 +1,4 @@
 import React, {RefObject, useEffect} from 'react';
-import styles from '../../../styles/Projects.less';
-import reusableStyles from '../../../styles/Common.less';
 import {ProjectCard} from "./ProjectCard/ProjectCard";
 import {Title} from "../../Title";
 
@@ -16,8 +14,10 @@ export const Projects: React.FC<ProjectsPropsType> = ({setProjectsRef}) => {
     }, [])
 
     const projects = [
-        {title: 'Social Network', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'},
-        {title: 'Todolist', description: 'Lorem ipsum dolor sit amet, conse, illo l?'}
+        {title: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'},
+        {title: 'Project 2', description: 'Lorem ipsum dolor sit amet, conse, illo l?'},
+        {title: 'Project 3', description: 'Lorem ipsum dolor sit amet, conse, illlor sit amet, conse, illo lorem10l?'},
+        {title: 'Project 4', description: 'Lorem ipsum dolor sit amet, conse, lor sit lconse, lor sit lconse, lor sit lconse, lor sit l?'},
     ]
 
     return (
@@ -26,7 +26,7 @@ export const Projects: React.FC<ProjectsPropsType> = ({setProjectsRef}) => {
                 <Title title='My projects'
                        subtitle='Pets'
                 />
-                <div className='card-wrapper'>
+                <div className='project-cards-wrapper'>
                     {projects.map((p, i) => {
                         return <ProjectCard
                             key={i}

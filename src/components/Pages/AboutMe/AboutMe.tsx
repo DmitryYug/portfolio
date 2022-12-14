@@ -14,7 +14,7 @@ export const AboutMe:React.FC<AboutMePropsType> = ({setAboutMeRef}) => {
 
     return (
         <div ref={aboutMeRef} className='light-block-wrapper full-screen-height with-background-image'>
-            <div className='content-block-container justify-center'>
+            <div className='content-block-container'>
                 <div className='text-block'>
                     <span>Hi there</span>
                     <h1>I`m Dmitriy Yuganyuk</h1>

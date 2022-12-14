@@ -4,7 +4,7 @@ import avatar from '../../../assets/test-sidebar-avatar.jpeg'
 export const PhotoBlock = () => {
 
     return (
-        <>
+        <div className='photo-block-container'>
             <div className='side-photo'>
                 <img src={avatar} alt=""/>
             </div>
@@ -12,7 +12,7 @@ export const PhotoBlock = () => {
                 <p>Dmitriy</p>
                 <p>Yuganiuk</p>
             </div>
-        </>
+        </div>
     );
 }
 

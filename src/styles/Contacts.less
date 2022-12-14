@@ -1,17 +1,40 @@
-.contactsBlock {
-    background-color: #212529;
-}
-.formContainer {
-    width: 70%;
-    align-items: stretch;
-    margin-top: 70px;
-}
-.formContainer input, textarea {
-    width: 100%;
+@import "_variables";
+
+
+.contacts {
+    &-content-container {
+        .basicFlex(space-between, center);
+        padding: 10px;
+
+    }
+    &-info-container {
+        .columnFlex(center, center);
+        margin-left: 50px;
+        &.address {
+
+        }
+        &.numbers {
+
+        }
+        &.social {
+
+        }
+    }
+    &-form-container {
+        width: 70%;
+        align-items: stretch;
+        margin: 70px 20px 0 auto;
+        .columnFlex(center, center);
+        input, textarea {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
 }
 
+
 @media screen and (max-width: 499px){
-    .formContainer{
+    .form-container{
         width: 85%;
     }
 }

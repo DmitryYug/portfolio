@@ -18,15 +18,17 @@ export const Nav: React.FC<NavPropsType> = ({getCurrentRef}) => {
     }
 
     return (
-        <ul className='nav'>
-            {sidBarStructure.map((sidBarItem, idx) => (
-                <li key={`${idx} + ${sidBarItem.value}`}>
-                    <a onClick={() => setCurrentRef(sidBarItem.value)}>
-                        {sidBarItem.title}
-                    </a>
-                </li>
-            ))}
-        </ul>
+        <nav>
+            <ul className='nav'>
+                {sidBarStructure.map((sidBarItem, idx) => (
+                    <li key={`${idx} + ${sidBarItem.value}`}>
+                        <a onClick={() => setCurrentRef(sidBarItem.value)}>
+                            {sidBarItem.title}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     );
 }
 

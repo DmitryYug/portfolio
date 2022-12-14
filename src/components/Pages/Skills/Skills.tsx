@@ -27,7 +27,7 @@ export const Skills: React.FC<SkillsPropsType> = ({setSkillsRef}) => {
 
     return (
         <div ref={skillsRef} className='dark-block-wrapper full-screen-height'>
-            <div className='content-block-container is-flex-column'>
+            <div className='skills-block-container'>
                 <Title title='Stack'
                        subtitle='Skills'
                 />

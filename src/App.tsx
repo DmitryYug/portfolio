@@ -6,7 +6,7 @@ import {Skills} from "./components/Pages/Skills/Skills";
 import {Projects} from "./components/Pages/Projects/Projects";
 import {OnlineJob} from "./components/Pages/OnlineJob/OnlineJob";
 import {Contacts} from "./components/Pages/Contacts/Contacts";
-import {Footer} from "./components/Footer/Footer";
+import {Footer} from "./components/Sidebar/Footer/Footer";
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
     let [skillsRef, setSkillsRef] = useState<RefObject<HTMLDivElement>>()
     let [aboutMeRef, setAboutMeRef] = useState<RefObject<HTMLDivElement>>()
     let [projectsRef, setProjectsRef] = useState<RefObject<HTMLDivElement>>()
+    let [contactsRef, setContactsRef] = useState<RefObject<HTMLDivElement>>()
 
     useEffect(() => {
         scrollToCurrentRef();
@@ -29,6 +30,10 @@ function App() {
         if (currentRefName === 'projects') {
             scrollTo(projectsRef)
         }
+        if (currentRefName === 'contacts') {
+            scrollTo(contactsRef)
+        }
+
     }
 
     const scrollTo = (ref: React.RefObject<HTMLDivElement> | undefined) => {
@@ -41,14 +46,13 @@ function App() {
     return (
         <div className='layout'>
             <Sidebar getCurrentRef={(value) => setCurrentRefName(value)}/>
-            <div>
+            <main>
                 <AboutMe setAboutMeRef={(ref) => setAboutMeRef(ref)}/>
                 <Skills setSkillsRef={(ref) => setSkillsRef(ref)}/>
                 <Projects setProjectsRef={(ref) => setProjectsRef(ref)}/>
                 {/*<OnlineJob/>*/}
-                {/*<Contacts/>*/}
-                {/*<Footer/>*/}
-            </div>
+                <Contacts setContactsRef={(ref) => {setContactsRef(ref)}}/>
+            </main>
         </div>
     );
 }
