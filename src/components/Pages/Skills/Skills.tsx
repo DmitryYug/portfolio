@@ -7,37 +7,45 @@ import htmlIcon from "../../../assets/icons/skill-card/html.svg"
 import jslIcon from "../../../assets/icons/skill-card/js.svg"
 
 interface SkillsPropsType {
-    setSkillsRef: (ref: RefObject<HTMLDivElement>) => void
 }
 
-export const Skills: React.FC<SkillsPropsType> = ({setSkillsRef}) => {
-
-    const skillsRef = React.useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        setSkillsRef(skillsRef)
-    }, [])
+export const Skills: React.FC<SkillsPropsType> = () => {
 
     const skills = [
-        {title: 'JS', icon: jslIcon, description: 'Lorem ipsum dolor sit amet.'},
-        {title: 'HTML/CSS', icon: htmlIcon, description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, saepe?.'},
-        {title: 'React', icon: reactIcon, description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit '},
-        {title: 'Vue', icon: vueIcon, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquid commodi deserunt enim inventore iusto minima quibusdam similique voluptatum!'}
+        {
+            title: 'JS',
+            icon: jslIcon,
+            children: ['TypeScript', 'jQuery', 'Solid', 'Kiss', 'Dry', 'REST API']
+        },
+        {
+            title: 'HTML/CSS',
+            icon: htmlIcon,
+            children: ['SASS/Less', 'Adaptive', 'Semantics', 'Web Standards']
+        },
+        {
+            title: 'React',
+            icon: reactIcon,
+            children: ['Redux', 'React Query', 'FLUX', 'TDD/Unit tests', 'StoryBook', 'UI libraries']
+        },
+        {
+            title: 'Vue',
+            icon: vueIcon,
+            children: ['VueX', 'Vuetify']
+        }
     ]
 
     return (
-        <div ref={skillsRef} className='dark-block-wrapper full-screen-height'>
+        <div id='skills' className='dark-block-wrapper full-screen-height'>
             <div className='skills-block-container'>
                 <Title title='Stack'
                        subtitle='Skills'
                 />
                 <div className='card-wrapper'>
                     {skills.map((s, i) => {
-                        return <SkillCard
-                            key={`${i} + ${s.title}`}
-                            title={s.title}
-                            description={s.description}
-                            icon={s.icon}
+                        return <SkillCard key={`${i} + ${s.title}`}
+                                          title={s.title}
+                                          icon={s.icon}
+                                          childrenSkills={s.children}
                         />
                     })}
                 </div>

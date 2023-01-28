@@ -6,20 +6,21 @@
 
 .light-block-wrapper {
   background: @main-background-light;
+
   &.full-screen-height {
     min-height: 100vh;
   }
+
   &.with-background-image {
-    background: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-    ), url(@about-me-background-image);
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(@about-me-background-image);
     background-size: cover;
   }
 }
 
 .dark-block-wrapper {
   background: @main-background-dark;
+
   &.full-screen-height {
     min-height: 100vh;
   }
@@ -27,7 +28,7 @@
 
 .content-block-container {
   height: 100%;
-  .basicFlex(center, center)
+  .flex-basic(center, center)
 }
 
 .card {
@@ -38,21 +39,27 @@
     justify-content: space-evenly;
     margin-top: 70px;
   }
+
   &-container {
-    border: @dev-border;
     width: @card-width;
+    @media (max-width: 1023px) {
+      width: @1023card-width;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
   }
+
   &-title {
+    .text-props(2rem);
     color: rgba(255, 255, 255, 1);
   }
+
   &-description {
-    color: rgba(255, 255, 255, .5);
+    .text-props(1.25rem);
+    color: @card-description-color;
   }
 }
 

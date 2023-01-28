@@ -10,6 +10,9 @@
     gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    @media (max-width: 767px) {
+      .flex-column(center, center);
+    }
     div:nth-child(3) {
       grid-column-start: 3;
       grid-column-end: 4;
@@ -24,6 +27,7 @@
     }
   }
   &-container {
+    width: 100%;
     border: @dev-border;
     display: flex;
     flex-direction: column;

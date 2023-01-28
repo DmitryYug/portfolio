@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 interface NavPropsType {
-    getCurrentRef: (value: string) => void
+
 }
 
-export const Nav: React.FC<NavPropsType> = ({getCurrentRef}) => {
+export const Nav: React.FC<NavPropsType> = () => {
 
     const sidBarStructure = [
         {title: 'About Me', value: 'aboutMe'},
@@ -13,18 +14,15 @@ export const Nav: React.FC<NavPropsType> = ({getCurrentRef}) => {
         {title: 'Contacts', value: 'contacts'}
     ]
 
-    const setCurrentRef = (value: string) => {
-        getCurrentRef(value)
-    }
 
     return (
         <nav>
             <ul className='nav'>
                 {sidBarStructure.map((sidBarItem, idx) => (
                     <li key={`${idx} + ${sidBarItem.value}`}>
-                        <a onClick={() => setCurrentRef(sidBarItem.value)}>
+                        <Link to={sidBarItem.value} smooth={true} delay={300}>
                             {sidBarItem.title}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>

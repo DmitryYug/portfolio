@@ -3,15 +3,8 @@ import {ProjectCard} from "./ProjectCard/ProjectCard";
 import {Title} from "../../Title";
 
 interface ProjectsPropsType {
-    setProjectsRef: (ref: RefObject<HTMLDivElement>) => void
 }
-export const Projects: React.FC<ProjectsPropsType> = ({setProjectsRef}) => {
-
-    const projectsRef = React.useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        setProjectsRef(projectsRef)
-    }, [])
+export const Projects: React.FC<ProjectsPropsType> = () => {
 
     const projects = [
         {title: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'},
@@ -21,7 +14,7 @@ export const Projects: React.FC<ProjectsPropsType> = ({setProjectsRef}) => {
     ]
 
     return (
-        <div ref={projectsRef} className='light-block-wrapper full-screen-height'>
+        <div id='projects' className='light-block-wrapper full-screen-height'>
             <div className='light-block-wrapper full-screen-height'>
                 <Title title='My projects'
                        subtitle='Pets'

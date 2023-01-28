@@ -4,19 +4,15 @@ import {PhotoBlock} from "./PhotoBlock/PhotoBlock";
 import {Footer} from "./Footer/Footer";
 
 interface SidebarPropsType {
-    getCurrentRef: (value: string) => void
 }
 
-export const Sidebar: React.FC<SidebarPropsType> = ({getCurrentRef}) => {
+export const Sidebar: React.FC<SidebarPropsType> = () => {
 
-    const setCurrentRef = (value: string) => {
-        getCurrentRef(value)
-    }
 
     return (
         <div className='sidebar'>
             <PhotoBlock/>
-            <Nav getCurrentRef={setCurrentRef}/>
+            <Nav/>
             <Footer/>
         </div>
     );

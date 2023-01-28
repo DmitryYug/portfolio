@@ -5,18 +5,12 @@ import {Title} from "../../Title";
 
 
 interface ContactsPropsType {
-    setContactsRef: (ref: RefObject<HTMLDivElement>) => void
 }
 
-export const Contacts: React.FC<ContactsPropsType> = ({setContactsRef}) => {
-    const contactsRef = React.useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        setContactsRef(contactsRef)
-    }, [])
+export const Contacts: React.FC<ContactsPropsType> = () => {
 
     return (
-        <div ref={contactsRef} className='dark-block-wrapper'>
+        <div id='contacts' className='dark-block-wrapper'>
             <Title title='contacts'
                    subtitle='get in touch'
             />
