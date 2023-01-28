@@ -6,22 +6,24 @@ import {Sidebar} from "./components/Sidebar/Sidebar";
 import {AboutMe} from "./components/Pages/AboutMe/AboutMe";
 import {Skills} from "./components/Pages/Skills/Skills";
 import {Projects} from "./components/Pages/Projects/Projects";
-import {Contacts} from "./components/Pages/Contacts/Contacts";
+import {ContactForm} from "./components/Pages/Contacts/ContactForm";
 
 
 function App() {
 
     return (
-        <div className='layout'>
+        <>
             <Sidebar/>
-            <main>
-                <AboutMe/>
-                <Skills/>
-                <Projects/>
-                {/*<OnlineJob/>*/}
-                <Contacts/>
-            </main>
-        </div>
+            <div className='layout'>
+                <main>
+                    <AboutMe/>
+                    <Skills/>
+                    <Projects/>
+                    {/*<OnlineJob/>*/}
+                    <ContactForm/>
+                </main>
+            </div>
+        </>
     );
 }
 

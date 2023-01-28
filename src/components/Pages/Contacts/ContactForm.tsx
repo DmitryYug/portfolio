@@ -7,14 +7,14 @@ import {Title} from "../../Title";
 interface ContactsPropsType {
 }
 
-export const Contacts: React.FC<ContactsPropsType> = () => {
+export const ContactForm: React.FC<ContactsPropsType> = () => {
 
     return (
         <div id='contacts' className='dark-block-wrapper'>
             <Title title='contacts'
                    subtitle='get in touch'
             />
-            <div className="contacts-content-container">
+            <div className="app-content-container contacts-content-container">
                 <div className="contacts-info-container">
                     <div className="contacts-info address">
                         ADDRESS

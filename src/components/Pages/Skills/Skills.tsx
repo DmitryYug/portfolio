@@ -1,4 +1,4 @@
-import React, {RefObject, useEffect} from 'react';
+import React from 'react';
 import {SkillCard} from "./SkillCard/SkillCard";
 import {Title} from "../../Title";
 import vueIcon from "../../../assets/icons/skill-card/vue.svg"
@@ -36,11 +36,11 @@ export const Skills: React.FC<SkillsPropsType> = () => {
 
     return (
         <div id='skills' className='dark-block-wrapper full-screen-height'>
-            <div className='skills-block-container'>
+            <div className='content skills'>
                 <Title title='Stack'
                        subtitle='Skills'
                 />
-                <div className='card-wrapper'>
+                <div className='cards-wrapper'>
                     {skills.map((s, i) => {
                         return <SkillCard key={`${i} + ${s.title}`}
                                           title={s.title}

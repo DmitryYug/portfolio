@@ -1,35 +1,66 @@
 @import "_variables";
 
-.skills-block-container {
+.skills {
   .flex-column(center, center);
 
-  .card-title {
-    margin-top: 20px;
+  .cards {
+    &-wrapper {
+      width: 100%;
+      .flex-basic(space-between, start);
+      flex-wrap: wrap;
+      margin-top: 70px;
+    }
   }
 
-  .card-description {
-    margin-top: 20px;
-    @media (max-width: 789px) {
-      .flex-basic(start, start);
-      width: 100%;
-      max-height: 200px;
-      gap: 30px;
-      flex-wrap: wrap;
+  .card {
+    &-container {
+      @media (max-width: @laptop) {
+        min-width: @skill-card-width;
+      }
+      @media (max-width: @tablet) {
+        min-width: 50%;
+      }
+      @media (max-width: @mobile) {
+        min-width: 100%;
+      }
+      padding: 15px;
+      box-sizing: border-box;
+      .flex-column(center, center);
     }
 
-    li {
-      margin-top: 10px;
-      position: relative;
-      &:before {
-        position: absolute;
-        content: '';
-        top: 25%;
-        left: -20px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        scale: 0.7;
-        background-color: @card-description-color;
+    &-title {
+      margin-top: 20px;
+      .text-props(3rem);
+      color: @title-color;
+    }
+
+    &-description {
+      .text-props(1.7rem);
+      color: @card-description-color;
+      margin-top: 20px;
+      @media (max-width: @mobile) {
+        .flex-basic(center, start);
+        width: 100%;
+        max-height: 200px;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      li {
+        margin-top: 10px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 25%;
+          left: -20px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          scale: 0.7;
+          background-color: @card-description-color;
+        }
       }
     }
   }

@@ -13,3 +13,10 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.content {
+  padding: @content-block-padding;
+  @media (max-width: @tablet) {
+    padding: @tablet-content-block-padding;
+  }
+}
