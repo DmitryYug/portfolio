@@ -1,17 +1,24 @@
 @import "styles/AboutMe";
 @import "styles/Common";
-@import "styles/Contacts";
-@import "styles/Footer";
+@import "styles/ContactForm";
 @import "styles/OnlineJob";
 @import "styles/ProjectCard";
 @import "styles/Projects";
-@import "styles/Sidebar";
 @import "styles/Skills";
 @import "styles/Title";
+@import "styles/Navigation";
 
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+.layout {
+  margin-left: @sidebar-width;
+  @media (max-width: @tablet) {
+    margin-top: @header-height;
+    margin-left: 0;
+  }
 }
 
 .content {
@@ -19,4 +26,8 @@ body {
   @media (max-width: @tablet) {
     padding: @tablet-content-block-padding;
   }
+}
+
+.d-none {
+  display: none;
 }

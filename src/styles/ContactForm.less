@@ -1,0 +1,44 @@
+@import "_variables";
+
+
+.contact-form {
+  .flex-basic(space-between, center);
+
+  &-info-container {
+    .flex-column(center, center);
+    margin-left: 50px;
+
+    &.address {
+
+    }
+
+    &.numbers {
+
+    }
+
+    &.social {
+
+    }
+  }
+
+  form {
+    width: 70%;
+    align-items: stretch;
+    margin: 70px 20px 100px auto;
+    .flex-column(center, start);
+    label {
+      .text-props(1rem);
+      color: @title-color;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 0.5rem;
+      background-color: @main-background-light;
+    }
+  }
+}
+

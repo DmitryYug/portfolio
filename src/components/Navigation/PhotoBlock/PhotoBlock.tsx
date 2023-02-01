@@ -1,10 +1,14 @@
 import React from 'react';
 import avatar from '../../../assets/test-sidebar-avatar.jpeg'
+import {animateScroll as scroll} from 'react-scroll'
+
 
 export const PhotoBlock = () => {
 
     return (
-        <div className='photo-block-container'>
+        <div onClick={scroll.scrollToTop}
+             className='photo-block-container'
+        >
             <div className='side-photo'>
                 <img src={avatar} alt=""/>
             </div>

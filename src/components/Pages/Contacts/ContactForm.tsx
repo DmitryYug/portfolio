@@ -1,6 +1,4 @@
-import React, {RefObject, useEffect, useState} from 'react';
-import styles from '../../../styles/Contacts.less';
-import reusableStyles from '../../../styles/Common.less';
+import React from 'react';
 import {Title} from "../../Title";
 
 
@@ -14,26 +12,33 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
             <Title title='contacts'
                    subtitle='get in touch'
             />
-            <div className="app-content-container contacts-content-container">
-                <div className="contacts-info-container">
-                    <div className="contacts-info address">
+            <div className="content  contact-form">
+                <div className="contact-form-info-container">
+                    <div className="contact-form-info address">
                         ADDRESS
                     </div>
-                    <div className="contacts-info numbers">
+                    <div className="contact-form-info numbers">
                         NUMBERS
                     </div>
-                    <div className="contacts-info social">
+                    <div className="contact-form-info social">
                         SOCIAL
                     </div>
                 </div>
-                <form className='contacts-form-container'>
+                <form>
+                    <label htmlFor="name">Full name</label>
                     <input type="text"
+                           id='name'
                            placeholder='Enter your name...'
                     />
+                    <label htmlFor="email">Email</label>
                     <input type="text"
+                           id='email'
                            placeholder='Enter your email...'
                     />
-                    <textarea placeholder='Let`s discuss your project'>
+                    <label htmlFor="comment">Whats on your mind?</label>
+                    <textarea placeholder='Let`s discuss your project'
+                              id='comment'
+                    >
 
                         </textarea>
                 </form>

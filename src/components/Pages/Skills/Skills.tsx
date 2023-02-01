@@ -36,11 +36,11 @@ export const Skills: React.FC<SkillsPropsType> = () => {
 
     return (
         <div id='skills' className='dark-block-wrapper full-screen-height'>
-            <div className='content skills'>
+            <div className=' skills'>
                 <Title title='Stack'
                        subtitle='Skills'
                 />
-                <div className='cards-wrapper'>
+                <div className='content cards-wrapper'>
                     {skills.map((s, i) => {
                         return <SkillCard key={`${i} + ${s.title}`}
                                           title={s.title}
