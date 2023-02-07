@@ -34,7 +34,7 @@ export const HeaderNav = () => {
                       )}
             >
                 <a onClick={(e) => e.preventDefault()}>
-                    <FaHamburger color={'#aab1b8'}
+                    <FaHamburger color='#aab1b8'
                                  size={40}
                                  style={{backgroundColor: "#111418"}}
                     />

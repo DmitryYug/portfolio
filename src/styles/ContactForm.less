@@ -2,42 +2,108 @@
 
 
 .contact-form {
-  .flex-basic(space-between, center);
+  .flex-basic(space-between, flex-start);
+  margin-top: 70px;
+  //padding-bottom: 70px;
+  &.content {
+    padding: 0 100px 70px 100px;
+  }
 
-  &-info-container {
-    .flex-column(center, center);
-    margin-left: 50px;
+  &-info {
+    &-container {
+      .flex-column(center, flex-start);
+      width: 30%;
 
-    &.address {
+      h3 {
+        text-transform: uppercase;
+        .text-props(1.7vw);
+        color: @title-color;
+        margin-bottom: 10px;
+      }
 
-    }
+      span {
+        .text-props(1.2vw);
+        font-weight: 200;
+        color: @title-color;
+      }
 
-    &.numbers {
-
+      p {
+        .text-props(1.2vw);
+        line-height: 1.8;
+        font-weight: 200;
+        color: @title-color;
+        margin-bottom: 20px;
+      }
     }
 
     &.social {
+      h3 {
+        margin-top: 20px;
+      }
 
+      .icons-block {
+        .flex-basic(center, center);
+        gap: 20px;
+      }
     }
   }
 
   form {
-    width: 70%;
+    width: 65%;
     align-items: stretch;
-    margin: 70px 20px 100px auto;
-    .flex-column(center, start);
+    .flex-column(center, flex-start);
+
     label {
       .text-props(1rem);
       color: @title-color;
       margin-left: 10px;
       margin-bottom: 5px;
     }
+
     input, textarea {
       width: 100%;
       margin-bottom: 20px;
       padding: 10px;
       border-radius: 0.5rem;
       background-color: @main-background-light;
+      color: @title-color;
+      border: 1px solid @main-background-dark;
+
+      &:focus {
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        box-shadow: 0 0 5px rgb(128 189 255 / 50%);
+        border-color: #80bdff;
+      }
+
+      //autofill background fix
+      &:-webkit-autofill,
+      &:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s;
+      }
+
+      &[data-autocompleted] {
+        background-color: transparent !important;
+      }
+    }
+
+    button {
+      background-color: @hover-color;
+      border-color: @hover-color;
+      padding: 0.8rem 2.6rem;
+      font-weight: 500;
+      border-width: 2px;
+      border-radius: 100px;
+      color: @title-color;
+      transition: all 0.5s ease;
+      box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+
+      &:hover {
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      }
+    }
+
+    .error {
+
     }
   }
 }

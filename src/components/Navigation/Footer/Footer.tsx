@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineClose} from "react-icons/ai";
+import React from 'react';
+import {AiFillFacebook, AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import {SiCodewars} from "react-icons/si";
-import {FaHamburger} from "react-icons/fa";
+
 interface FooterProps {
 }
 export const Footer: React.FC<FooterProps> = () => {

@@ -6,7 +6,7 @@
   .cards {
     &-wrapper {
       width: 100%;
-      .flex-basic(space-between, start);
+      .flex-basic(space-between, flex-start);
       flex-wrap: wrap;
       margin-top: 70px;
     }
@@ -42,7 +42,7 @@
       color: @card-description-color;
       margin-top: 20px;
       @media (max-width: @mobile) {
-        .flex-basic(center, start);
+        .flex-basic(center, flex-start);
         width: 100%;
         max-height: 200px;
         gap: 30px;
