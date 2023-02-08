@@ -1,17 +1,49 @@
-import React, {RefObject, useEffect} from 'react';
-import {ProjectCard} from "./ProjectCard/ProjectCard";
+import React from 'react';
 import {Title} from "../../Title";
+import type {TabsProps} from 'antd';
+import {Tabs} from 'antd';
+import {VueProjects} from "./ProjectTabs/VueProjects";
+import {ReactProjects} from "./ProjectTabs/ReactProjects";
+import {HtmlProjects} from "./ProjectTabs/HtmlProjects";
+import {AllProjects} from "./ProjectTabs/AllProjects";
 
 interface ProjectsPropsType {
 }
+
+
+
 export const Projects: React.FC<ProjectsPropsType> = () => {
 
-    const projects = [
-        {title: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'},
-        {title: 'Project 2', description: 'Lorem ipsum dolor sit amet, conse, illo l?'},
-        {title: 'Project 3', description: 'Lorem ipsum dolor sit amet, conse, illlor sit amet, conse, illo lorem10l?'},
-        {title: 'Project 4', description: 'Lorem ipsum dolor sit amet, conse, lor sit lconse, lor sit lconse, lor sit lconse, lor sit l?'},
-    ]
+    const items: TabsProps['items'] = [
+        {
+            key: '1',
+            label: `All`,
+            children: <AllProjects/>,
+        },
+        {
+            key: '2',
+            label: `Vue`,
+            children: <VueProjects/>,
+        },
+        {
+            key: '3',
+            label: `React`,
+            children: <ReactProjects/>,
+        },
+        {
+            key: '4',
+            label: `Html`,
+            children: <HtmlProjects/>,
+        },
+    ];
+
+    const tabStyles = {
+        'color': 'rgba(255, 255, 255, 1)'
+    }
+
+    const onChange = (key: string) => {
+        console.log(key);
+    };
 
     return (
         <div id='projects' className='light-block-wrapper full-screen-height'>
@@ -20,13 +52,14 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
                        subtitle='Pets'
                 />
                 <div className='project-cards-wrapper'>
-                    {projects.map((p, i) => {
-                        return <ProjectCard
-                            key={i}
-                            title={p.title}
-                            description={p.description}
-                        />
-                    })}
+                    <Tabs defaultActiveKey="1"
+                          items={items}
+                          onChange={onChange}
+                          centered
+                          size='large'
+                          tabBarStyle={tabStyles}
+                          tabBarGutter={50}
+                    />
                 </div>
             </div>
         </div>

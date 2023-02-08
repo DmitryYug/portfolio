@@ -5,13 +5,14 @@ import vueIcon from "../../../assets/icons/skill-card/vue.svg"
 import reactIcon from "../../../assets/icons/skill-card/react.png"
 import htmlIcon from "../../../assets/icons/skill-card/html.svg"
 import jslIcon from "../../../assets/icons/skill-card/js.svg"
+import {SkillCardType} from "../../../types/Types";
 
 interface SkillsPropsType {
 }
 
 export const Skills: React.FC<SkillsPropsType> = () => {
 
-    const skills = [
+    const skills: SkillCardType[] = [
         {
             title: 'JS',
             icon: jslIcon,

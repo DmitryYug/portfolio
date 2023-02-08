@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 type SkillCardPropsType = {
@@ -7,6 +7,10 @@ type SkillCardPropsType = {
     childrenSkills: string[]
 }
 export const SkillCard = (props: SkillCardPropsType) => {
+
+    useEffect(() => {
+        console.log(typeof (props.icon))
+    }, [])
 
     const renderChildrenSkills = props.childrenSkills.map(skill => (
         <li>{skill}</li>

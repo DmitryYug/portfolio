@@ -19,6 +19,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
 
     const footerIconsColor = '#aab1b8';
     const {register, handleSubmit, watch, formState: {errors}} = useForm<ContactFormTypes>();
+
     const footerIcons = [
         {title: 'gitHub', icon: <AiFillGithub color={footerIconsColor} size={20}/>},
         {title: 'codeWars', icon: <SiCodewars color={footerIconsColor} size={20}/>},
@@ -29,7 +30,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
     const onSubmit = handleSubmit(data => {
         console.log(data)
     });
-    const errorMessage = () => <div className='error'>Fill the form, please</div>;
+    const errorMessage = (errorInputName: string) => <span className='error-message'>Fill the {errorInputName}, please</span>;
 
 
     return (
@@ -59,7 +60,10 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                     </div>
                 </div>
                 <form onSubmit={onSubmit}>
-                    <label htmlFor="name">Full name</label>
+                    <label htmlFor="name">
+                        <span>Full name</span>
+                        {errors.name && errorMessage('full name')}
+                    </label>
                     <input type="text"
                            id='name'
                            placeholder='Enter your name...'
@@ -67,7 +71,10 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                                required: true
                            })}
                     />
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">
+                        <span>Email</span>
+                        {errors.email && errorMessage('e-mail')}
+                    </label>
                     <input type="text"
                            id='email'
                            placeholder='Enter your email...'
@@ -78,20 +85,21 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                            )}
 
                     />
-                    <label htmlFor="comment">Whats on your mind?</label>
+                    <label htmlFor="comment">
+                        <span>Whats on your mind?</span>
+                        {errors.comment && errorMessage('comment block')}
+                    </label>
                     <textarea placeholder='Let`s discuss your project'
                               id='comment'
                               {...register("comment", {
                                   required: true
                               })}
                     />
-                    <button>
-                        Send Message
-                    </button>
-                    {errors.name
-                    || errors.email
-                    || errors.comment
-                        ? errorMessage() : null}
+                    <div className='d-flex-start'>
+                        <button>
+                            Send Message
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, {RefObject, useEffect} from 'react';
+import React from 'react';
 
 interface AboutMePropsType {
 }

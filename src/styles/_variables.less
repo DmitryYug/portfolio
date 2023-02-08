@@ -8,12 +8,14 @@
 @content-block-padding: 0 100px;
 @tablet-content-block-padding: 0 50px;
 @sidebar-background: #111418;
-@hover-color: #20c997;
+@green-color: #20c997;
+@green-hovered-color: #1baa80;
 @main-background-dark: #212529;
 @main-background-light: #343a40;
 @card-description-color: rgba(255, 255, 255, .5);
 @title-color: rgba(255, 255, 255, 1);
 @footer-icons-color: #aab1b8;
+@error-text: rgb(212, 106, 106);
 @about-me-background-image: "/src/assets/test-about-me-bckgr-img.jpeg";
 
 
@@ -41,7 +43,7 @@
 .divider(@width, @height, @bottom, @left) {
   content: '';
   position: absolute;
-  background: @hover-color;
+  background: @green-color;
   width: @width;
   height: @height;
   bottom: @bottom;
