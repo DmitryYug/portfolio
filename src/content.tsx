@@ -1,8 +1,8 @@
 import {ProjectCardType, SkillCardType} from "./types/Types";
 import React from "react";
-import {RiReactjsFill, RiVuejsFill} from 'react-icons/ri'
-import {DiJavascript} from "react-icons/di";
-import {SiJavascript} from "react-icons/si";
+import {RiReactjsFill, RiVuejsLine} from 'react-icons/ri'
+import {DiJavascript1} from "react-icons/di";
+import {AiOutlineHtml5} from "react-icons/ai";
 
 
 interface ProjectsBlockDataType {
@@ -14,22 +14,22 @@ interface ProjectsBlockDataType {
 export const skills: SkillCardType[] = [
     {
         title: 'JavaScript',
-        icon: <SiJavascript size={70} color='#aab1b8'/>,
+        icon: <DiJavascript1 size={70} color='#1baa80'/>,
         children: ['TypeScript', 'jQuery', 'Solid', 'Kiss', 'Dry', 'REST API']
     },
     {
         title: 'HTML/CSS',
-        icon: <DiJavascript size={70} color='#aab1b8'/>,
+        icon: <AiOutlineHtml5 size={70} color='#1baa80'/>,
         children: ['SASS/Less', 'Adaptive', 'Semantics', 'Web Standards']
     },
     {
         title: 'React',
-        icon: <RiReactjsFill size={70} color='#aab1b8'/>,
+        icon: <RiReactjsFill size={70} color='#1baa80'/>,
         children: ['Redux', 'React Query', 'FLUX', 'TDD/Unit tests', 'StoryBook', 'UI libraries']
     },
     {
         title: 'Vue',
-        icon: <RiVuejsFill size={70} color='#aab1b8'/>,
+        icon: <RiVuejsLine size={70} color='#1baa80'/>,
         children: ['VueX', 'Vuetify']
     }
 ]
