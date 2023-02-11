@@ -22,6 +22,7 @@ export const HeaderNav = () => {
                                   <Link to={sidBarItem.value}
                                         smooth={true}
                                         delay={300}
+                                        key={sidBarItem.value + idx}
                                   >
                                       <li key={`${idx} + ${sidBarItem.value}`}
                                           className='item'

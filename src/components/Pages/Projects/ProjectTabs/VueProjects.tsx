@@ -11,7 +11,7 @@ export const VueProjects = () => {
             {
                 projects.vueProjects.map((card, i) => (
                     <ProjectCard
-                        key={i}
+                        key={card.title + i}
                         title={card.title}
                         description={card.description}
                     />

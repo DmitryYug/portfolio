@@ -38,7 +38,7 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
     ];
 
     const tabStyles = {
-        'color': 'rgba(255, 255, 255, 1)'
+        'color': 'rgba(255, 255, 255, 1)',
     }
 
     const onChange = (key: string) => {

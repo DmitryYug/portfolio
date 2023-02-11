@@ -2,56 +2,52 @@
 
 .skills {
   .flex-column(center, center);
-
+  &-wrapper {
+    .flex-basic(center, flex-start);
+  }
   .cards {
     &-wrapper {
       width: 100%;
       .flex-basic(space-between, flex-start);
       flex-wrap: wrap;
-      margin-top: 70px;
     }
   }
 
   .card {
     &-container {
-      @media (max-width: @laptop) {
-        max-width: 25%;
-      }
-      @media (max-width: @tablet) {
-        min-width: 50%;
-      }
-      @media (max-width: @mobile) {
-        min-width: 100%;
-      }
+      max-width: 500px;
       padding: 15px;
       box-sizing: border-box;
-      .flex-column(center, center);
+      .flex-basic(center, center);
+      gap: 30px;
     }
 
     &-title {
-      margin-top: 20px;
-      .text-props(3vw);
+      .text-props(2rem);
       @media (max-width: @tablet) {
-        .text-props(5vw);
+        .text-props(2rem);
       }
       color: @title-color;
     }
 
     &-description {
-      .text-props(1.7rem);
+      .text-props(1.3rem);
       color: @card-description-color;
-      margin-top: 20px;
+      .flex-basic(flex-start, center);
+      flex-wrap: wrap;
+
       @media (max-width: @mobile) {
         .flex-basic(center, flex-start);
         width: 100%;
         max-height: 200px;
-        gap: 30px;
         flex-wrap: wrap;
       }
 
       li {
         margin-top: 10px;
+        margin-right: 40px;
         position: relative;
+
 
         &:before {
           position: absolute;
@@ -71,8 +67,8 @@
 
 .icon {
   img {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
     object-position: center;
     padding: 5px;

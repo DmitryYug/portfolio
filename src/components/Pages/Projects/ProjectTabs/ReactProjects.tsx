@@ -3,14 +3,14 @@ import {projects} from "../../../../content";
 import {ProjectCard} from "../ProjectCard/ProjectCard";
 
 
-export const HtmlProjects = () => {
+export const ReactProjects = () => {
 
     return (
         <>
             {
-                projects.htmlProjects.map((card, i) => (
+                projects.reactProjects.map((card, i) => (
                     <ProjectCard
-                        key={i}
+                        key={card.title + i}
                         title={card.title}
                         description={card.description}
                     />

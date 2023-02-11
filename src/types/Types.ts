@@ -1,7 +1,8 @@
+import React from "react";
 
 export interface SkillCardType {
     title: string
-    icon: string
+    icon: React.ReactElement
     children: string[]
 }
 

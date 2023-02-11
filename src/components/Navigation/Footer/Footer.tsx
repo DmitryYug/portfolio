@@ -8,10 +8,10 @@ export const Footer: React.FC<FooterProps> = () => {
     const footerIconsColor = '#aab1b8';
 
     const footerIcons = [
-        {title: 'gitHub', icon: <AiFillGithub color={footerIconsColor} size={20}/>},
-        {title: 'codeWars', icon: <SiCodewars color={footerIconsColor} size={20}/>},
-        {title: 'linkedIn', icon: <AiFillLinkedin color={footerIconsColor} size={20}/>},
-        {title: 'facebook', icon: <AiFillFacebook color={footerIconsColor} size={20}/>}
+        {title: 'gitHub', icon: <AiFillGithub key={1} color={footerIconsColor} size={20}/>},
+        {title: 'codeWars', icon: <SiCodewars key={2} color={footerIconsColor} size={20}/>},
+        {title: 'linkedIn', icon: <AiFillLinkedin key={3} color={footerIconsColor} size={20}/>},
+        {title: 'facebook', icon: <AiFillFacebook key={4} color={footerIconsColor} size={20}/>}
     ]
 
     return (

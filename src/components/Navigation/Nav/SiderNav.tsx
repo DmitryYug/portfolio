@@ -31,6 +31,7 @@ export const SiderNav: React.FC<NavPropsType> = (props) => {
                     <Link to={sidBarItem.value}
                           smooth={true}
                           delay={300}
+                          key={`${idx} + ${sidBarItem.value}`}
                     >
                         <li key={`${idx} + ${sidBarItem.value}`}>
                             {sidBarItem.title}
