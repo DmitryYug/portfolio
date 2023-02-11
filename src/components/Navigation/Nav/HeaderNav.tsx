@@ -1,14 +1,14 @@
 import React from 'react';
 import {Dropdown} from 'antd';
-import {FaHamburger} from "react-icons/fa";
 import {Link} from "react-scroll";
+import {GiHamburgerMenu} from "react-icons/gi";
 
 export const HeaderNav = () => {
 
 
     const navigationLinks = [
         {title: 'About Me', value: 'aboutMe'},
-        {title: 'Skills', value: 'skills'},
+        {title: 'CV', value: 'cv'},
         {title: 'Projects', value: 'projects'},
         {title: 'Contacts', value: 'contacts'}
     ]
@@ -35,7 +35,7 @@ export const HeaderNav = () => {
                       )}
             >
                 <a onClick={(e) => e.preventDefault()}>
-                    <FaHamburger color='#aab1b8'
+                    <GiHamburgerMenu color='#aab1b8'
                                  size={40}
                                  style={{backgroundColor: "#111418"}}
                     />

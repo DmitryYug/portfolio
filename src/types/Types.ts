@@ -11,3 +11,9 @@ export interface ProjectCardType {
     description: string
 }
 
+export interface EducationCardType {
+    title: string
+    period: string
+    speciality: string
+}
+

@@ -1,4 +1,4 @@
-import {ProjectCardType, SkillCardType} from "./types/Types";
+import {EducationCardType, ProjectCardType, SkillCardType} from "./types/Types";
 import React from "react";
 import {RiReactjsFill, RiVuejsLine} from 'react-icons/ri'
 import {DiJavascript1} from "react-icons/di";
@@ -10,29 +10,75 @@ interface ProjectsBlockDataType {
     reactProjects: ProjectCardType[]
     htmlProjects: ProjectCardType[]
 }
+interface CvBlockDataType {
+    skills: SkillCardType[]
+    education: EducationCardType[]
+}
 
-export const skills: SkillCardType[] = [
-    {
-        title: 'JavaScript',
-        icon: <DiJavascript1 size={70} color='#1baa80'/>,
-        children: ['TypeScript', 'jQuery', 'Solid', 'Kiss', 'Dry', 'REST API']
-    },
-    {
-        title: 'HTML/CSS',
-        icon: <AiOutlineHtml5 size={70} color='#1baa80'/>,
-        children: ['SASS/Less', 'Adaptive', 'Semantics', 'Web Standards']
-    },
-    {
-        title: 'React',
-        icon: <RiReactjsFill size={70} color='#1baa80'/>,
-        children: ['Redux', 'React Query', 'FLUX', 'TDD/Unit tests', 'StoryBook', 'UI libraries']
-    },
-    {
-        title: 'Vue',
-        icon: <RiVuejsLine size={70} color='#1baa80'/>,
-        children: ['VueX', 'Vuetify']
-    }
-]
+export const cv: CvBlockDataType = {
+    skills: [
+        {
+            title: 'JavaScript',
+            icon: <DiJavascript1 size={70} color='#1baa80'/>,
+            children: ['TypeScript', 'jQuery', 'Solid', 'Kiss', 'Dry', 'REST API']
+        },
+        {
+            title: 'HTML/CSS',
+            icon: <AiOutlineHtml5 size={70} color='#1baa80'/>,
+            children: ['SASS/Less', 'Adaptive', 'Semantics', 'Web Standards']
+        },
+        {
+            title: 'React',
+            icon: <RiReactjsFill size={70} color='#1baa80'/>,
+            children: ['Redux', 'React Query', 'FLUX', 'TDD/Unit tests', 'StoryBook', 'UI libraries']
+        },
+        {
+            title: 'Vue',
+            icon: <RiVuejsLine size={70} color='#1baa80'/>,
+            children: ['VueX', 'Vuetify']
+        }
+    ],
+    education: [
+        {
+            title: 'Belorussian National Technical University',
+            period: '2007-2012',
+            speciality: 'Engineer'
+        },
+        {
+            title: 'Udemy Academy',
+            period: '2018-2019',
+            speciality: 'HTML, JavaScript for beginners'
+        },
+        {
+            title: 'IT-incubator',
+            period: '2019-2020',
+            speciality: 'React frontend engineer'
+        },
+    ]
+}
+
+// export const skills: SkillCardType[] = [
+//     {
+//         title: 'JavaScript',
+//         icon: <DiJavascript1 size={70} color='#1baa80'/>,
+//         children: ['TypeScript', 'jQuery', 'Solid', 'Kiss', 'Dry', 'REST API']
+//     },
+//     {
+//         title: 'HTML/CSS',
+//         icon: <AiOutlineHtml5 size={70} color='#1baa80'/>,
+//         children: ['SASS/Less', 'Adaptive', 'Semantics', 'Web Standards']
+//     },
+//     {
+//         title: 'React',
+//         icon: <RiReactjsFill size={70} color='#1baa80'/>,
+//         children: ['Redux', 'React Query', 'FLUX', 'TDD/Unit tests', 'StoryBook', 'UI libraries']
+//     },
+//     {
+//         title: 'Vue',
+//         icon: <RiVuejsLine size={70} color='#1baa80'/>,
+//         children: ['VueX', 'Vuetify']
+//     }
+// ]
 export const projects: ProjectsBlockDataType = {
     vueProjects: [
         {
@@ -89,10 +135,3 @@ export const projects: ProjectsBlockDataType = {
         },
     ]
 }
-
-// export const footerIcons = [
-//     {title: 'gitHub', icon: AiFillGithub},
-//     {title: 'codeWars', icon: SiCodewars},
-//     {title: 'linkedIn', icon: AiFillLinkedin},
-//     {title: 'facebook', icon: AiFillFacebook}
-// ]

@@ -18,7 +18,7 @@ interface ContactFormTypes {
 export const ContactForm: React.FC<ContactsPropsType> = () => {
 
     const footerIconsColor = '#aab1b8';
-    const {register, handleSubmit, watch, formState: {errors}} = useForm<ContactFormTypes>();
+    const {register, handleSubmit, formState: {errors}} = useForm<ContactFormTypes>();
 
     const footerIcons = [
         {title: 'gitHub', icon: <AiFillGithub color={footerIconsColor} size={20}/>},
@@ -30,7 +30,8 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
     const onSubmit = handleSubmit(data => {
         console.log(data)
     });
-    const errorMessage = (errorInputName: string) => <span className='error-message'>Fill the {errorInputName}, please</span>;
+    const errorMessage = (errorInputName: string) => <span
+        className='error-message'>Fill the {errorInputName}, please</span>;
 
 
     return (
@@ -38,21 +39,24 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
             <Title title='contacts'
                    subtitle='get in touch'
             />
-            <div className="contact-form content">
-                <div className="contact-form-info-container">
-                    <div className="contact-form-info address">
+            <div className="content contact-form">
+                <div className="contact-form-info">
+                    <div className="address">
                         <h3>adress</h3>
-                        <p>los-angeles, staples center, vip places</p>
+                        <span>los-angeles, staples center, vip places</span>
                     </div>
-                    <div className='d-flex-center' style={{marginBottom: '10px'}}>
-                        <AiFillPhone color='#20c997' size='25'/>
-                        <span style={{marginLeft: '10px'}}>+7-(916)-979-59-03</span>
+                    <div className='contact-me'>
+                        <h3>contact me</h3>
+                        <div className="d-flex-start" style={{marginBottom: '10px'}}>
+                            <AiFillPhone color='#20c997' size='20'/>
+                            <span style={{marginLeft: '10px'}}>+7-(916)-979-59-03</span>
+                        </div>
+                        <div className="d-flex-start" style={{marginBottom: '10px'}}>
+                            <HiOutlineMail color='#20c997' size='20'/>
+                            <span style={{marginLeft: '10px'}}>dmitriyyuganuk@gmail.com</span>
+                        </div>
                     </div>
-                    <div className='d-flex-center' style={{marginBottom: '10px'}}>
-                        <HiOutlineMail color='#20c997' size='25'/>
-                        <span style={{marginLeft: '10px'}}>dmitriyyuganuk@gmail.com</span>
-                    </div>
-                    <div className="contact-form-info social">
+                    <div className="social">
                         <h3>follow me</h3>
                         <div className='icons-block'>
                             {footerIcons.map(icon => icon.icon)}
