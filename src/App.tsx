@@ -14,7 +14,6 @@ function App() {
 
     return (
         <>
-            git account test
             <Sidebar/>
             <Header/>
             <div className='layout'>
