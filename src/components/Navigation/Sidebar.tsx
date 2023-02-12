@@ -1,7 +1,7 @@
 import React from 'react';
 import {SiderNav} from "./Nav/SiderNav";
 import {PhotoBlock} from "./PhotoBlock/PhotoBlock";
-import {Footer} from "./Footer/Footer";
+import {SocialIconsBlock} from "./SocialIconsBlock";
 
 interface SidebarPropsType {
 }
@@ -12,7 +12,7 @@ export const Sidebar: React.FC<SidebarPropsType> = () => {
         <div className='sidebar'>
             <PhotoBlock/>
             <SiderNav/>
-            <Footer/>
+            <SocialIconsBlock/>
         </div>
     );
 }

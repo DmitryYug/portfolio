@@ -3,9 +3,8 @@ import {EducationCardType} from "../../../types/Types";
 
 export const EducationCard = (props: EducationCardType) => {
 
-
     return (
-        <div className='education cards-wrapper'>
+        <div className='education card-container'>
             <div className='period'>
                 {props.period}
             </div>

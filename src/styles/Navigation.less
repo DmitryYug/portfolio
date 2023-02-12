@@ -1,7 +1,7 @@
 @import "_variables";
 
 .sidebar {
-  @media (max-width: @tablet) {
+  @media (max-width: @mobile-horizontal) {
     display: none;
   }
   height: 100%;
@@ -48,8 +48,8 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      object-fit: contain;
-      object-position: center;
+      object-fit: cover;
+      object-position: 0 -20px;
       padding: 5px;
     }
   }
@@ -95,7 +95,8 @@
   height: @header-height;
   width: 100%;
   padding: 0;
-  @media (min-width: @tablet) {
+
+  @media (min-width: @mobile-horizontal) {
     display: none;
   }
 
@@ -130,7 +131,7 @@
     .flex-basic(center, center);
     gap: 10px;
     margin: 0;
-    @media (max-width: @mobile) {
+    @media (max-width: @mobile-horizontal) {
       padding-left: 20px;
     }
   }
@@ -139,7 +140,7 @@
     .flex-basic(flex-end, center);
     gap: 50px;
     flex-grow: 1;
-    @media (max-width: @mobile) {
+    @media (max-width: @mobile-horizontal) {
       display: none;
     }
 

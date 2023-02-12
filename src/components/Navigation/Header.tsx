@@ -1,6 +1,6 @@
 import React from 'react';
 import {PhotoBlock} from "./PhotoBlock/PhotoBlock";
-import {Footer} from "./Footer/Footer";
+import {SocialIconsBlock} from "./SocialIconsBlock";
 import {HeaderNav} from "./Nav/HeaderNav";
 
 
@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderPropsType> = () => {
     return (
         <div className='header'>
             <PhotoBlock/>
-            <Footer/>
+            <SocialIconsBlock/>
             <HeaderNav/>
         </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../../../assets/test-sidebar-avatar.jpeg'
+import avatar from '../../../assets/test-sidebar-avatar-1.jpg'
 import {animateScroll as scroll} from 'react-scroll'
 
 

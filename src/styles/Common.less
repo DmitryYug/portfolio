@@ -8,13 +8,14 @@
   }
 
   &.with-background-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(@about-me-background-image);
+    background: url(@about-me-background-image) no-repeat top 35% left 0;
     background-size: cover;
   }
 }
 
 .dark-block-wrapper {
   background: @main-background-dark;
+
   &.full-screen-height {
     min-height: 100vh;
   }

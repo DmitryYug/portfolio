@@ -7,6 +7,7 @@
   &-wrapper {
     width: 100%;
     .flex-basic(space-between, flex-start);
+    margin-top: 50px;
   }
 
   .skills {
@@ -58,14 +59,34 @@
 
   .education {
     &-wrapper {
-
+      width: 49%;
+      .flex-column(flex-start, center);
+      gap: 30px;
     }
     &.card {
       &-container {
-
-      }
-      &-title {
-
+        .flex-column(flex-start, flex-start);
+        gap: 10px;
+        width: 100%;
+        background-color: @main-background-light;
+        padding: 10px;
+        border-radius: 15px;
+        .period {
+          .text-props(1rem);
+          color: @title-color;
+          background-color: @error-text;
+          border-radius: 5px;
+          padding: 3px;
+        }
+        .org-title {
+          .text-props(1.4rem);
+          color: @title-color;
+          font-weight: 500;
+        }
+        .speciality {
+          .text-props(1.2rem);
+          color: @green-hovered-color;
+        }
       }
     }
   }

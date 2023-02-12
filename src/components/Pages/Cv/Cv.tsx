@@ -2,6 +2,7 @@ import React from 'react';
 import {SkillCard} from "./SkillCard";
 import {Title} from "../../Title";
 import {cv} from "../../../content";
+import {EducationCard} from "./EducationCard";
 
 interface CvPropsType {
 }
@@ -16,9 +17,13 @@ export const Cv: React.FC<CvPropsType> = () => {
         />
     })
 
-    const renderEducationCards = cv.education.map((s, i) => {
-        return <div>education card</div>
-    })
+    const renderEducationCards = cv.education.map((e, i) => (
+        <EducationCard title={e.title}
+                       period={e.period}
+                       speciality={e.speciality}
+                       key={e.title + i}
+        />
+    ))
 
     return (
         <div id='cv' className='dark-block-wrapper full-screen-height'>
