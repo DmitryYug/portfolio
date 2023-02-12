@@ -16,4 +16,10 @@ export interface EducationCardType {
     period: string
     speciality: string
 }
+export interface ExperienceCardType {
+    orgTitle: string
+    period: string
+    position: string
+    duties: string[]
+}
 

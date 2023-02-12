@@ -3,23 +3,56 @@
 .cv {
 
   .flex-column(center, center);
-
+  padding-bottom: 50px;
   &-wrapper {
     width: 100%;
     .flex-basic(space-between, flex-start);
     margin-top: 50px;
   }
 
+  .accordion {
+    width: 100%;
+
+    .ant-collapse-header {
+      .text-props(1.8rem);
+      color: @title-color;
+      text-transform: uppercase;
+      .flex-basic(flex-start, center);
+    }
+
+    .ant-collapse-item {
+      &:nth-child(n) .ant-collapse-header {
+        border: 1px solid @main-background-light;
+      }
+
+      &:first-child .ant-collapse-header {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-child .ant-collapse-header {
+        border-radius: 0 0 10px 10px;
+      }
+
+      &.ant-collapse-item-active .ant-collapse-header:not(&:first-child .ant-collapse-header) {
+        border-radius: unset;
+      }
+
+    }
+
+    .ant-collapse-content-box {
+      background-color: @main-background-light;
+    }
+  }
+
   .skills {
     &-wrapper {
-      width: 49%;
+      width: 100%;
       .flex-column(flex-start, flex-start);
       gap: 50px;
     }
 
     &.card {
       &-container {
-        max-width: 500px;
         box-sizing: border-box;
         .flex-basic(center, flex-start);
         gap: 15px;
@@ -40,18 +73,7 @@
         li {
           margin-right: 30px;
           position: relative;
-
-          &:before {
-            position: absolute;
-            content: '';
-            top: 25%;
-            left: -20px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            scale: 0.7;
-            background-color: @card-description-color;
-          }
+          .list-item-before-element(0.5);
         }
       }
     }
@@ -63,6 +85,7 @@
       .flex-column(flex-start, center);
       gap: 30px;
     }
+
     &.card {
       &-container {
         .flex-column(flex-start, flex-start);
@@ -71,6 +94,7 @@
         background-color: @main-background-light;
         padding: 10px;
         border-radius: 15px;
+
         .period {
           .text-props(1rem);
           color: @title-color;
@@ -78,11 +102,13 @@
           border-radius: 5px;
           padding: 3px;
         }
+
         .org-title {
           .text-props(1.4rem);
           color: @title-color;
           font-weight: 500;
         }
+
         .speciality {
           .text-props(1.2rem);
           color: @green-hovered-color;
@@ -92,6 +118,41 @@
   }
 
   .experience {
+    &-wrapper {
+      .ant-timeline-item-tail {
+        border-inline-start: 2px solid @green-hovered-color;
+      }
+    }
 
+    .duties {
+      .text-props(1rem);
+      color: @card-description-color;
+
+      li {
+        margin-left: 20px;
+        position: relative;
+        .list-item-before-element(0.5);
+      }
+    }
+
+    .organisation-title {
+      .text-props(1.4rem);
+      color: @title-color;
+      font-weight: 500;
+    }
+
+    .position {
+      .text-props(1.2rem);
+      color: @green-hovered-color;
+    }
+
+    .period {
+      .text-props(1rem);
+      color: @title-color;
+      background-color: @error-text;
+      border-radius: 5px;
+      padding: 3px;
+      width: fit-content;
+    }
   }
 }
