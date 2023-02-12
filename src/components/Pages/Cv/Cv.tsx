@@ -12,22 +12,23 @@ interface CvPropsType {
 
 export const Cv: React.FC<CvPropsType> = () => {
 
-    const [activePanel, setActivePanel] = useState<string>('skills');
+    const [activePanel, setActivePanel] = useState<string | string[]>('skills');
 
-    const activePanelHandler = (e: string | string[]) => {
-        switch (e) {
-            case '1':
-                setActivePanel('skills')
-                break
-            case '2':
-                setActivePanel('education')
-                break
-            case '3':
-                setActivePanel('experience')
-                break
-            default:
-                break
-        }
+    const activePanelHandler = (e: string) => {
+        setActivePanel(e)
+        // switch (e) {
+        //     case '1':
+        //         setActivePanel('skills')
+        //         break
+        //     case '2':
+        //         setActivePanel('education')
+        //         break
+        //     case '3':
+        //         setActivePanel('experience')
+        //         break
+        //     default:
+        //         break
+        // }
     }
 
     const renderSkillCards = cv.skills.map((s, i) => {
@@ -86,12 +87,18 @@ export const Cv: React.FC<CvPropsType> = () => {
     return (
         <div id='cv' className='dark-block-wrapper full-screen-height'>
             <div className='cv'>
-                <Title title='Stack'
+                <Title title={activePanel || 'choose smth...'}
                        subtitle='Cv'
                 />
+                <p className='content'>
+                    Front-end developer with 2 years experience of creating SPA with React/Redux and Vue/VueX.
+                    Interested
+                    in new technologies, now NodeJS is in my to do. Improve knowledge of Computer Science, used to
+                    codewars work out before working day. Hobbies are basketball, box and movies.
+                </p>
                 <div className='content cv-wrapper'>
                     <Collapse defaultActiveKey={['skills']}
-                              onChange={activePanelHandler}
+                              onChange={(key: string | string[]) => setActivePanel(key)}
                               accordion ghost
                               className='accordion'
                     >
