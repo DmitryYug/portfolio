@@ -87,7 +87,7 @@ export const Cv: React.FC<CvPropsType> = () => {
     return (
         <div id='cv' className='dark-block-wrapper full-screen-height'>
             <div className='cv'>
-                <Title title={activePanel || 'choose smth...'}
+                <Title title={activePanel || 'about me'}
                        subtitle='Cv'
                 />
                 <p className='content'>

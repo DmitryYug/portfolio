@@ -1,25 +1,24 @@
 import {EducationCardType, ExperienceCardType, ProjectCardType, SkillCardType} from "./types/Types";
 import React from "react";
+//icons
 import {RiReactjsFill, RiVuejsLine} from 'react-icons/ri'
 import {DiJavascript1} from "react-icons/di";
 import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineHtml5} from "react-icons/ai";
 import {SiCodewars} from "react-icons/si";
+//images
+import ntDevLanding from '../src/assets/projectCards/ntDevLanding/cover.png'
 
-
-interface ProjectsBlockDataType {
-    vueProjects: ProjectCardType[]
-    reactProjects: ProjectCardType[]
-    htmlProjects: ProjectCardType[]
-}
 interface CvBlockDataType {
     skills: SkillCardType[]
     education: EducationCardType[]
     experience: ExperienceCardType[]
 }
+
 interface LinksTypes {
-    navigation: {title: string, value: string}[]
-    social: {title: string, icon: React.ReactElement}[]
+    navigation: { title: string, value: string }[]
+    social: { title: string, icon: React.ReactElement }[]
 }
+
 export const links: LinksTypes = {
     navigation: [
         {title: 'CV', value: 'cv'},
@@ -79,7 +78,7 @@ export const cv: CvBlockDataType = {
             orgTitle: 'Freelance',
             period: '2020-2021',
             position: 'Frontend developer',
-            duties: ['HTML landings', 'Custom UI kit creating','SPA performance optimisation']
+            duties: ['HTML landings', 'Custom UI kit creating', 'SPA performance optimisation']
         },
         {
             orgTitle: 'NT development',
@@ -90,59 +89,11 @@ export const cv: CvBlockDataType = {
     ]
 }
 
-export const projects: ProjectsBlockDataType = {
-    vueProjects: [
-        {
-            title: 'Vue 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'
-        },
-        {
-            title: 'Vue 2',
-            description: 'Lorem ipsum dolor sit amet, conse, illo l?'
-        },
-        {
-            title: 'Vue 3',
-            description: 'Lorem ipsum dolor sit amet, conse, illlor sit amet, conse, illo lorem10l?'
-        },
-        {
-            title: 'Vue 4',
-            description: 'Lorem ipsum dolor sit amet, conse, lor sit lconse, lor sit lconse, lor sit lconse, lor sit l?'
-        },
-    ],
-    reactProjects: [
-        {
-            title: 'React 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'
-        },
-        {
-            title: 'React 2',
-            description: 'Lorem ipsum dolor sit amet, conse, illo l?'
-        },
-        {
-            title: 'React 3',
-            description: 'Lorem ipsum dolor sit amet, conse, illlor sit amet, conse, illo lorem10l?'
-        },
-        {
-            title: 'React 4',
-            description: 'Lorem ipsum dolor sit amet, conse, lor sit lconse, lor sit lconse, lor sit lconse, lor sit l?'
-        },
-    ],
-    htmlProjects: [
-        {
-            title: 'Html 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?'
-        },
-        {
-            title: 'Html 2',
-            description: 'Lorem ipsum dolor sit amet, conse, illo l?'
-        },
-        {
-            title: 'Html 3',
-            description: 'Lorem ipsum dolor sit amet, conse, illlor sit amet, conse, illo lorem10l?'
-        },
-        {
-            title: 'Html 4',
-            description: 'Lorem ipsum dolor sit amet, conse, lor sit lconse, lor sit lconse, lor sit lconse, lor sit l?'
-        },
-    ]
-}
+export const projects: ProjectCardType[] = [
+    {
+        title: 'NT development landing',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
+        stack: ['React'],
+        background: ntDevLanding
+    }
+]

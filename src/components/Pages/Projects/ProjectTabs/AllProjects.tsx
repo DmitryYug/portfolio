@@ -1,16 +1,23 @@
 import React from "react";
-import {ReactProjects} from "./ReactProjects";
-import {HtmlProjects} from "./HtmlProjects";
-import {VueProjects} from "./VueProjects";
+import {projects} from "../../../../content";
+import {ProjectCard} from "../ProjectCard/ProjectCard";
 
 
 export const AllProjects = () => {
 
     return (
         <>
-          <VueProjects/>
-          <ReactProjects/>
-          <HtmlProjects/>
+            {
+                projects.map((card, i) => (
+                    <ProjectCard
+                        key={card.title + i}
+                        title={card.title}
+                        description={card.description}
+                        background={card.background}
+                        stack={card.stack}
+                    />
+                ))
+            }
         </>
     )
 }

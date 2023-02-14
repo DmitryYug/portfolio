@@ -2,9 +2,6 @@ import React from 'react';
 import {Title} from "../../Title";
 import type {TabsProps} from 'antd';
 import {Tabs} from 'antd';
-import {VueProjects} from "./ProjectTabs/VueProjects";
-import {ReactProjects} from "./ProjectTabs/ReactProjects";
-import {HtmlProjects} from "./ProjectTabs/HtmlProjects";
 import {AllProjects} from "./ProjectTabs/AllProjects";
 
 interface ProjectsPropsType {
@@ -19,21 +16,6 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
             key: '1',
             label: `All`,
             children: <AllProjects/>,
-        },
-        {
-            key: '2',
-            label: `Vue`,
-            children: <VueProjects/>,
-        },
-        {
-            key: '3',
-            label: `React`,
-            children: <ReactProjects/>,
-        },
-        {
-            key: '4',
-            label: `Html`,
-            children: <HtmlProjects/>,
         },
     ];
 
