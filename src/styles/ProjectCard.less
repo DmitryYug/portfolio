@@ -1,56 +1,79 @@
 @import "_variables";
 
 .project-card {
-  &.container {
-    position: relative;
-    height: 250px;
+  .flex-column(center, center);
+
+  .background {
+    transition: all 0.5s;
+    position: absolute;
+    inset: 0 0;
+    background-size: cover;
+    background-position-x: right;
+    filter: none;
+    //box-shadow: 5px 5px 5px #212529;
     border-radius: 10px;
+
     &:before {
-      //transition: all 1s;
-      //content: "";
-      //position: absolute;
-      //top: 0;
-      //left: 0;
-      //right: 50%;
-      //bottom: 0;
-      ////background-image: url('../assets/projectCards/ntDevLanding/cover.png');
-      //background-size: cover;
-      //background-position: center;
-      //filter: none;
-      //box-shadow: 5px 5px 5px @main-background-dark;
-      //border-radius: 10px;
+      transition: all 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
     }
 
-    //&:hover {
-    //  &:before {
-    //    content: "";
-    //    position: absolute;
-    //    top: 0;
-    //    left: 0;
-    //    right: 50%;
-    //    bottom: 0;
-    //    //background-image: url('../assets/projectCards/ntDevLanding/cover.png');
-    //    background-size: cover;
-    //    background-position: center;
-    //    filter: blur(3px);
-    //    transition: all 1s;
-    //    border-radiqus: 10px;
-    //  }
-    //}
+    &:hover {
+      filter: blur(2px);
+      box-shadow: none;
+      scale: 1.05;
 
-    img {
-      //max-width: 50%;
-      //height: auto;
+      &:before {
+        transition: all 1s;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
-}
 
-.picture {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: lightcoral;
+  .container {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    transition: all 1s;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #212529;
+
+  }
+
+  .text-container {
+    position: relative;
+    .flex-column(space-around, center);
+
+    h3 {
+      transition: all 0.5s;
+      opacity: 0;
+      .text-props(1.4rem);
+      font-weight: 600;
+      color: @title-color;
+    }
+
+    span {
+      transition: all 0.5s;
+      opacity: 0;
+      .text-props(1.2rem);
+      color: @title-color;
+    }
+
+    &.active h3 {
+      opacity: 1;
+      display: block;
+    }
+    &.active span {
+      opacity: 1;
+      display: block;
+    }
+  }
+
 }

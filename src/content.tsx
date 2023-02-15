@@ -93,7 +93,7 @@ export const projects: ProjectCardType[] = [
     {
         title: 'NT development landing',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
-        stack: ['React'],
+        stack: ['React', 'Less'],
         background: ntDevLanding
     }
 ]

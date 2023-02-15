@@ -1,31 +1,21 @@
 import React from 'react';
 import {Title} from "../../Title";
-import type {TabsProps} from 'antd';
-import {Tabs} from 'antd';
-import {AllProjects} from "./ProjectTabs/AllProjects";
+import {projects} from "../../../content";
+import {ProjectCard} from "./ProjectCard/ProjectCard";
 
 interface ProjectsPropsType {
 }
 
-
-
 export const Projects: React.FC<ProjectsPropsType> = () => {
-
-    const items: TabsProps['items'] = [
-        {
-            key: '1',
-            label: `All`,
-            children: <AllProjects/>,
-        },
-    ];
-
-    const tabStyles = {
-        'color': 'rgba(255, 255, 255, 1)',
-    }
-
-    const onChange = (key: string) => {
-        console.log(key);
-    };
+    const renderProjectCards = projects.map((card, i) => (
+        <ProjectCard
+            key={card.title + i}
+            title={card.title}
+            description={card.description}
+            background={card.background}
+            stack={card.stack}
+        />
+    ))
 
     return (
         <div id='projects' className='light-block-wrapper full-screen-height'>
@@ -33,15 +23,9 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
                 <Title title='My projects'
                        subtitle='Pets'
                 />
-                <div className='project-cards-wrapper'>
-                    <Tabs defaultActiveKey="1"
-                          items={items}
-                          onChange={onChange}
-                          centered
-                          size='large'
-                          tabBarStyle={tabStyles}
-                          tabBarGutter={50}
-                    />
+                <div className='projects-cards-wrapper'>
+                    {renderProjectCards}
+                    {/*<AllProjects/>*/}
                 </div>
             </div>
         </div>

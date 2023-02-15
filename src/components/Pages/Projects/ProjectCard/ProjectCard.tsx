@@ -10,52 +10,23 @@ type ProjectCardPropsType = {
 
 export const ProjectCard = (props: ProjectCardPropsType) => {
 
-
-    let cardContainerStyles: React.CSSProperties = {
-        backgroundImage: `url(${props.background})`,
-        transition: 'all 1 s',
-        content: "",
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        right: '50%',
-        bottom: '0',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        filter: 'none',
-        boxShadow: '5px 5px 5px #212529',
-        borderRadius: '10px',
-    }
-
-    let cardContainerStylesHovered: React.CSSProperties = {
-        backgroundImage: `url(${props.background})`,
-        transition: 'all 1 s',
-        content: "",
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        right: '50%',
-        bottom: '0',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        filter: 'blur(3px)',
-        borderRadius: '10px',
-    }
-
-    let [currentStyles, setCurrentStyles] = useState<React.CSSProperties>(cardContainerStyles)
+    let [isActive, setIsActive] = useState<string>('')
 
     return (
-        <>
-            <div style={currentStyles}
-                 onMouseEnter={() => setCurrentStyles(cardContainerStylesHovered)}
-            >
-                :before
+        <div className='project-card'>
+            <div className='container'>
+                <div style={{backgroundImage: `url(${props.background})`}}
+                     className='background'
+                     onMouseEnter={() => setIsActive('active')}
+                     onMouseLeave={() => setIsActive('')}
+                >
+                </div>
+                <div className={`text-container ${isActive}`}>
+                    <h3>{props.title}</h3>
+                    <span>{props.stack.map(tech => tech)}</span>
+                </div>
             </div>
-            <div className='project-card container'>
-                <h3>{props.title}</h3>
-                {/*<img src={props.background} alt=""/>*/}
-            </div>
-        </>
+        </div>
 
     );
 }
