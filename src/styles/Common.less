@@ -21,3 +21,24 @@
   }
 }
 
+.my-button {
+  border-color: @green-color;
+  padding: 0.8rem 2.6rem;
+  font-weight: 500;
+  border-width: 2px;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+  &.is-rounded {
+    border-radius: 100px;
+  }
+  &.is-green {
+    background-color: @green-color;
+    color: @title-color;
+    &:hover {
+      background-color: @green-hovered-color;
+    }
+  }
+  &:hover {
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
+  }
+}

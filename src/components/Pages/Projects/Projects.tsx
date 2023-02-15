@@ -7,6 +7,7 @@ interface ProjectsPropsType {
 }
 
 export const Projects: React.FC<ProjectsPropsType> = () => {
+
     const renderProjectCards = projects.map((card, i) => (
         <ProjectCard
             key={card.title + i}
@@ -25,7 +26,6 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
                 />
                 <div className='projects-cards-wrapper'>
                     {renderProjectCards}
-                    {/*<AllProjects/>*/}
                 </div>
             </div>
         </div>

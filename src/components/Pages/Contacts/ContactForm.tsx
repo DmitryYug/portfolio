@@ -4,6 +4,7 @@ import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillPhone} from "react-i
 import {HiOutlineMail} from "react-icons/hi";
 import {SiCodewars} from "react-icons/si";
 import {useForm} from "react-hook-form";
+import MyButton from "../../MyButton";
 
 
 interface ContactsPropsType {
@@ -100,9 +101,9 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                               })}
                     />
                     <div className='d-flex-start'>
-                        <button>
-                            Send Message
-                        </button>
+                        <MyButton className='is-rounded is-green'
+                                  title='Send Message'
+                        />
                     </div>
                 </form>
             </div>
