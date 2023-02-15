@@ -30,12 +30,17 @@ body {
 .d-none {
   display: none;
 }
-.d-flex-center {
-  .flex-basic(center, center);
-}
-.d-flex-start {
-  .flex-basic(flex-start, center);
-}
-.d-flex-col-start {
-  .flex-column(center, flex-start);
+.d-flex {
+  &-center {
+    .flex-basic(center, center);
+  }
+  &-start {
+    .flex-basic(flex-start, center);
+  }
+  &-col-center {
+    .flex-column(center, center);
+  }
+  &-col-start {
+    .flex-column(center, flex-start);
+  }
 }

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import MyButton from "../../../MyButton";
 
 type ProjectCardPropsType = {
     title: string
@@ -22,8 +23,11 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
                 >
                 </div>
                 <div className={`text-container ${isActive}`}>
-                    <h3>{props.title}</h3>
-                    <span>{props.stack.map(tech => tech)}</span>
+                    <div className='d-flex-col-center'>
+                        <div className='title'>{props.title}</div>
+                        <ul className='stack'>{props.stack.map(tech => <li>{tech}</li>)}</ul>
+                    </div>
+                    <span>Click for more...</span>
                 </div>
             </div>
         </div>

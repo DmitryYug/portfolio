@@ -10,7 +10,6 @@
     background-size: cover;
     background-position-x: right;
     filter: none;
-    //box-shadow: 5px 5px 5px #212529;
     border-radius: 10px;
 
     &:before {
@@ -49,14 +48,34 @@
 
   .text-container {
     position: relative;
+    pointer-events: none;
+    height: 100%;
+    padding: 10px;
     .flex-column(space-around, center);
 
-    h3 {
+    .title {
+      .text-props(1.4rem);
       transition: all 0.5s;
       opacity: 0;
-      .text-props(1.4rem);
       font-weight: 600;
       color: @title-color;
+      text-align: center;
+    }
+    .stack {
+      .text-props(1.2rem);
+      transition: all 0.5s;
+      opacity: 0;
+      color: @title-color;
+      .flex-basic(space-around, center);
+      flex-wrap: wrap;
+      gap: 20px;
+      //ul {
+      //  position: relative;
+      //}
+      li {
+        position: relative;
+        .list-item-before-element(0.5, @title-color, -15px);
+      }
     }
 
     span {
@@ -66,13 +85,14 @@
       color: @title-color;
     }
 
-    &.active h3 {
+    &.active .title {
       opacity: 1;
-      display: block;
+    }
+    &.active .stack {
+      opacity: 1;
     }
     &.active span {
       opacity: 1;
-      display: block;
     }
   }
 

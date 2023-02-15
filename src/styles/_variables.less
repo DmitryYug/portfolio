@@ -51,16 +51,16 @@
   left: @left;
   //transform: translate(-50%, 10px);
 }
-.list-item-before-element (@scale) {
+.list-item-before-element (@scale, @color, @left) {
   &:before {
     position: absolute;
     content: '';
     top: 25%;
-    left: -20px;
+    left: @left;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     scale: @scale;
-    background-color: @card-description-color;
+    background-color: @color;
   }
 }
