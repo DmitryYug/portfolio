@@ -25,7 +25,12 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
                 <div className={`text-container ${isActive}`}>
                     <div className='d-flex-col-center'>
                         <div className='title'>{props.title}</div>
-                        <ul className='stack'>{props.stack.map(tech => <li>{tech}</li>)}</ul>
+                        <ul className='stack'>
+                            {props.stack.map(tech =>
+                                    <li>{tech}</li>
+                                )
+                            }
+                        </ul>
                     </div>
                     <span>Click for more...</span>
                 </div>

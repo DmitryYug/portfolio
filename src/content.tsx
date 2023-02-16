@@ -7,6 +7,9 @@ import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineHtml5} from "reac
 import {SiCodewars} from "react-icons/si";
 //images
 import ntDevLanding from '../src/assets/projectCards/ntDevLanding/cover.png'
+import ntDent from '../src/assets/projectCards/ntDent/cover.png'
+import rsg from '../src/assets/projectCards/rsg/cover.png'
+import todolist from '../src/assets/projectCards/todolist/cover.png'
 
 interface CvBlockDataType {
     skills: SkillCardType[]
@@ -95,5 +98,23 @@ export const projects: ProjectCardType[] = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
         stack: ['React', 'Less'],
         background: ntDevLanding
+    },
+    {
+        title: 'Dental clinic system',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
+        stack: ['Vue', 'Vue X'],
+        background: ntDent
+    },
+    {
+        title: 'Html module for a big system',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
+        stack: ['HTML', 'Less', 'JQuery'],
+        background: rsg
+    },
+    {
+        title: 'Todo list',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
+        stack: ['React', 'Redux'],
+        background: todolist
     }
 ]
