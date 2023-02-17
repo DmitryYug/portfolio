@@ -95,26 +95,26 @@ export const cv: CvBlockDataType = {
 export const projects: ProjectCardType[] = [
     {
         title: 'NT development landing',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
         stack: ['React', 'Less'],
-        background: ntDevLanding
+        background: ntDevLanding,
+        info: 'Web site with scroll navigation, simple routing, complex animation effects, progressive image loading'
     },
     {
         title: 'Dental clinic system',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
         stack: ['Vue', 'Vue X'],
-        background: ntDent
+        background: ntDent,
+        info: 'Complex system for dental clinic. Includes handling of visits, finances, cure plans '
     },
     {
         title: 'Html module for a big system',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
         stack: ['HTML', 'Less', 'JQuery'],
-        background: rsg
+        background: rsg,
+        info: 'lorem 10'
     },
     {
         title: 'Todo list',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid id, illo labore nostrum perferendis quasi?',
         stack: ['React', 'Redux'],
-        background: todolist
+        background: todolist,
+        info: 'lorem 10'
     }
 ]

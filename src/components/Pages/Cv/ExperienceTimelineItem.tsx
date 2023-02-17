@@ -15,7 +15,7 @@ export const ExperienceTimelineItem = (props: ExperienceTimelineItemPropsTypes) 
                 {props.position}
             </div>
             <ul className="duties">
-                {props.duties.map(d => (<li>{d}</li>))}
+                {props.duties.map((d,i) => (<li key={i}>{d}</li>))}
             </ul>
         </div>
     );

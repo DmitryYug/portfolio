@@ -11,6 +11,7 @@
     background-position-x: right;
     filter: none;
     border-radius: 10px;
+    cursor: pointer;
 
     &:before {
       transition: all 0.5s;
@@ -60,6 +61,7 @@
       color: @title-color;
       text-align: center;
     }
+
     .stack {
       .text-props(1.2rem);
       transition: all 0.5s;
@@ -85,12 +87,50 @@
     &.active .title {
       opacity: 1;
     }
+
     &.active .stack {
       opacity: 1;
     }
+
     &.active span {
       opacity: 1;
     }
   }
 
+  &-modal {
+    &-wrapper {
+      padding: 20px;
+      background-color: @main-background-light;
+      .text-props(1.5rem);
+      color: @title-color;
+
+      .text-container {
+        margin-top: 30px;
+        .item {
+          .flex-basic(flex-start, flex-start);
+          .text-props(1.3rem);
+          color: @title-color;
+          position: relative;
+          margin-bottom: 20px;
+          &:after {
+            .divider(100%, 1px, -5px, 0);
+          }
+          label {
+            flex: 0 0 30%;
+          }
+          ul {
+            .flex-basic(flex-start, center);
+            gap: 25px;
+            li {
+              position: relative;
+              .list-item-before-element(0.7, @title-color, -15px);
+            }
+          }
+          #stackList {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
 }

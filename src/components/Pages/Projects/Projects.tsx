@@ -12,9 +12,9 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
         <ProjectCard
             key={card.title + i}
             title={card.title}
-            description={card.description}
             background={card.background}
             stack={card.stack}
+            info={card.info}
         />
     ))
 
