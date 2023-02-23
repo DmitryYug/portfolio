@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {SkillCard} from "./SkillCard";
-import {Title} from "../../Title";
-import {cv} from "../../../content";
 import {EducationCard} from "./EducationCard";
 import {Collapse, Timeline} from 'antd';
 import {ExperienceTimelineItem} from "./ExperienceTimelineItem";
+import {Title} from "../../Title";
+import {cv} from "../../../content";
 
 
 interface CvPropsType {
@@ -48,7 +48,9 @@ export const Cv: React.FC<CvPropsType> = () => {
     ))
 
     const renderExperienceTimeline = cv.experience.map((exp, ind) => (
-        <Timeline.Item color='#1baa80'>
+        <Timeline.Item color='#1baa80'
+                       key={ind}
+        >
             <ExperienceTimelineItem period={exp.period}
                                     duties={exp.duties}
                                     orgTitle={exp.orgTitle}
