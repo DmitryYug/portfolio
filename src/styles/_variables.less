@@ -51,11 +51,11 @@
   left: @left;
   //transform: translate(-50%, 10px);
 }
-.list-item-before-element (@scale, @color, @left) {
+.list-item-before-element (@scale, @color, @left, @top) {
   &:before {
     position: absolute;
     content: '';
-    top: 25%;
+    top: @top;
     left: @left;
     width: 12px;
     height: 12px;

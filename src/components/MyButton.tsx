@@ -6,8 +6,6 @@ interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 function CustomButton({ className, onClick, children, title, ...rest }: CustomButtonProps) {
 
-
-
     return (
         <button className={`my-button ${className}`}
                 onClick={onClick}

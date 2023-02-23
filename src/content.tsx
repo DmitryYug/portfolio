@@ -6,10 +6,15 @@ import {DiJavascript1} from "react-icons/di";
 import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineHtml5} from "react-icons/ai";
 import {SiCodewars} from "react-icons/si";
 //images
-import ntDevLanding from '../src/assets/projectCards/ntDevLanding/cover.png'
-import ntDent from '../src/assets/projectCards/ntDent/cover.png'
-import rsg from '../src/assets/projectCards/rsg/cover.png'
-import todolist from '../src/assets/projectCards/todolist/cover.png'
+import ntDevLanding from './assets/projectCards/ntDevLanding/cover.png'
+import ntDent from './assets/projectCards/ntDent/cover.png'
+import rsg from './assets/projectCards/rsg/cover.png'
+import todolist from './assets/projectCards/todolist/cover.png'
+//videos
+import ntDevLandingDemo from './assets/projectCards/ntDevLanding/demo.mp4'
+import ntDentDemo from './assets/projectCards/ntDent/demo.mp4'
+import rsgDemo from './assets/projectCards/rsg/demo.mp4'
+import tdlDemo from './assets/projectCards/todolist/demo.mp4'
 
 interface CvBlockDataType {
     skills: SkillCardType[]
@@ -94,27 +99,35 @@ export const cv: CvBlockDataType = {
 
 export const projects: ProjectCardType[] = [
     {
-        title: 'NT development landing',
+        title: 'Web site',
         stack: ['React', 'Less'],
         background: ntDevLanding,
-        info: 'Web site with scroll navigation, simple routing, complex animation effects, progressive image loading'
+        info: 'Web site for a company Im working in.',
+        features: ['scroll navigation', 'react-router', 'native css and animate.css animation', 'progressive image loading'],
+        demo: ntDevLandingDemo
     },
     {
         title: 'Dental clinic system',
         stack: ['Vue', 'Vue X'],
         background: ntDent,
-        info: 'Complex system for dental clinic. Includes handling of visits, finances, cure plans '
+        info: 'Big project with legacy codebase on Vue2. Includes handling of visits, finances, cure plans, store',
+        features: ['Vue router', 'Vuetify', 'Custom plugin with helper reusable functions', 'Handling visual and system settings of app in localStorage with VueX'],
+        demo: ntDentDemo
     },
     {
         title: 'Html module for a big system',
         stack: ['HTML', 'Less', 'JQuery'],
         background: rsg,
-        info: 'lorem 10'
+        info: 'Simple HTML project with jQuery UI elements logic',
+        features: [],
+        demo: rsgDemo
     },
     {
         title: 'Todo list',
         stack: ['React', 'Redux'],
         background: todolist,
-        info: 'lorem 10'
+        info: 'Every developer should have a TDL in portfolio.',
+        features: [],
+        demo: tdlDemo
     }
 ]

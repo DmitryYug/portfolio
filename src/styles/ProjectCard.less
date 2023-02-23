@@ -73,7 +73,7 @@
 
       li {
         position: relative;
-        .list-item-before-element(0.5, @title-color, -15px);
+        .list-item-before-element(0.5, @title-color, -15px, 25%);
       }
     }
 
@@ -104,30 +104,52 @@
       .text-props(1.5rem);
       color: @title-color;
 
+      .slider-container {
+        pointer-events: all;
+
+        video {
+          width: 100%;
+          height: auto;
+        }
+      }
+
       .text-container {
         margin-top: 30px;
+
         .item {
           .flex-basic(flex-start, flex-start);
           .text-props(1.3rem);
           color: @title-color;
           position: relative;
           margin-bottom: 20px;
+
           &:after {
             .divider(100%, 1px, -5px, 0);
           }
+
           label {
             flex: 0 0 30%;
           }
-          ul {
+
+          #stackList {
             .flex-basic(flex-start, center);
-            gap: 25px;
+            gap: 30px;
+            margin-left: 20px;
+
             li {
               position: relative;
-              .list-item-before-element(0.7, @title-color, -15px);
+              .list-item-before-element(0.6, @title-color, -20px, 25%);
             }
           }
-          #stackList {
+          #features {
+            .flex-column(center, flex-start);
+            gap: 10px;
             margin-left: 20px;
+
+            li {
+              position: relative;
+              .list-item-before-element(0.6, @title-color, -20px, 25%);
+            }
           }
         }
       }

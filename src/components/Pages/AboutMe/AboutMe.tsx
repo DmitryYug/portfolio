@@ -13,7 +13,6 @@ export const AboutMe: React.FC<AboutMePropsType> = () => {
         <div id='aboutMe' className='light-block-wrapper full-screen-height with-background-image'>
             <div className='content-block-container'>
                 <div className='text-block'>
-
                     <TypeWriterEffect
                         textStyle={{
                             fontWeight: 500,
@@ -21,22 +20,16 @@ export const AboutMe: React.FC<AboutMePropsType> = () => {
                             color: 'rgba(255, 255, 255, 1)',
                             fontSize: '1.8em',
                         }}
-                        startDelay={2000}
-                        cursorColor="#3F3D56"
+                        startDelay={1000}
+                        cursorColor="rgba(255, 255, 255, 1)"
                         multiText={[
-                            'Hey there, This is a type writer animation package',
-                            'it consist of two types...',
-                            'Single text display and multi text display',
-                            'Fonts can be customized.',
-                            'The type speed can be customized as well',
+                            'Hello dear guest.' +
+                            'Glad to see you here',
+                            'Im frontend engineer'
                         ]}
-                        multiTextDelay={1000}
-                        typeSpeed={30}
+                        multiTextDelay={4000}
+                        typeSpeed={100}
                     />
-
-
-                    <span>Hi there</span>
-                    <h1>I`m Dmitriy Yuganyuk</h1>
                 </div>
             </div>
         </div>

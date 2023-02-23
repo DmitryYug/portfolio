@@ -7,6 +7,8 @@ type ProjectCardPropsType = {
     stack: string[]
     background: string
     info: string
+    features: string[]
+    demo: string
 }
 
 
@@ -56,9 +58,10 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
                     <div className='d-flex-col-center'>
                         <div className='title'>{props.title}</div>
                         <ul className='stack'>
-                            {props.stack.map((tech, i) =>
-                                <li key={i}>{tech}</li>
-                            )
+                            {
+                                props.stack.map((tech, i) =>
+                                    <li key={i}>{tech}</li>
+                                )
                             }
                         </ul>
                     </div>

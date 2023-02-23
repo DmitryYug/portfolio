@@ -11,6 +11,8 @@ export interface ProjectCardType {
     stack: string[]
     background: string
     info: string
+    features: string[]
+    demo: string
 }
 
 export interface EducationCardType {

@@ -15,6 +15,8 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
             background={card.background}
             stack={card.stack}
             info={card.info}
+            features={card.features}
+            demo={card.demo}
         />
     ))
 

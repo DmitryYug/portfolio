@@ -6,7 +6,6 @@ import {SiCodewars} from "react-icons/si";
 import {useForm} from "react-hook-form";
 import MyButton from "../../MyButton";
 
-
 interface ContactsPropsType {
 }
 
@@ -31,8 +30,10 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
     const onSubmit = handleSubmit(data => {
         console.log(data)
     });
-    const errorMessage = (errorInputName: string) => <span
-        className='error-message'>Fill the {errorInputName}, please</span>;
+    const errorMessage = (errorInputName: string) =>
+        <span className='error-message'>
+            Fill the {errorInputName}, please
+        </span>;
 
 
     return (
@@ -50,7 +51,9 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                         <h3>contact me</h3>
                         <div className="d-flex-start" style={{marginBottom: '10px'}}>
                             <AiFillPhone color='#20c997' size='20'/>
-                            <span style={{marginLeft: '10px'}}>+7-(916)-979-59-03</span>
+                            <span style={{marginLeft: '10px'}}>
+                                +7-(916)-979-59-03
+                            </span>
                         </div>
                         <div className="d-flex-start" style={{marginBottom: '10px'}}>
                             <HiOutlineMail color='#20c997' size='20'/>
@@ -60,7 +63,10 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                     <div className="social">
                         <h3>follow me</h3>
                         <div className='icons-block'>
-                            {footerIcons.map(icon => icon.icon)}
+                            {footerIcons.map((icon, i) =>
+                                <React.Fragment key={i}>
+                                    {icon.icon}
+                                </React.Fragment>)}
                         </div>
                     </div>
                 </div>
