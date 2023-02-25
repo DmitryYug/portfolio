@@ -5,9 +5,12 @@
 
   &-wrapper {
     margin-top: 70px;
-    padding: 10px;
-    .flex-basic(space-around, center);
-    flex-wrap: wrap;
+    padding: 30px;
+    //.flex-basic(space-around, center);
+    //flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
   }
 }
