@@ -115,6 +115,14 @@ export const projects: ProjectCardType[] = [
         demo: ntDentDemo
     },
     {
+        title: 'Todo list',
+        stack: ['React', 'Redux'],
+        background: todolist,
+        info: 'Every developer should have a TDL in portfolio.',
+        features: [],
+        demo: tdlDemo
+    },
+    {
         title: 'Html module for a big system',
         stack: ['HTML', 'Less', 'JQuery'],
         background: rsg,
@@ -122,12 +130,4 @@ export const projects: ProjectCardType[] = [
         features: [],
         demo: rsgDemo
     },
-    {
-        title: 'Todo list',
-        stack: ['React', 'Redux'],
-        background: todolist,
-        info: 'Every developer should have a TDL in portfolio.',
-        features: [],
-        demo: tdlDemo
-    }
 ]
