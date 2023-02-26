@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.less';
 import './styles/initial-styles/nullstyle.css'
 import './styles/initial-styles/normalize.css'
