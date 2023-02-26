@@ -21,7 +21,6 @@ function App() {
                     <AboutMe/>
                     <Cv/>
                     <Projects/>
-                    {/*<OnlineJob/>*/}
                     <ContactForm/>
                 </main>
             </div>
