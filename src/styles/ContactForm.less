@@ -4,6 +4,7 @@
 .contact-form {
   .flex-basic(space-between, flex-start);
   margin-top: 70px;
+  padding-bottom: 50px;
   @media (max-width: @mobile-horizontal) {
     .flex-column(center, center);
   }
@@ -61,9 +62,9 @@
       margin-bottom: 20px;
       padding: 10px;
       border-radius: 0.5rem;
-      background-color: @main-background-light;
+      background-color: @main-background-dark;
       color: @title-color;
-      border: 1px solid @main-background-dark;
+      border: 1px solid @main-background-light;
 
       &:focus {
         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -80,27 +81,6 @@
       &[data-autocompleted] {
         background-color: transparent !important;
       }
-    }
-
-    button {
-      //background-color: @green-color;
-      //border-color: @green-color;
-      //padding: 0.8rem 2.6rem;
-      //font-weight: 500;
-      //border-width: 2px;
-      //border-radius: 100px;
-      //color: @title-color;
-      //transition: all 0.5s ease;
-      //box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
-      //
-      //&:hover {
-      //  background-color: @green-hovered-color;
-      //  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
-      //}
-    }
-
-    .item {
-
     }
 
     .error {

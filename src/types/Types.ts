@@ -26,4 +26,9 @@ export interface ExperienceCardType {
     position: string
     duties: string[]
 }
+export interface BlogCardTypes {
+    background: string
+    title: string
+    description: string
+}
 
