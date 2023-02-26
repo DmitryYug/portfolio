@@ -2,12 +2,13 @@ import React, {useEffect} from 'react';
 import './App.less';
 import './styles/initial-styles/nullstyle.css'
 import './styles/initial-styles/normalize.css'
-import {Sidebar} from "./components/Navigation/Sidebar";
-import {AboutMe} from "./components/Pages/AboutMe/AboutMe";
-import {Cv} from "./components/Pages/Cv/Cv";
-import {Projects} from "./components/Pages/Projects/Projects";
-import {ContactForm} from "./components/Pages/Contacts/ContactForm";
-import {Header} from "./components/Navigation/Header";
+import {Sidebar} from "./components/navigation/Sidebar";
+import {AboutMe} from "./components/pages/about-me/AboutMe";
+import {Cv} from "./components/pages/cv/Cv";
+import {Projects} from "./components/pages/projects/Projects";
+import {ContactForm} from "./components/pages/contacts/ContactForm";
+import {Header} from "./components/navigation/Header";
+import {Blog} from "./components/pages/blog/Blog";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
                     <AboutMe/>
                     <Cv/>
                     <Projects/>
+                    <Blog/>
                     <ContactForm/>
                 </main>
             </div>

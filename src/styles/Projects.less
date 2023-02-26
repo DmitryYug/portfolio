@@ -1,14 +1,181 @@
 @import "_variables";
 
-
-.projects-cards{
-
-  &-wrapper {
+.projects {
+  &-cards-wrapper {
+    height: 100%;
     margin-top: 70px;
-    padding: 30px;
+    padding-bottom: 40px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: @tablet) {
+      .flex-column(center, center);
+    }
     gap: 50px;
+  }
+  &-card {
+    width: 100%;
+    .flex-column(center, center);
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &:nth-child(4) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    .background {
+      transition: all 0.5s;
+      position: absolute;
+      inset: 0 0;
+      background-size: cover;
+      background-position-x: right;
+      filter: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:before {
+        transition: all 0.5s;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      &:hover {
+        filter: blur(2px);
+        box-shadow: none;
+        scale: 1.05;
+
+        &:before {
+          transition: all 1s;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+
+    .container {
+      position: relative;
+      height: 350px;
+      //width: 250px;
+      width: 100%;
+      border-radius: 10px;
+      transition: all 1s;
+      overflow: hidden;
+      box-shadow: 5px 5px 5px #212529;
+    }
+
+    .text-container {
+      position: relative;
+      pointer-events: none;
+      height: 100%;
+      padding: 10px;
+      .flex-column(space-around, center);
+
+      .title {
+        .text-props(1.4rem);
+        transition: all 0.5s;
+        opacity: 0;
+        font-weight: 600;
+        color: @title-color;
+        text-align: center;
+      }
+
+      .stack {
+        .text-props(1.2rem);
+        transition: all 0.5s;
+        opacity: 0;
+        color: @title-color;
+        .flex-basic(space-around, center);
+        flex-wrap: wrap;
+        gap: 20px;
+
+        li {
+          position: relative;
+          .list-item-before-element(0.5, @title-color, -15px, 25%);
+        }
+      }
+
+      span {
+        transition: all 0.5s;
+        opacity: 0;
+        .text-props(1.2rem);
+        color: @title-color;
+      }
+
+      &.active .title {
+        opacity: 1;
+      }
+
+      &.active .stack {
+        opacity: 1;
+      }
+
+      &.active span {
+        opacity: 1;
+      }
+    }
+
+    &-modal {
+      &-wrapper {
+        padding: 20px;
+        background-color: @main-background-light;
+        .text-props(1.5rem);
+        color: @title-color;
+
+        .slider-container {
+          pointer-events: all;
+
+          video {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .text-container {
+          margin-top: 30px;
+
+          .item {
+            .flex-basic(flex-start, flex-start);
+            .text-props(1.3rem);
+            color: @title-color;
+            position: relative;
+            margin-bottom: 20px;
+
+            &:after {
+              .divider(100%, 1px, -5px, 0);
+            }
+
+            label {
+              flex: 0 0 30%;
+            }
+
+            #stackList {
+              .flex-basic(flex-start, center);
+              gap: 30px;
+              margin-left: 20px;
+
+              li {
+                position: relative;
+                .list-item-before-element(0.6, @title-color, -20px, 25%);
+              }
+            }
+            #features {
+              .flex-column(center, flex-start);
+              gap: 10px;
+              margin-left: 20px;
+
+              li {
+                position: relative;
+                .list-item-before-element(0.6, @title-color, -20px, 25%);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

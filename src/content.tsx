@@ -1,4 +1,4 @@
-import {EducationCardType, ExperienceCardType, ProjectCardType, SkillCardType} from "./types/Types";
+import {BlogCardTypes, EducationCardType, ExperienceCardType, ProjectCardType, SkillCardType} from "./types/Types";
 import React from "react";
 //icons
 import {RiReactjsFill, RiVuejsLine} from 'react-icons/ri'
@@ -6,15 +6,17 @@ import {DiJavascript1} from "react-icons/di";
 import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineHtml5} from "react-icons/ai";
 import {SiCodewars} from "react-icons/si";
 //images
-import ntDevLanding from './assets/projectCards/ntDevLanding/cover.png'
-import ntDent from './assets/projectCards/ntDent/cover.png'
-import rsg from './assets/projectCards/rsg/cover.png'
-import todolist from './assets/projectCards/todolist/cover.png'
+import ntDevLanding from './assets/project-cards/nt-dev-landing/cover.png'
+import ntDent from './assets/project-cards/nt-dent/cover.png'
+import rsg from './assets/project-cards/rsg/cover.png'
+import todolist from './assets/project-cards/todolist/cover.png'
+
+import blogTest from './assets/blog-cards/blog-test.jpeg'
 //videos
-import ntDevLandingDemo from './assets/projectCards/ntDevLanding/demo.mp4'
-import ntDentDemo from './assets/projectCards/ntDent/demo.mp4'
-import rsgDemo from './assets/projectCards/rsg/demo.mp4'
-import tdlDemo from './assets/projectCards/todolist/demo.mp4'
+import ntDevLandingDemo from './assets/project-cards/nt-dev-landing/demo.mp4'
+import ntDentDemo from './assets/project-cards/nt-dent/demo.mp4'
+import rsgDemo from './assets/project-cards/rsg/demo.mp4'
+import tdlDemo from './assets/project-cards/todolist/demo.mp4'
 
 interface CvBlockDataType {
     skills: SkillCardType[]
@@ -129,5 +131,22 @@ export const projects: ProjectCardType[] = [
         info: 'Simple HTML project with jQuery UI elements logic',
         features: [],
         demo: rsgDemo
+    },
+]
+export const blog: BlogCardTypes[] = [
+    {
+        title: 'Here will be smth smart',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, necessitatibus officiis praesentium. ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni',
+        background: blogTest
+    },
+    {
+        title: 'Here will be smth smart',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, necessitatibus officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, necessitatibus officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, id',
+        background: blogTest
+    },
+    {
+        title: 'Here will be smth smart',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, ',
+        background: blogTest
     },
 ]

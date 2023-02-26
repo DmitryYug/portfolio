@@ -1,6 +1,6 @@
 import React from 'react';
-import {SiderNav} from "./Nav/SiderNav";
-import {PhotoBlock} from "./PhotoBlock/PhotoBlock";
+import {SiderNav} from "./nav/SiderNav";
+import {PhotoBlock} from "./photo-block/PhotoBlock";
 import {SocialIconsBlock} from "./SocialIconsBlock";
 
 interface SidebarPropsType {

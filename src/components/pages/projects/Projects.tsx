@@ -1,7 +1,7 @@
 import React from 'react';
 import {Title} from "../../Title";
 import {projects} from "../../../content";
-import {ProjectCard} from "./ProjectCard/ProjectCard";
+import {ProjectCard} from "./project-card/ProjectCard";
 
 interface ProjectsPropsType {
 }
@@ -23,11 +23,13 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
     return (
         <div id='projects' className='light-block-wrapper full-screen-height'>
             <div className='light-block-wrapper full-screen-height'>
-                <Title title='My projects'
-                       subtitle='Pets'
-                />
-                <div className='projects-cards-wrapper'>
-                    {renderProjectCards}
+                <div className="content">
+                    <Title title='My projects'
+                           subtitle='Pets'
+                    />
+                    <div className='projects-cards-wrapper'>
+                        {renderProjectCards}
+                    </div>
                 </div>
             </div>
         </div>

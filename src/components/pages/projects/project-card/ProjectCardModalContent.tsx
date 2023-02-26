@@ -14,7 +14,7 @@ interface ProjectCardModalPropsType {
 export const ProjectCardModalContent = (props: ProjectCardModalPropsType) => {
 
     return (
-        <div className='project-card-modal-wrapper'>
+        <div className='projects-card-modal-wrapper'>
             <h3>{props.content.title}</h3>
             <div className="slider-container">
 

@@ -35,7 +35,7 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
 
     return (
 
-        <div className='project-card'>
+        <div className='projects-card'>
             <div className='container'>
                 <div style={{backgroundImage: `url(${props.background})`}}
                      className='background'

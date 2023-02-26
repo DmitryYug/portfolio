@@ -1,7 +1,7 @@
 import React from 'react';
-import {PhotoBlock} from "./PhotoBlock/PhotoBlock";
+import {PhotoBlock} from "./photo-block/PhotoBlock";
 import {SocialIconsBlock} from "./SocialIconsBlock";
-import {HeaderNav} from "./Nav/HeaderNav";
+import {HeaderNav} from "./nav/HeaderNav";
 
 
 interface HeaderPropsType {
