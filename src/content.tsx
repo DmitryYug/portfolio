@@ -33,7 +33,8 @@ export const links: LinksTypes = {
     navigation: [
         {title: 'CV', value: 'cv'},
         {title: 'Projects', value: 'projects'},
-        {title: 'Contacts', value: 'contacts'}
+        {title: 'Blog', value: 'blog'},
+        {title: 'Contacts', value: 'contacts'},
     ],
     social: [
         {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>},
