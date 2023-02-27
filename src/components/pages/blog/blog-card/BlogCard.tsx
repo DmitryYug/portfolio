@@ -8,14 +8,17 @@ export const BlogCard = (props: BlogCardTypes) => {
     const [activeClass, setActiveClass] = useState<string>('');
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
+    // const handleOk = () => {
+    //     console.log('ok')
+    //     setIsModalOpen(false);
+    // };
 
-    const handleCancel = () => {
-        setIsModalOpen(false);
-        console.log(isModalOpen)
-    };
+    // const handleCancel = () => {
+    //     setIsModalOpen(false);
+    // };
+    const close = () => {
+        console.log('closed')
+    }
 
     return (
         <div className='blog-card mouse-prevent-wrapper'>
@@ -40,8 +43,6 @@ export const BlogCard = (props: BlogCardTypes) => {
             </div>
             <Modal title={null}
                    open={isModalOpen}
-                   onOk={handleOk}
-                   onCancel={handleCancel}
                    footer={null}
                    wrapClassName={'blog-modal'}
                    width={'100%'}
@@ -50,6 +51,7 @@ export const BlogCard = (props: BlogCardTypes) => {
                        <BlogArticleModalContent content={props.modalContent}
                                                 articleImg={props.background}
                                                 title={props.title}
+                                                closeModalCb={() => setIsModalOpen(false)}
                        />}
             />
 

@@ -92,8 +92,12 @@
       padding: 0 80px;
       margin-top: 30px;
       &-image {
+        pointer-events: all;
         width: 100%;
-        .flex-basic(flex-start, center);
+        .flex-basic(flex-start, flex-start);
+        button {
+          background-color: transparent;
+        }
       }
     }
     h4 {
