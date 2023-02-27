@@ -23,7 +23,7 @@ export const AboutMe: React.FC<AboutMePropsType> = () => {
                         'Glad to see you here',
                         'Im frontend engineer'
                     ]}
-                    multiTextDelay={4000}
+                    multiTextDelay={3000}
                     typeSpeed={100}
                 />
             </div>

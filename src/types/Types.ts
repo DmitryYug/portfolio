@@ -30,5 +30,10 @@ export interface BlogCardTypes {
     background: string
     title: string
     description: string
+    modalContent: {
+        tags: string[]
+        article: string
+        date: string
+    }
 }
 
