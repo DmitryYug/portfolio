@@ -19,6 +19,10 @@
     overflow: hidden;
     border-radius: 10px;
 
+    &.mouse-prevent-wrapper {
+      pointer-events: all;
+    }
+
     .overflow-wrapper {
       overflow: hidden;
     }
@@ -76,6 +80,53 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
       }
+    }
+  }
+
+  &-modal {
+    background-color: @main-background-dark;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    .article-header {
+      padding: 0 80px;
+      margin-top: 30px;
+      &-image {
+        width: 100%;
+        .flex-basic(flex-start, center);
+      }
+    }
+    h4 {
+      .text-props(1.4rem);
+      font-weight: 600;
+      color: @title-color;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .date {
+      .flex-basic(flex-start, center);
+      color: @title-color;
+      .text-props(1rem);
+      margin-bottom: 15px;
+      span {
+        margin-left: 5px;
+      }
+    }
+    .tags {
+      .flex-basic(flex-start, center);
+      color: @title-color;
+      flex-wrap: wrap;
+      .text-props(1rem);
+      gap: 15px;
+      span {
+        margin-left: 5px;
+      }
+    }
+    p {
+      .text-props(1.3rem);
+      line-height: 1.7;
+      color: @title-color;
+      padding: 40px 80px;
     }
   }
 }

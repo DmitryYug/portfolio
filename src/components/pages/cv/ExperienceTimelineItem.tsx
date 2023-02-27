@@ -1,8 +1,7 @@
 import * as React from 'react';
 import {ExperienceCardType} from "../../../types/Types";
 
-type ExperienceTimelineItemPropsTypes = ExperienceCardType;
-export const ExperienceTimelineItem = (props: ExperienceTimelineItemPropsTypes) => {
+export const ExperienceTimelineItem = (props: ExperienceCardType) => {
     return (
         <div className='experience item-wrapper'>
             <div className="organisation-title">

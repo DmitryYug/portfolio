@@ -10,7 +10,11 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  //.modal-visible {
+  //  overflow: hidden;
+  //}
 }
+
 
 .layout {
   margin-left: @sidebar-width;
@@ -18,6 +22,8 @@ body {
     margin-left: 0;
   }
 }
+
+
 
 .content {
   padding: @content-block-padding;
@@ -29,16 +35,20 @@ body {
 .d-none {
   display: none;
 }
+
 .d-flex {
   &-center {
     .flex-basic(center, center);
   }
+
   &-start {
     .flex-basic(flex-start, center);
   }
+
   &-col-center {
     .flex-column(center, center);
   }
+
   &-col-start {
     .flex-column(center, flex-start);
   }

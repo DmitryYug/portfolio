@@ -138,16 +138,31 @@ export const blog: BlogCardTypes[] = [
     {
         title: 'Here will be smth smart',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, necessitatibus officiis praesentium. ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni',
-        background: blogTest
+        background: blogTest,
+        modalContent: {
+            tags: ['tag 1', 'tag 2'],
+            article: 'Lorem',
+            date: '20.12.2022'
+        }
     },
     {
         title: 'Here will be smth smart',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, necessitatibus officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, necessitatibus officiis praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, id',
-        background: blogTest
+        background: blogTest,
+        modalContent: {
+            tags: ['tag 1', 'tag 2'],
+            article: 'Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto at dignissimos distinctio earum eius excepturi harum, iusto modi molestiae neque, officiis perferendis praesentium quae quidem ratione reiciendis repudiandae sapiente sunt temporibus. Ad assumenda beatae consequatur cum dolore dolores dolorum earum eos eveniet exercitationem, iste libero minus natus, perferendis perspiciatis porro saepe temporibus unde veritatis voluptatum? Accusamus earum facere fuga odit officia pariatur tenetur unde voluptate? Ab accusantium, aliquam animi debitis deleniti dolorem doloremque ducimus eaque esse eum ex fuga ipsa laborum laudantium minus nam obcaecati officiis porro quaerat quam quas quia quibusdam quis quisquam quo reiciendis reprehenderit sequi sint sit vero! Deleniti fugit obcaecati officiis pariatur quod sapiente sequi veniam. Architecto atque consequuntur expedita, natus omnis perferendis temporibus tenetur.',
+            date: '20.12.2022'
+        }
     },
     {
         title: 'Here will be smth smart',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error eum facere fugit magni, ',
-        background: blogTest
+        background: blogTest,
+        modalContent: {
+            tags: ['tag 1', 'tag 2'],
+            article: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci, alias aliquid aperiam asperiores assumenda at atque aut beatae culpa delectus dignissimos distinctio ducimus eius eveniet excepturi ipsam magnam minima minus molestias natus, nobis nostrum odit officiis placeat possimus quaerat quis quisquam quos repellendus reprehenderit sapiente soluta totam vero vitae voluptatum! Deleniti distinctio eligendi enim esse, eum iure minima modi molestiae, nostrum porro quam quasi rem repellendus sint velit. Ad aliquam architecto autem delectus dicta doloremque dolorum eaque eos error exercitationem fugiat incidunt ipsum laboriosam nisi numquam odit officia, porro qui quia, repudiandae rerum sapiente sed tempora veritatis voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci, alias aliquid aperiam asperiores assumenda at atque aut beatae culpa delectus dignissimos distinctio ducimus eius eveniet excepturi ipsam magnam minima minus molestias natus, nobis nostrum odit officiis placeat possimus quaerat quis quisquam quos repellendus reprehenderit sapiente soluta totam vero vitae voluptatum! Deleniti distinctio eligendi enim esse, eum iure minima modi molestiae, nostrum porro quam quasi rem repellendus sint velit. Ad aliquam architecto autem delectus dicta doloremque dolorum eaque eos error exercitationem fugiat incidunt ipsum laboriosam nisi numquam odit officia, porro qui quia, repudiandae rerum sapiente sed tempora veritatis voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci, alias aliquid aperiam asperiores assumenda at atque aut beatae culpa delectus dignissimos distinctio ducimus eius eveniet excepturi ipsam magnam minima minus molestias natus, nobis nostrum odit officiis placeat possimus quaerat quis quisquam quos repellendus reprehenderit sapiente soluta totam vero vitae voluptatum! Deleniti distinctio eligendi enim esse, eum iure minima modi molestiae, nostrum porro quam quasi rem repellendus sint velit. Ad aliquam architecto autem delectus dicta doloremque dolorum eaque eos error exercitationem fugiat incidunt ipsum laboriosam nisi numquam odit officia, porro qui quia, repudiandae rerum sapiente sed tempora veritatis voluptatum.',
+            date: '20.12.2022'
+        }
     },
 ]

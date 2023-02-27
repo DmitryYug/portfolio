@@ -17,10 +17,6 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
     let [isActive, setIsActive] = useState<string>('')
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const modalBodyStyles = {
-        background: '#212529',
-        padding: '0'
-    }
     const showModal = () => {
         setIsModalOpen(true);
     };
@@ -44,16 +40,6 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
                      onClick={showModal}
                 >
                 </div>
-
-                <Modal title={null}
-                       open={isModalOpen}
-                       onOk={handleOk}
-                       onCancel={handleCancel}
-                       footer={null}
-                       bodyStyle={modalBodyStyles}
-                       modalRender={() => <ProjectCardModalContent content={props}/>}
-                />
-
                 <div className={`text-container ${isActive}`}>
                     <div className='d-flex-col-center'>
                         <div className='title'>{props.title}</div>
@@ -68,6 +54,15 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
                     <span>Click for more...</span>
                 </div>
             </div>
+
+            <Modal title={null}
+                   open={isModalOpen}
+                   onOk={handleOk}
+                   onCancel={handleCancel}
+                   footer={null}
+                   modalRender={() => <ProjectCardModalContent content={props}/>}
+            />
+
         </div>
 
     );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 interface ProjectCardModalPropsType {
     content: {
@@ -17,11 +17,9 @@ export const ProjectCardModalContent = (props: ProjectCardModalPropsType) => {
         <div className='projects-card-modal-wrapper'>
             <h3>{props.content.title}</h3>
             <div className="slider-container">
-
                 <video autoPlay loop>
                     <source src={props.content.demo} />
                 </video>
-
             </div>
             <div className='text-container'>
                 <div className="item">
