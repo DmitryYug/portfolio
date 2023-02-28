@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "cv",
   "homepage": "https://DmitryYug.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +23,7 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
-    "react-typewriter-effect": "^1.1.0",
+    "react-type-animation": "^2.1.2",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },

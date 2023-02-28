@@ -28,7 +28,7 @@ export const BlogArticleModalContent = (props: BlogArticleModalPropsType) => {
                 }}
                 ></div>
                 <button onClick={props.closeModalCb}>
-                    <MdClose color='#20c997' size={50} onClick={props.closeModalCb}/>
+                    <MdClose color='#20c997' size={40}/>
                 </button>
             </div>
             <div className="article-header">

@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-scroll'
 
 //@ts-ignore
-import TypeWriterEffect from 'react-typewriter-effect';
 import {HiChevronDown} from "react-icons/hi";
+import {TypeAnimation} from "react-type-animation";
 
 interface AboutMePropsType {
 }
@@ -15,16 +15,26 @@ export const AboutMe: React.FC<AboutMePropsType> = () => {
             <div className="main-background image-wrapper"></div>
             <div className="main-background color-wrapper"></div>
             <div className="typewriter">
-                <TypeWriterEffect
-                    startDelay={1000}
-                    cursorColor="rgba(255, 255, 255, 1)"
-                    multiText={[
-                        'Hello dear guest.' + ' ' +
-                        'Glad to see you here',
-                        'Im frontend engineer'
+                <TypeAnimation
+                    sequence={[
+                        'Hello dear guest.',
+                        500,
+                        'Hello dear guest. ' +
+                        'My name is Dmitriy.',
+                        1000,
+                        'Im a frontend engineer.',
+                        1000,
+                        'We can discuss your project or job opportunity',
+                        500,
+                        'We can discuss your project or job opportunity via contact form.',
+                        1000,
                     ]}
-                    multiTextDelay={3000}
-                    typeSpeed={100}
+                    deletionSpeed={60}
+                    speed={10}
+                    wrapper="div"
+                    cursor={true}
+                    repeat={Infinity}
+                    style={{fontSize: '2em'}}
                 />
             </div>
             <Link className='arrow-down link-container'

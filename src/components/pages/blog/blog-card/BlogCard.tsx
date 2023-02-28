@@ -8,18 +8,6 @@ export const BlogCard = (props: BlogCardTypes) => {
     const [activeClass, setActiveClass] = useState<string>('');
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-    // const handleOk = () => {
-    //     console.log('ok')
-    //     setIsModalOpen(false);
-    // };
-
-    // const handleCancel = () => {
-    //     setIsModalOpen(false);
-    // };
-    const close = () => {
-        console.log('closed')
-    }
-
     return (
         <div className='blog-card mouse-prevent-wrapper'>
             <div className="blog-card"

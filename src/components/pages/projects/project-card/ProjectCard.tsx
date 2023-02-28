@@ -1,33 +1,22 @@
 import React, {useState} from 'react';
 import {Modal} from "antd";
 import {ProjectCardModalContent} from "./ProjectCardModalContent";
+import {ProjectCardType} from "../../../../types/Types";
 
-type ProjectCardPropsType = {
-    title: string
-    stack: string[]
-    background: string
-    info: string
-    features: string[]
-    demo: string
-}
+// type ProjectCardPropsType = {
+//     title: string
+//     stack: string[]
+//     background: string
+//     info: string
+//     features: string[]
+//     demo: string
+// }
 
 
-export const ProjectCard = (props: ProjectCardPropsType) => {
+export const ProjectCard = (props: ProjectCardType) => {
 
     let [isActive, setIsActive] = useState<string>('')
     const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
-
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
 
     return (
 
@@ -37,7 +26,7 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
                      className='background'
                      onMouseEnter={() => setIsActive('active')}
                      onMouseLeave={() => setIsActive('')}
-                     onClick={showModal}
+                     onClick={() => setIsModalOpen(true)}
                 >
                 </div>
                 <div className={`text-container ${isActive}`}>
@@ -57,10 +46,13 @@ export const ProjectCard = (props: ProjectCardPropsType) => {
 
             <Modal title={null}
                    open={isModalOpen}
-                   onOk={handleOk}
-                   onCancel={handleCancel}
                    footer={null}
-                   modalRender={() => <ProjectCardModalContent content={props}/>}
+                   width={'80%'}
+                   style={{ top: '20px'}}
+                   modalRender={() =>
+                       <ProjectCardModalContent content={props}
+                                                closeModalCb={() => setIsModalOpen(false)}
+                       />}
             />
 
         </div>
