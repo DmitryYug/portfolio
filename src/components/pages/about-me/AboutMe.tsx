@@ -17,17 +17,18 @@ export const AboutMe: React.FC<AboutMePropsType> = () => {
             <div className="typewriter">
                 <TypeAnimation
                     sequence={[
+                        1000,
                         'Hello dear guest.',
-                        500,
+                        1000,
                         'Hello dear guest. ' +
                         'My name is Dmitriy.',
-                        1000,
+                        2000,
                         'Im a frontend engineer.',
+                        2000,
+                        'We can discuss your project or job offer',
                         1000,
-                        'We can discuss your project or job opportunity',
-                        500,
-                        'We can discuss your project or job opportunity via contact form.',
-                        1000,
+                        'We can discuss your project or job offer via contact form.',
+                        2000,
                     ]}
                     deletionSpeed={60}
                     speed={10}

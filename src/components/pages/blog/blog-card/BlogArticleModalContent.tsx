@@ -19,14 +19,8 @@ export const BlogArticleModalContent = (props: BlogArticleModalPropsType) => {
     return (
         <>
             <div className="article-header-image">
-                <div style={{
-                    backgroundImage: `url(${props.articleImg})`,
-                    backgroundSize: 'cover',
-                    height: '200px',
-                    width: '100%',
-                    margin: '0 20px 0 80px'
-                }}
-                ></div>
+                <div style={{backgroundImage: `url(${props.articleImg})`,}}>
+                </div>
                 <button onClick={props.closeModalCb}>
                     <MdClose color='#20c997' size={40}/>
                 </button>

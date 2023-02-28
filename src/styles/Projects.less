@@ -144,73 +144,147 @@
           width: 100%;
           height: auto;
         }
-        .date {
-          .flex-basic(flex-start, center);
-          color: @title-color;
-          margin-top: 20px;
-          .text-props(1rem);
-          span {
-            margin-left: 5px;
-          }
-        }
-        .url {
-          .flex-basic(flex-start, center);
-          .text-props(1.3rem);
-          color: @title-color;
-          margin-top: 20px;
-          span {
-            color: @card-description-color;
-            margin-left: 10px;
-          }
-        }
-
-        .text-container {
-          width: 100%;
-          margin-left: 20px;
-          .item {
+        .info-block {
+          .flex-basic(space-between, flex-start);
+          @media (max-width: @mobile-horizontal) {
             .flex-column(flex-start, flex-start);
-            @media (max-width: @mobile-horizontal) {
-              .flex-column(center, flex-start);
+          }
+          .date {
+            .flex-basic(flex-start, center);
+            color: @title-color;
+            margin-top: 20px;
+            .text-props(1rem);
+            span {
+              margin-left: 5px;
             }
+          }
+          .url {
+            .flex-basic(flex-start, center);
             .text-props(1.3rem);
-            color: @card-description-color;
-            position: relative;
-            margin-bottom: 20px;
-
-
-            &:after {
-              .divider(100%, 1px, -5px, 0);
+            color: @title-color;
+            margin-top: 20px;
+            span {
+              color: @card-description-color;
+              margin-left: 10px;
             }
-
-            label {
-              .text-props(1.5rem);
-              color: @title-color;
-              flex: 0 0 30%;
-              margin-bottom: 10px;
+          }
+          .text-container {
+            width: 100%;
+            margin-left: 20px;
+            @media (max-width: @mobile-horizontal) {
+              margin: 0;
             }
-
-            #stackList {
-              .flex-basic(flex-start, center);
-
-              li {
-                position: relative;
-                margin-left: 20px;
-                .list-item-before-element(0.6, @card-description-color, -15px, 25%);
+            .item {
+              .flex-column(flex-start, flex-start);
+              @media (max-width: @mobile-horizontal) {
+                .flex-column(center, flex-start);
               }
-            }
+              .text-props(1.3rem);
+              color: @card-description-color;
+              position: relative;
+              margin-bottom: 20px;
 
-            #features {
-              .flex-column(center, flex-start);
-              gap: 10px;
-              margin-left: 20px;
 
-              li {
-                position: relative;
-                .list-item-before-element(0.6, @card-description-color, -20px, 25%);
+              &:after {
+                .divider(100%, 1px, -5px, 0);
+              }
+
+              label {
+                .text-props(1.5rem);
+                color: @title-color;
+                flex: 0 0 30%;
+                margin-bottom: 10px;
+              }
+
+              #stackList {
+                .flex-basic(flex-start, center);
+
+                li {
+                  position: relative;
+                  margin-left: 20px;
+                  .list-item-before-element(0.6, @card-description-color, -15px, 25%);
+                }
+              }
+
+              #features {
+                .flex-column(center, flex-start);
+                gap: 10px;
+                margin-left: 20px;
+
+                li {
+                  position: relative;
+                  .list-item-before-element(0.6, @card-description-color, -20px, 25%);
+                }
               }
             }
           }
         }
+        //.date {
+        //  .flex-basic(flex-start, center);
+        //  color: @title-color;
+        //  margin-top: 20px;
+        //  .text-props(1rem);
+        //  span {
+        //    margin-left: 5px;
+        //  }
+        //}
+        //.url {
+        //  .flex-basic(flex-start, center);
+        //  .text-props(1.3rem);
+        //  color: @title-color;
+        //  margin-top: 20px;
+        //  span {
+        //    color: @card-description-color;
+        //    margin-left: 10px;
+        //  }
+        //}
+        //.text-container {
+        //  width: 100%;
+        //  margin-left: 20px;
+        //  .item {
+        //    .flex-column(flex-start, flex-start);
+        //    @media (max-width: @mobile-horizontal) {
+        //      .flex-column(center, flex-start);
+        //    }
+        //    .text-props(1.3rem);
+        //    color: @card-description-color;
+        //    position: relative;
+        //    margin-bottom: 20px;
+        //
+        //
+        //    &:after {
+        //      .divider(100%, 1px, -5px, 0);
+        //    }
+        //
+        //    label {
+        //      .text-props(1.5rem);
+        //      color: @title-color;
+        //      flex: 0 0 30%;
+        //      margin-bottom: 10px;
+        //    }
+        //
+        //    #stackList {
+        //      .flex-basic(flex-start, center);
+        //
+        //      li {
+        //        position: relative;
+        //        margin-left: 20px;
+        //        .list-item-before-element(0.6, @card-description-color, -15px, 25%);
+        //      }
+        //    }
+        //
+        //    #features {
+        //      .flex-column(center, flex-start);
+        //      gap: 10px;
+        //      margin-left: 20px;
+        //
+        //      li {
+        //        position: relative;
+        //        .list-item-before-element(0.6, @card-description-color, -20px, 25%);
+        //      }
+        //    }
+        //  }
+        //}
       }
     }
   }

@@ -91,10 +91,22 @@
     .article-header {
       padding: 0 80px;
       margin-top: 30px;
+      @media (max-width: @mobile-horizontal) {
+        padding: 0 10px;
+      }
       &-image {
         pointer-events: all;
         width: 100%;
         .flex-basic(flex-start, flex-start);
+        div {
+          background-size: cover;
+          height: 200px;
+          width: 100%;
+          margin: 0 20px 0 80px;
+          @media (max-width: @mobile-horizontal) {
+            margin: 0 20px 0 10px;
+          }
+        }
         button {
           background-color: transparent;
         }
@@ -131,6 +143,9 @@
       line-height: 1.7;
       color: @title-color;
       padding: 40px 80px;
+      @media (max-width: @mobile-horizontal) {
+        padding: 20px 10px;
+      }
     }
   }
 }

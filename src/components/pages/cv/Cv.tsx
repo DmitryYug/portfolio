@@ -90,6 +90,9 @@ export const Cv: React.FC<CvPropsType> = () => {
                         {renderCollapseItems}
                     </Collapse>
                 </div>
+                <button className='my-button is-rounded is-green'>
+                    Download CV
+                </button>
             </div>
         </div>
     );

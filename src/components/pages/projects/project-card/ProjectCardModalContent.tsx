@@ -18,7 +18,7 @@ export const ProjectCardModalContent = (props: ProjectCardModalPropsType) => {
                     <MdClose color='#20c997' size={30}/>
                 </button>
             </div>
-            <div className='d-flex-space-between-start'>
+            <div className='info-block'>
                 <div className='d-flex-col-start'>
                     <video autoPlay loop>
                         <source src={props.content.demo}/>
