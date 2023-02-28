@@ -37,6 +37,13 @@ export const AboutMe: React.FC<AboutMePropsType> = () => {
                     style={{fontSize: '2em'}}
                 />
             </div>
+            <Link className='my-button is-transparent is-bordered is-rounded'
+                  to='contacts'
+                  smooth={true}
+                  delay={300}
+            >
+                Contact Me
+            </Link>
             <Link className='arrow-down link-container'
                   to='cv'
                   smooth={true}
