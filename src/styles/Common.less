@@ -36,6 +36,13 @@
       background-color: @green-hovered-color;
     }
   }
+  &.is-bordered {
+    border: 2px solid @green-hovered-color;
+    &:hover {
+      background-color: @green-color;
+      box-shadow: unset;
+    }
+  }
   &:hover {
     box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.7);
   }

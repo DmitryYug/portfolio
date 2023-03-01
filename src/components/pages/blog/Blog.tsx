@@ -1,23 +1,20 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Title} from "../../Title";
 import {blog} from "../../../content";
 import {BlogCard} from "./blog-card/BlogCard";
-import {BlogArticleModalContent} from "./blog-card/BlogArticleModalContent";
 
 interface BlogPropsType {
 }
 
 export const Blog: React.FC<BlogPropsType> = () => {
 
-    const [modalState, setModalState] = useState<string>('');
-
-    const blogCardsRender = blog.map(card =>
+    const blogCardsRender = blog.map((card, i) =>
         <BlogCard
+            key={card.title + i}
             title={card.title}
             description={card.description}
             background={card.background}
             modalContent={card.modalContent}
-            // onClickHandler={() => setModalState('visible')}
         />
     )
 
@@ -31,12 +28,6 @@ export const Blog: React.FC<BlogPropsType> = () => {
                     {blogCardsRender}
                 </div>
             </div>
-            {/*<BlogArticleModalContent title='title'*/}
-            {/*                  modalState={modalState}*/}
-            {/*                  articleImg='img path'*/}
-            {/*                  date='24.02.2023'*/}
-            {/*                  tags={['tag 1', 'tag 2']}*/}
-            {/*/>*/}
         </div>
     );
 }

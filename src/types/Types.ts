@@ -8,6 +8,8 @@ export interface SkillCardType {
 
 export interface ProjectCardType {
     title: string
+    date: string
+    url: string
     stack: string[]
     background: string
     info: string

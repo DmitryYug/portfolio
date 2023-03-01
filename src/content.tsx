@@ -103,6 +103,8 @@ export const cv: CvBlockDataType = {
 export const projects: ProjectCardType[] = [
     {
         title: 'Web site',
+        date: '29.08.2000',
+        url: 'http://some-url',
         stack: ['React', 'Less'],
         background: ntDevLanding,
         info: 'Web site for a company Im working in.',
@@ -111,6 +113,8 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'Dental clinic system',
+        date: '29.08.2000',
+        url: 'http://some-url',
         stack: ['Vue', 'Vue X'],
         background: ntDent,
         info: 'Big project with legacy codebase on Vue2. Includes handling of visits, finances, cure plans, store',
@@ -119,18 +123,22 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'Todo list',
+        date: '29.08.2000',
+        url: 'http://some-url',
         stack: ['React', 'Redux'],
         background: todolist,
         info: 'Every developer should have a TDL in portfolio.',
-        features: [],
+        features: ['Lorem ipsum dolor sit amet', 'consectetur adipisicing elit.' ,'Facilis, omnis!'],
         demo: tdlDemo
     },
     {
         title: 'Html module for a big system',
+        date: '29.08.2000',
+        url: 'http://some-url',
         stack: ['HTML', 'Less', 'JQuery'],
         background: rsg,
         info: 'Simple HTML project with jQuery UI elements logic',
-        features: [],
+        features: ['Lorem ipsum dolor sit',  'amet, consectetur',  'adipisicing elit', 'Exercitationem illo, modi', 'Aperiam at ex obcaecati!'],
         demo: rsgDemo
     },
 ]

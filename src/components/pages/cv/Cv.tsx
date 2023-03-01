@@ -14,23 +14,6 @@ export const Cv: React.FC<CvPropsType> = () => {
 
     const [activePanel, setActivePanel] = useState<string | string[]>('skills');
 
-    const activePanelHandler = (e: string) => {
-        setActivePanel(e)
-        // switch (e) {
-        //     case '1':
-        //         setActivePanel('skills')
-        //         break
-        //     case '2':
-        //         setActivePanel('education')
-        //         break
-        //     case '3':
-        //         setActivePanel('experience')
-        //         break
-        //     default:
-        //         break
-        // }
-    }
-
     const renderSkillCards = cv.skills.map((s, i) => {
         return <SkillCard key={`${i} + ${s.title}`}
                           title={s.title}
@@ -107,6 +90,9 @@ export const Cv: React.FC<CvPropsType> = () => {
                         {renderCollapseItems}
                     </Collapse>
                 </div>
+                <button className='my-button is-rounded is-green'>
+                    Download CV
+                </button>
             </div>
         </div>
     );

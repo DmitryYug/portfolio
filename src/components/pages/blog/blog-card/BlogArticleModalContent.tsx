@@ -1,11 +1,12 @@
 import * as React from 'react';
 import {BsCalendar3} from "react-icons/bs";
 import {SlTag} from "react-icons/sl";
-import {GrClose} from "react-icons/gr";
+import {MdClose} from "react-icons/md";
 
 interface BlogArticleModalPropsType {
     articleImg: string
     title: string
+    closeModalCb: () => void
     content: {
         tags: string[]
         article: string
@@ -18,15 +19,11 @@ export const BlogArticleModalContent = (props: BlogArticleModalPropsType) => {
     return (
         <>
             <div className="article-header-image">
-                <div style={{
-                    backgroundImage: `url(${props.articleImg})`,
-                    backgroundSize: 'cover',
-                    height: '200px',
-                    width: '100%',
-                    margin: '0 80px'
-                }}
-                ></div>
-                <GrClose color='#20c997' size={30}/>
+                <div style={{backgroundImage: `url(${props.articleImg})`,}}>
+                </div>
+                <button onClick={props.closeModalCb}>
+                    <MdClose color='#20c997' size={40}/>
+                </button>
             </div>
             <div className="article-header">
                 <h4>{props.title}</h4>
@@ -38,8 +35,8 @@ export const BlogArticleModalContent = (props: BlogArticleModalPropsType) => {
                 </div>
                 <div className='tags'>
                     {
-                        props.content.tags.map(tag =>
-                            <div>
+                        props.content.tags.map((tag, i) =>
+                            <div key={i}>
                                 <SlTag color='#20c997' size={15}/>
                                 <span>{tag}</span>
                             </div>
