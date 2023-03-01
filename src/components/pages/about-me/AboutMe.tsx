@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-scroll'
 
 //@ts-ignore
@@ -8,7 +8,7 @@ import {TypeAnimation} from "react-type-animation";
 interface AboutMePropsType {
 }
 
-export const AboutMe: React.FC<AboutMePropsType> = () => {
+export const AboutMe: React.FC<AboutMePropsType> = (props) => {
 
     return (
         <div id='aboutMe' className='main-background'>

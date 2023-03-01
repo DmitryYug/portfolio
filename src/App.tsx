@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import './App.less';
 import './styles/initial-styles/nullstyle.css'
 import './styles/initial-styles/normalize.css'
@@ -9,11 +9,13 @@ import {Projects} from "./components/pages/projects/Projects";
 import {ContactForm} from "./components/pages/contacts/ContactForm";
 import {Header} from "./components/navigation/Header";
 import {Blog} from "./components/pages/blog/Blog";
+import {Context} from "./types/Context";
 
 
 function App() {
 
-    const [deviceTypeClassName, setDeviceTypeClassName] = useState<string>('');
+    const [deviceTypeClassName, setDeviceTypeClassName] = useState<string>( '');
+    // const DeviceType = React.createContext(deviceTypeClassName);
 
     useEffect(() => {
         if ("ontouchstart" in document.documentElement) {
@@ -27,11 +29,13 @@ function App() {
             <Header/>
             <div className='layout'>
                 <main>
-                    <AboutMe/>
-                    <Cv/>
-                    <Projects/>
-                    <Blog/>
-                    <ContactForm/>
+                    <Context.Provider value={deviceTypeClassName}>
+                        <AboutMe/>
+                        <Cv/>
+                        <Projects/>
+                        <Blog/>
+                        <ContactForm/>
+                    </Context.Provider>
                 </main>
             </div>
         </>
