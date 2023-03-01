@@ -2,7 +2,7 @@
 
 
 .main-background {
-  min-height: 100vh;
+  min-height: calc(100vh - @header-height);
   position: relative;
   .my-button {
     position: absolute;
@@ -43,9 +43,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 1;
     .text-props(1.6em);
     color: rgba(255, 255, 255, 1);
+    @media (max-width: @mobile-horizontal) {
+      top: 10%;
+      left: 10%;
+      .text-props(1.3em);
+      transform: unset;
+    }
   }
 
   .arrow-down {
@@ -55,7 +61,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       cursor: pointer;
-      z-index: 2;
+      z-index: 1;
     }
     &.icon {
       animation-name: arrow-down;

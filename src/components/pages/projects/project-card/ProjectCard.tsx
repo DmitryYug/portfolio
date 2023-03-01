@@ -3,16 +3,6 @@ import {Modal} from "antd";
 import {ProjectCardModalContent} from "./ProjectCardModalContent";
 import {ProjectCardType} from "../../../../types/Types";
 
-// type ProjectCardPropsType = {
-//     title: string
-//     stack: string[]
-//     background: string
-//     info: string
-//     features: string[]
-//     demo: string
-// }
-
-
 export const ProjectCard = (props: ProjectCardType) => {
 
     let [isActive, setIsActive] = useState<string>('')

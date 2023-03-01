@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.less';
 import './styles/initial-styles/nullstyle.css'
 import './styles/initial-styles/normalize.css'
@@ -12,6 +12,14 @@ import {Blog} from "./components/pages/blog/Blog";
 
 
 function App() {
+
+    const [deviceTypeClassName, setDeviceTypeClassName] = useState<string>('');
+
+    useEffect(() => {
+        if ("ontouchstart" in document.documentElement) {
+            setDeviceTypeClassName('is-touch')
+        }
+    }, []);
 
     return (
         <>

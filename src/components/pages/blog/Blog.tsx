@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Title} from "../../Title";
 import {blog} from "../../../content";
 import {BlogCard} from "./blog-card/BlogCard";
-import {BlogArticleModalContent} from "./blog-card/BlogArticleModalContent";
 
 interface BlogPropsType {
 }
