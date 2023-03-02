@@ -13,6 +13,9 @@
     margin-top: 20px;
     .text-props(2rem);
     color: @title-color;
+    @media (max-width: @mobile-horizontal) {
+      .text-props(1.5rem);
+    }
   }
   button {
     margin-top: 50px;
@@ -90,7 +93,6 @@
 
   .education {
     &-wrapper {
-      width: 49%;
       .flex-column(flex-start, center);
       gap: 30px;
     }

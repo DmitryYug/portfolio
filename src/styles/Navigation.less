@@ -95,15 +95,20 @@
   height: @header-height;
   width: 100%;
   padding: 0;
-
+  transition: all 0.5s;
   @media (min-width: @mobile-horizontal) {
     display: none;
+  }
+  &.hidden {
+    transition: all 0.5s;
+    top: -@header-height;
   }
 
   .nav {
     background-color: @main-background-dark;
     margin-left: 80px;
     margin-right: 20px;
+
     ul {
       width: 100%;
     }
@@ -112,6 +117,7 @@
       color: @green-color;
       cursor: pointer;
     }
+
     &.d-none {
       display: none;
     }
@@ -154,9 +160,11 @@
 .nav-dropdown {
   width: 100%;
   background: @main-background-dark !important;
+
   ul {
     width: 100%;
   }
+
   .item {
     .text-props(1.5rem);
     margin-top: 10px;
@@ -167,6 +175,7 @@
       .divider(100%, 1px, 0, 0)
     }
   }
+
   li {
     .text-props(1.5rem);
     padding: 10px 0;

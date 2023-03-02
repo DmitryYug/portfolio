@@ -1,22 +1,24 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Modal} from "antd";
 import {ProjectCardModalContent} from "./ProjectCardModalContent";
 import {ProjectCardType} from "../../../../types/Types";
+import {Context} from "../../../../types/Context";
 
 export const ProjectCard = (props: ProjectCardType) => {
 
     let [isActive, setIsActive] = useState<string>('')
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const device = useContext<string>(Context)
 
     return (
-
         <div className='projects-card'>
             <div className='container'>
                 <div style={{backgroundImage: `url(${props.background})`}}
                      className='background'
                      onMouseEnter={() => setIsActive('active')}
                      onMouseLeave={() => setIsActive('')}
-                     onClick={() => setIsModalOpen(true)}
+                     onClick={() => (device !== 'is-touch') && setIsModalOpen(true)}
+                     onDoubleClick={() => (device === 'is-touch') && setIsModalOpen(true)}
                 >
                 </div>
                 <div className={`text-container ${isActive}`}>
@@ -30,7 +32,7 @@ export const ProjectCard = (props: ProjectCardType) => {
                             }
                         </ul>
                     </div>
-                    <span>Click for more...</span>
+                    <span>{ device === 'is-touch' ? 'Double click for more...' : 'Click for more...'}</span>
                 </div>
             </div>
 

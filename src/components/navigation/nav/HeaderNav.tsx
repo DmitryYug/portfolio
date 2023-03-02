@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Dropdown} from 'antd';
 import {Link} from "react-scroll";
 import {GiHamburgerMenu} from "react-icons/gi";
@@ -9,6 +9,7 @@ export const HeaderNav = () => {
     return (
         <nav className='nav'>
             <Dropdown overlayClassName='nav-dropdown'
+                      trigger={['click']}
                       dropdownRender={() => (
                           <ul>
                               {links.navigation.map((sidBarItem, idx) => (
@@ -30,11 +31,12 @@ export const HeaderNav = () => {
             >
                 <a onClick={(e) => e.preventDefault()}>
                     <GiHamburgerMenu color='#aab1b8'
-                                 size={40}
-                                 style={{backgroundColor: "#111418"}}
+                                     size={40}
+                                     style={{backgroundColor: "#111418"}}
                     />
                 </a>
             </Dropdown>
+
         </nav>
     );
 }
