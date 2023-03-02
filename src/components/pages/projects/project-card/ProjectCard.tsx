@@ -15,8 +15,8 @@ export const ProjectCard = (props: ProjectCardType) => {
             <div className='container'>
                 <div style={{backgroundImage: `url(${props.background})`}}
                      className='background'
-                     onMouseEnter={() =>  setIsActive('active')}
-                     onMouseLeave={() =>  setIsActive('')}
+                     onMouseEnter={() => setIsActive('active')}
+                     onMouseLeave={() => setIsActive('')}
                      onClick={() => (device !== 'is-touch') && setIsModalOpen(true)}
                      onDoubleClick={() => (device === 'is-touch') && setIsModalOpen(true)}
                 >
