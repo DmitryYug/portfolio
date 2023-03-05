@@ -21,7 +21,7 @@ interface ContactFormTypes {
 }
 
 export const ContactForm: React.FC<ContactsPropsType> = () => {
-    const [formSendingStatus, setFormSendingStatus] = useState<MyButtonStatusTypes>('ok');
+    const [formSendingStatus, setFormSendingStatus] = useState<MyButtonStatusTypes>('initial');
     const footerIconsColor = '#aab1b8';
     const footerIcons = [
         {title: 'gitHub', icon: <AiFillGithub color={footerIconsColor} size={20}/>},
