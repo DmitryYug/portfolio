@@ -39,3 +39,4 @@ export interface BlogCardTypes {
     }
 }
 
+export type MyButtonStatusTypes = 'pending' | 'initial' | 'ok' | 'err'

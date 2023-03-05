@@ -4,6 +4,7 @@ import {Link} from 'react-scroll'
 //@ts-ignore
 import {HiChevronDown} from "react-icons/hi";
 import {TypeAnimation} from "react-type-animation";
+import MyButton from "../../MyButton";
 
 interface AboutMePropsType {
 }
@@ -38,12 +39,14 @@ export const AboutMe: React.FC<AboutMePropsType> = (props) => {
                     style={{fontSize: '2em'}}
                 />
             </div>
-            <Link className='my-button is-transparent is-bordered is-rounded'
-                  to='contacts'
+            <Link to='contacts'
                   smooth={true}
                   delay={300}
             >
-                Contact Me
+                <MyButton size='1.5rem'
+                          className='is-transparent is-bordered is-rounded'
+                          myTitle='Contact Me'
+                />
             </Link>
             <Link className='arrow-down link-container'
                   to='cv'

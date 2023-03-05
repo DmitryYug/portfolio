@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import './App.less';
 import './styles/initial-styles/nullstyle.css'
-import './styles/initial-styles/normalize.css'
+// import './styles/initial-styles/normalize.css'
 import {Sidebar} from "./components/navigation/Sidebar";
 import {AboutMe} from "./components/pages/about-me/AboutMe";
 import {Cv} from "./components/pages/cv/Cv";

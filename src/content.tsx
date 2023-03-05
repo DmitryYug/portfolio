@@ -26,7 +26,7 @@ interface CvBlockDataType {
 
 interface LinksTypes {
     navigation: { title: string, value: string }[]
-    social: { title: string, icon: React.ReactElement }[]
+    social: { title: string, icon: React.ReactElement, url: string }[]
 }
 
 export const links: LinksTypes = {
@@ -37,10 +37,10 @@ export const links: LinksTypes = {
         {title: 'Contacts', value: 'contacts'},
     ],
     social: [
-        {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>},
-        {title: 'codeWars', icon: <SiCodewars color='#aab1b8' size={20}/>},
-        {title: 'linkedIn', icon: <AiFillLinkedin color='#aab1b8' size={20}/>},
-        {title: 'facebook', icon: <AiFillFacebook color='#aab1b8' size={20}/>}
+        {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>, url: 'https://github.com/DmitryYug'},
+        {title: 'codeWars', icon: <SiCodewars color='#aab1b8' size={20}/>, url: 'https://www.codewars.com/users/DmitryYuganyuk'},
+        {title: 'linkedIn', icon: <AiFillLinkedin color='#aab1b8' size={20}/>, url: 'https://www.linkedin.com/in/dmitriy-yuganuk/'},
+        {title: 'facebook', icon: <AiFillFacebook color='#aab1b8' size={20}/>, url: 'https://www.facebook.com/dmitry.yuganuk'}
     ]
 }
 

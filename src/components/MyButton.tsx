@@ -1,19 +1,49 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React, {ButtonHTMLAttributes, ReactElement} from 'react';
+import {LoadingOutlined} from "@ant-design/icons";
+import {MyButtonStatusTypes} from "../types/Types";
 
-interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    title: string;
+
+interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    size: string
+    myTitle: string | ReactElement
+    status?: MyButtonStatusTypes
+    okMessage?: string | ReactElement
+    errorMessage?: string | ReactElement
 }
 
-function CustomButton({ className, onClick, children, title, ...rest }: CustomButtonProps) {
+function MyButton({
+                      myTitle,
+                      size,
+                      className,
+                      okMessage,
+                      errorMessage,
+                      children,
+                      status,
+                      ...rest
+                  }: MyButtonProps) {
+
+    const loadingIcon = <LoadingOutlined style={{fontSize: `${size}`}} spin/>;
+    const errorStatusClass = (status === 'err') && 'is-danger'
+    const renderChildren = () => {
+        if (status === 'ok') {
+            return okMessage
+        } else if (status === 'err') {
+            return errorMessage
+        } else if (status === 'pending') {
+            return loadingIcon
+        }
+        return myTitle
+    }
 
     return (
-        <button className={`my-button ${className}`}
-                onClick={onClick}
+        <button className={`my-button ${className} ${errorStatusClass}`}
+                disabled={status === 'pending'}
+                style={{fontSize: `${size}`}}
                 {...rest}
         >
-            {title}
+            {renderChildren()}
         </button>
     );
 }
 
-export default CustomButton;
+export default MyButton;

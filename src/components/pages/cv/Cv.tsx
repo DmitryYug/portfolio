@@ -5,6 +5,7 @@ import {Collapse, Timeline} from 'antd';
 import {ExperienceTimelineItem} from "./ExperienceTimelineItem";
 import {Title} from "../../Title";
 import {cv} from "../../../content";
+import MyButton from "../../MyButton";
 
 
 interface CvPropsType {
@@ -90,9 +91,10 @@ export const Cv: React.FC<CvPropsType> = () => {
                         {renderCollapseItems}
                     </Collapse>
                 </div>
-                <button className='my-button is-rounded is-green'>
-                    Download CV
-                </button>
+                <MyButton className='is-rounded is-green'
+                          size='1.6rem'
+                          myTitle='Download CV'
+                />
             </div>
         </div>
     );
