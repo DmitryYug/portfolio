@@ -52,7 +52,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
             numberOfPieces={25}
             recycle={false}
             confettiSource={{x: 0, y: 280, w: 100, h: 0}}
-            style={{inset: 'auto 0 0 auto', border: '1px solid black'}}
+            style={{inset: 'auto 0 0 auto'}}
             colors={['#343a40', '#aab1b8', '#D46A6A', '#212529', '#1baa80', '#20c997', '#FFFFFF']}
         />
 
