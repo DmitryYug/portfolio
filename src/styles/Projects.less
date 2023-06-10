@@ -144,10 +144,12 @@
           height: auto;
         }
         .info-block {
-          .flex-basic(space-between, flex-start);
-          @media (max-width: @mobile-horizontal) {
-            .flex-column(flex-start, flex-start);
-          }
+          .flex-column(flex-start, flex-start);
+
+          //.flex-basic(space-between, flex-start);
+          //@media (max-width: @mobile-horizontal) {
+            //.flex-column(flex-start, flex-start);
+          //}
           .date {
             .flex-basic(flex-start, center);
             color: @title-color;
@@ -163,7 +165,7 @@
             color: @title-color;
             margin-top: 10px;
             margin-bottom: 20px;
-            span {
+            a {
               color: @card-description-color;
               margin-left: 10px;
             }

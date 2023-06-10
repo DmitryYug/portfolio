@@ -22,7 +22,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
 
     const footerIcons = [
         {title: 'gitHub', icon: <AiFillGithub color={footerIconsColor} size={20}/>},
-        {title: 'codeWars', icon: <SiCodewars color={footerIconsColor} size={20}/>},
+        // {title: 'codeWars', icon: <SiCodewars color={footerIconsColor} size={20}/>},
         {title: 'linkedIn', icon: <AiFillLinkedin color={footerIconsColor} size={20}/>},
         {title: 'facebook', icon: <AiFillFacebook color={footerIconsColor} size={20}/>}
     ]
@@ -37,7 +37,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
 
 
     return (
-        <div id='contacts' className='light-block-wrapper'>
+        <div id='contacts' className='dark-block-wrapper'>
             <Title title='contacts'
                    subtitle='get in touch'
             />
@@ -45,15 +45,15 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                 <div className="contact-form">
                     <div className="contact-form-info">
                         <div className="address">
-                            <h3>adress</h3>
-                            <span>los-angeles, staples center, vip places</span>
+                            <h3>address</h3>
+                            <span>Israel, Tel-Aviv district</span>
                         </div>
                         <div className='contact-me'>
                             <h3>contact me</h3>
                             <div className="d-flex-start" style={{marginBottom: '10px'}}>
                                 <AiFillPhone color='#20c997' size='20'/>
                                 <span style={{marginLeft: '10px'}}>
-                                +7-(916)-979-59-03
+                                +972-55-770-33-12
                             </span>
                             </div>
                             <div className="d-flex-start" style={{marginBottom: '10px'}}>

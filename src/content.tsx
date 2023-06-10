@@ -10,6 +10,8 @@ import ntDevLanding from './assets/project-cards/nt-dev-landing/cover.png'
 import ntDent from './assets/project-cards/nt-dent/cover.png'
 import rsg from './assets/project-cards/rsg/cover.png'
 import todolist from './assets/project-cards/todolist/cover.png'
+import cardProject from './assets/project-cards/cardsProject/cover.png'
+import contactsProject from './assets/project-cards/contactsProject/cover.png'
 
 import blogTest from './assets/blog-cards/blog-test.jpeg'
 //videos
@@ -17,6 +19,8 @@ import ntDevLandingDemo from './assets/project-cards/nt-dev-landing/demo.mp4'
 import ntDentDemo from './assets/project-cards/nt-dent/demo.mp4'
 import rsgDemo from './assets/project-cards/rsg/demo.mp4'
 import tdlDemo from './assets/project-cards/todolist/demo.mp4'
+import cardProjectDemo from './assets/project-cards/cardsProject/demo.mp4'
+import contactsProjectDemo from './assets/project-cards/contactsProject/demo1.mp4'
 
 interface CvBlockDataType {
     skills: SkillCardType[]
@@ -38,7 +42,7 @@ export const links: LinksTypes = {
     ],
     social: [
         {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>},
-        {title: 'codeWars', icon: <SiCodewars color='#aab1b8' size={20}/>},
+        // {title: 'codeWars', icon: <SiCodewars color='#aab1b8' size={20}/>},
         {title: 'linkedIn', icon: <AiFillLinkedin color='#aab1b8' size={20}/>},
         {title: 'facebook', icon: <AiFillFacebook color='#aab1b8' size={20}/>}
     ]
@@ -83,53 +87,66 @@ export const cv: CvBlockDataType = {
             period: '2019-2020',
             speciality: 'React frontend engineer'
         },
+        {
+            title: 'Ulbi school',
+            period: '2023-2023',
+            speciality: 'Front-end for senior engineers'
+        },
     ],
     experience: [
         {
             orgTitle: 'Freelance',
-            period: '2020-2021',
+            period: '2020-2022',
             position: 'Frontend developer',
-            duties: ['HTML landings', 'Custom UI kit creating', 'SPA performance optimisation']
+            duties: [
+                'Developed over 20 fast and SEO-optimized websites, delivering high-quality results',
+                'Collaborated effectively with backend engineers to create single-page applications (SPAs) tailored to meet client requirements',
+                'Ensured comprehensive test coverage, contributing to the overall quality and stability of the projects'
+            ]
         },
         {
             orgTitle: 'NT development',
-            period: '2021- till now',
+            period: '2022- 2023',
             position: 'Frontend engineer',
-            duties: ['HTML', 'Legacy code bug fixing', 'Architecture decisions']
+            duties: [
+                'Successfully collaborated as a front-end developer, both independently and as part of a team, on a project',
+                'Demonstrated proficiency in decomposing tasks and efficiently implementing new features',
+                'Achieved significant performance improvements for the web app, resulting in enhanced user experience'
+            ]
         },
     ]
 }
 
 export const projects: ProjectCardType[] = [
     {
-        title: 'Web site',
-        date: '29.08.2000',
-        url: 'http://some-url',
-        stack: ['React', 'Less'],
+        title: 'Web site for IT company',
+        date: '29.08.2000', //@todo do i need a date here ?
+        url: 'https://dmitryyug.github.io/nt-dev-landing-lorem/',
+        stack: ['React', 'Less', 'Firebase'],
         background: ntDevLanding,
-        info: 'Web site for a company Im working in.',
-        features: ['scroll navigation', 'react-router', 'native css and animate.css animation', 'progressive image loading'],
+        info: 'Web site for a company I`ve been working in',
+        features: ['scroll navigation', 'react-router', 'complex animations', 'progressive image loading', 'adaptive'],
         demo: ntDevLandingDemo
     },
     {
-        title: 'Dental clinic system',
-        date: '29.08.2000',
-        url: 'http://some-url',
-        stack: ['Vue', 'Vue X'],
-        background: ntDent,
-        info: 'Big project with legacy codebase on Vue2. Includes handling of visits, finances, cure plans, store',
-        features: ['Vue router', 'Vuetify', 'Custom plugin with helper reusable functions', 'Handling visual and system settings of app in localStorage with VueX'],
-        demo: ntDentDemo
+        title: 'App with info cards for beer company',
+        date: '29.08.2000', //@todo do i need a date here ?
+        url: 'https://dmitryyug.github.io/vicuesoft/',
+        stack: ['React', 'TypeScript', 'CSS modules'],
+        background: cardProject,
+        info: 'React SPA with routing. TypeScript. API sandbox. State management - Redux',
+        features: ['routing', 'pagination', 'api search'],
+        demo: cardProjectDemo
     },
     {
-        title: 'Todo list',
-        date: '29.08.2000',
-        url: 'http://some-url',
-        stack: ['React', 'Redux'],
-        background: todolist,
-        info: 'Every developer should have a TDL in portfolio.',
-        features: ['Lorem ipsum dolor sit amet', 'consectetur adipisicing elit.' ,'Facilis, omnis!'],
-        demo: tdlDemo
+        title: 'Private page with contacts, available after authorization',
+        date: '29.08.2000', //@todo do i need a date here ?
+        url: 'https://dmitryyug.github.io/takeoff-staff/',
+        stack: ['React', 'TypeScript', 'CSS modules'],
+        background: contactsProject,
+        info: 'React SPA with protected routing. TypeScript. Mock json placeholder data. Redux. CRUD operations with contacts',
+        features: ['authorisation', 'protected routing', 'CRUD operations with contacts', 'MaterialUI'],
+        demo: contactsProjectDemo
     },
     {
         title: 'Html module for a big system',

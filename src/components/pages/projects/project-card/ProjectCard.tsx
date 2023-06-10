@@ -32,7 +32,13 @@ export const ProjectCard = (props: ProjectCardType) => {
                             }
                         </ul>
                     </div>
-                    <span>{ device === 'is-touch' ? 'Double click for more...' : 'Click for more...'}</span>
+                    <span>
+                        {
+                            device === 'is-touch'
+                                ? 'Double click for more...'
+                                : 'Click for more...'
+                        }
+                    </span>
                 </div>
             </div>
 
@@ -41,6 +47,7 @@ export const ProjectCard = (props: ProjectCardType) => {
                    footer={null}
                    width={'80%'}
                    style={{ top: '20px'}}
+                   onCancel={() => setIsModalOpen(false)}
                    modalRender={() =>
                        <ProjectCardModalContent content={props}
                                                 closeModalCb={() => setIsModalOpen(false)}

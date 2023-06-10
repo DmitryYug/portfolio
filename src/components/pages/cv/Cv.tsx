@@ -76,10 +76,7 @@ export const Cv: React.FC<CvPropsType> = () => {
                        subtitle='Cv'
                 />
                 <p className='content'>
-                    Front-end developer with 2 years experience of creating SPA with React/Redux and Vue/VueX.
-                    Interested
-                    in new technologies, now NodeJS is in my to do. Improve knowledge of Computer Science, used to
-                    codewars work out before working day. Hobbies are basketball, box and movies.
+                    I am a skilled front-end engineer with 3 years of experience, specializing in creating web interfaces using React, Vue, TypeScript, and JavaScript.
                 </p>
                 <div className='content cv-wrapper'>
                     <Collapse defaultActiveKey={['skills']}
@@ -90,9 +87,15 @@ export const Cv: React.FC<CvPropsType> = () => {
                         {renderCollapseItems}
                     </Collapse>
                 </div>
-                <button className='my-button is-rounded is-green'>
+                <a href={'https://drive.google.com/file/d/1qDerKsP8HvxlB1Ty-PpNPMptFhS6Vt9y/view?usp=sharing'}
+                   target='_blank'
+                   rel="noreferrer"
+
+                   className='my-button is-rounded is-green'
+                   style={{marginTop: '30px', fontSize: '22px'}}
+                >
                     Download CV
-                </button>
+                </a>
             </div>
         </div>
     );

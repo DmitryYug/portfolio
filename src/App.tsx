@@ -33,7 +33,7 @@ function App() {
                         <AboutMe/>
                         <Cv/>
                         <Projects/>
-                        <Blog/>
+                        {/*<Blog/>*/}
                         <ContactForm/>
                     </Context.Provider>
                 </main>
