@@ -1,26 +1,21 @@
 import {BlogCardTypes, EducationCardType, ExperienceCardType, ProjectCardType, SkillCardType} from "./types/Types";
 import React from "react";
 //icons
-import {RiReactjsFill, RiVuejsLine} from 'react-icons/ri'
+import {RiReactjsFill, RiVuejsLine} from "react-icons/ri";
 import {DiJavascript1} from "react-icons/di";
 import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineHtml5} from "react-icons/ai";
-import {SiCodewars} from "react-icons/si";
 //images
-import ntDevLanding from './assets/project-cards/nt-dev-landing/cover.png'
-import ntDent from './assets/project-cards/nt-dent/cover.png'
-import rsg from './assets/project-cards/rsg/cover.png'
-import todolist from './assets/project-cards/todolist/cover.png'
-import cardProject from './assets/project-cards/cardsProject/cover.png'
-import contactsProject from './assets/project-cards/contactsProject/cover.png'
+import ntDevLanding from "./assets/project-cards/nt-dev-landing/cover.png";
+import rsg from "./assets/project-cards/rsg/cover.png";
+import cardProject from "./assets/project-cards/cardsProject/cover.png";
+import contactsProject from "./assets/project-cards/contactsProject/cover.png";
 
-import blogTest from './assets/blog-cards/blog-test.jpeg'
+import blogTest from "./assets/blog-cards/blog-test.jpeg";
 //videos
-import ntDevLandingDemo from './assets/project-cards/nt-dev-landing/demo.mp4'
-import ntDentDemo from './assets/project-cards/nt-dent/demo.mp4'
-import rsgDemo from './assets/project-cards/rsg/demo.mp4'
-import tdlDemo from './assets/project-cards/todolist/demo.mp4'
-import cardProjectDemo from './assets/project-cards/cardsProject/demo.mp4'
-import contactsProjectDemo from './assets/project-cards/contactsProject/demo1.mp4'
+import ntDevLandingDemo from "./assets/project-cards/nt-dev-landing/demo.mp4";
+import rsgDemo from "./assets/project-cards/rsg/demo.mp4";
+import cardProjectDemo from "./assets/project-cards/cardsProject/demo.mp4";
+import contactsProjectDemo from "./assets/project-cards/contactsProject/demo1.mp4";
 
 interface CvBlockDataType {
     skills: SkillCardType[]
@@ -42,7 +37,6 @@ export const links: LinksTypes = {
     ],
     social: [
         {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>},
-        // {title: 'codeWars', icon: <SiCodewars color='#aab1b8' size={20}/>},
         {title: 'linkedIn', icon: <AiFillLinkedin color='#aab1b8' size={20}/>},
         {title: 'facebook', icon: <AiFillFacebook color='#aab1b8' size={20}/>}
     ]
@@ -120,7 +114,6 @@ export const cv: CvBlockDataType = {
 export const projects: ProjectCardType[] = [
     {
         title: 'Web site for IT company',
-        date: '29.08.2000', //@todo do i need a date here ?
         url: 'https://dmitryyug.github.io/nt-dev-landing-lorem/',
         stack: ['React', 'Less', 'Firebase'],
         background: ntDevLanding,
@@ -130,7 +123,6 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'App with info cards for beer company',
-        date: '29.08.2000', //@todo do i need a date here ?
         url: 'https://dmitryyug.github.io/vicuesoft/',
         stack: ['React', 'TypeScript', 'CSS modules'],
         background: cardProject,
@@ -140,7 +132,6 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'Private page with contacts, available after authorization',
-        date: '29.08.2000', //@todo do i need a date here ?
         url: 'https://dmitryyug.github.io/takeoff-staff/',
         stack: ['React', 'TypeScript', 'CSS modules'],
         background: contactsProject,
@@ -150,7 +141,6 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'Html module for a big system',
-        date: '29.08.2000',
         url: 'http://some-url',
         stack: ['HTML', 'Less', 'JQuery'],
         background: rsg,

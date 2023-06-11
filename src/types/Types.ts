@@ -8,7 +8,6 @@ export interface SkillCardType {
 
 export interface ProjectCardType {
     title: string
-    date: string
     url: string
     stack: string[]
     background: string
@@ -39,3 +38,4 @@ export interface BlogCardTypes {
     }
 }
 
+export type SendingStatusTypes = 'success' | 'error' | 'pending' | 'new'

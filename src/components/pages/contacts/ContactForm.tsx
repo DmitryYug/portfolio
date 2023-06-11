@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from "react";
 import {Title} from "../../Title";
 import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillPhone} from "react-icons/ai";
 import {HiOutlineMail} from "react-icons/hi";
-import {SiCodewars} from "react-icons/si";
-import {useForm} from "react-hook-form";
+import {SendingStatusTypes} from "../../../types/Types";
+import {Form} from "./Form";
+import {Progress, Spin} from "antd";
 import MyButton from "../../MyButton";
+
 
 interface ContactsPropsType {
 }
@@ -17,29 +19,51 @@ interface ContactFormTypes {
 
 export const ContactForm: React.FC<ContactsPropsType> = () => {
 
-    const footerIconsColor = '#aab1b8';
-    const {register, handleSubmit, formState: {errors}} = useForm<ContactFormTypes>();
+    const [sendingStatus, setSendingStatus] = useState<SendingStatusTypes>("new");
+
+    const footerIconsColor = "#aab1b8";
 
     const footerIcons = [
-        {title: 'gitHub', icon: <AiFillGithub color={footerIconsColor} size={20}/>},
-        // {title: 'codeWars', icon: <SiCodewars color={footerIconsColor} size={20}/>},
-        {title: 'linkedIn', icon: <AiFillLinkedin color={footerIconsColor} size={20}/>},
-        {title: 'facebook', icon: <AiFillFacebook color={footerIconsColor} size={20}/>}
-    ]
+        {title: "gitHub", icon: <AiFillGithub color={footerIconsColor} size={20}/>},
+        {title: "linkedIn", icon: <AiFillLinkedin color={footerIconsColor} size={20}/>},
+        {title: "facebook", icon: <AiFillFacebook color={footerIconsColor} size={20}/>}
+    ];
 
-    const onSubmit = handleSubmit(data => {
-        console.log(data)
-    });
-    const errorMessage = (errorInputName: string) =>
-        <span className='error-message'>
-            Fill the {errorInputName}, please
-        </span>;
+    const formStateRender = () => {
+        if (sendingStatus === "new") {
+            return <Form sendingStatusHandler={(status) => setSendingStatus(status)}/>;
+        } else if (sendingStatus === "pending") {
+            return (
+                <div className="loader">
+                    <Spin size="large"/>
+                </div>
+            );
+        } else {
+            const message = sendingStatus === "success"
+                ? <span>Thanks for the message. <br/> I will answer you asap.</span>
+                : <span>Something went wrong. <br/> Try again, please.</span>;
 
+            return (
+                <div className="loader">
+                    <Progress type="circle" percent={100}
+                              status={sendingStatus === "success" ? "success" : "exception"}/>
+                    <div className='status-message'>
+                        {message}
+                    </div>
+                    <MyButton title="new message"
+                              className="is-rounded is-transparent is-bordered"
+                              style={{color: "rgba(255, 255, 255, 1)"}}
+                              onClick={() => setSendingStatus("new")}
+                    />
+                </div>
+            );
+        }
+    };
 
     return (
-        <div id='contacts' className='dark-block-wrapper'>
-            <Title title='contacts'
-                   subtitle='get in touch'
+        <div id="contacts" className="dark-block-wrapper">
+            <Title title="contacts"
+                   subtitle="get in touch"
             />
             <div className="content">
                 <div className="contact-form">
@@ -48,22 +72,22 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                             <h3>address</h3>
                             <span>Israel, Tel-Aviv district</span>
                         </div>
-                        <div className='contact-me'>
+                        <div className="contact-me">
                             <h3>contact me</h3>
-                            <div className="d-flex-start" style={{marginBottom: '10px'}}>
-                                <AiFillPhone color='#20c997' size='20'/>
-                                <span style={{marginLeft: '10px'}}>
+                            <div className="d-flex-start" style={{marginBottom: "10px"}}>
+                                <AiFillPhone color="#20c997" size="20"/>
+                                <span style={{marginLeft: "10px"}}>
                                 +972-55-770-33-12
                             </span>
                             </div>
-                            <div className="d-flex-start" style={{marginBottom: '10px'}}>
-                                <HiOutlineMail color='#20c997' size='20'/>
-                                <span style={{marginLeft: '10px'}}>dmitriyyuganuk@gmail.com</span>
+                            <div className="d-flex-start" style={{marginBottom: "10px"}}>
+                                <HiOutlineMail color="#20c997" size="20"/>
+                                <span style={{marginLeft: "10px"}}>dmitriyyuganuk@gmail.com</span>
                             </div>
                         </div>
                         <div className="social">
                             <h3>follow me</h3>
-                            <div className='icons-block'>
+                            <div className="icons-block">
                                 {footerIcons.map((icon, i) =>
                                     <React.Fragment key={i}>
                                         {icon.icon}
@@ -71,51 +95,10 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                             </div>
                         </div>
                     </div>
-                    <form onSubmit={onSubmit}>
-                        <label htmlFor="name">
-                            <span>Full name</span>
-                            {errors.name && errorMessage('full name')}
-                        </label>
-                        <input type="text"
-                               id='name'
-                               placeholder='Enter your name...'
-                               {...register("name", {
-                                   required: true
-                               })}
-                        />
-                        <label htmlFor="email">
-                            <span>Email</span>
-                            {errors.email && errorMessage('e-mail')}
-                        </label>
-                        <input type="text"
-                               id='email'
-                               placeholder='Enter your email...'
-                               {...register("email", {
-                                       required: true,
-                                       pattern: /(.+)@(.+){2,}\.(.+){2,}/
-                                   }
-                               )}
-
-                        />
-                        <label htmlFor="comment">
-                            <span>Whats on your mind?</span>
-                            {errors.comment && errorMessage('comment block')}
-                        </label>
-                        <textarea placeholder='Let`s discuss your project'
-                                  id='comment'
-                                  {...register("comment", {
-                                      required: true
-                                  })}
-                        />
-                        <div className='d-flex-start'>
-                            <MyButton className='is-rounded is-green'
-                                      title='Send Message'
-                            />
-                        </div>
-                    </form>
+                    {formStateRender()}
                 </div>
             </div>
         </div>
     );
-}
+};
 
