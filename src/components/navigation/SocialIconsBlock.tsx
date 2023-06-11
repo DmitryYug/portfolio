@@ -10,9 +10,9 @@ export const SocialIconsBlock: React.FC<SocialProps> = () => {
             <div className='icons-block'>
                 {
                     links.social.map((icon, i) =>
-                    <React.Fragment key={i}>
+                    <a key={i} href={icon.link} target='_blank'>
                         {icon.icon}
-                    </React.Fragment>)
+                    </a>)
                 }
             </div>
         </footer>

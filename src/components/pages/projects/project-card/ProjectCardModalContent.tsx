@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {MdClose} from "react-icons/md";
-import {BsCalendar3} from "react-icons/bs";
 import {ProjectCardType} from "../../../../types/Types";
+import {Spin} from "antd";
 
 interface ProjectCardModalPropsType {
     closeModalCb: () => void;
@@ -10,6 +10,8 @@ interface ProjectCardModalPropsType {
 
 export const ProjectCardModalContent = (props: ProjectCardModalPropsType) => {
 
+    const [isDemoLoading, setIsDemoLoading] = useState<boolean>(true)
+
     return (
         <div className="projects-card-modal-wrapper">
             <h3>{props.content.title}</h3>
@@ -17,8 +19,12 @@ export const ProjectCardModalContent = (props: ProjectCardModalPropsType) => {
                 <MdClose color="#20c997" size={30}/>
             </button>
             <div className="info-block">
-                <div className="d-flex-col-start">
-                    <video autoPlay loop>
+                <div className="video-block">
+                    {isDemoLoading ? <Spin className='loader' size="large"/> : null}
+                    <video autoPlay loop
+                           onLoadedData={() => setIsDemoLoading(false)}
+
+                    >
                         <source src={props.content.demo}/>
                     </video>
                 </div>

@@ -148,9 +148,18 @@
           width: 70%;
           height: auto;
         }
+
         .info-block {
           .flex-column(flex-start, flex-start);
-
+          .video-block {
+            .flex-basic(center, center);
+            position: relative;
+            width: 100%;
+            .loader {
+              position: absolute;
+              padding: 100px;
+            }
+          }
           .date {
             .flex-basic(flex-start, center);
             color: @title-color;

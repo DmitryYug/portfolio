@@ -6,15 +6,10 @@ import {SendingStatusTypes} from "../../../types/Types";
 import {Form} from "./Form";
 import {Progress, Spin} from "antd";
 import MyButton from "../../MyButton";
+import {SocialIconsBlock} from "../../navigation/SocialIconsBlock";
 
 
 interface ContactsPropsType {
-}
-
-interface ContactFormTypes {
-    name: string,
-    email: string,
-    comment: string
 }
 
 export const ContactForm: React.FC<ContactsPropsType> = () => {
@@ -22,12 +17,6 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
     const [sendingStatus, setSendingStatus] = useState<SendingStatusTypes>("new");
 
     const footerIconsColor = "#aab1b8";
-
-    const footerIcons = [
-        {title: "gitHub", icon: <AiFillGithub color={footerIconsColor} size={20}/>},
-        {title: "linkedIn", icon: <AiFillLinkedin color={footerIconsColor} size={20}/>},
-        {title: "facebook", icon: <AiFillFacebook color={footerIconsColor} size={20}/>}
-    ];
 
     const formStateRender = () => {
         if (sendingStatus === "new") {
@@ -87,12 +76,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                         </div>
                         <div className="social">
                             <h3>follow me</h3>
-                            <div className="icons-block">
-                                {footerIcons.map((icon, i) =>
-                                    <React.Fragment key={i}>
-                                        {icon.icon}
-                                    </React.Fragment>)}
-                            </div>
+                            <SocialIconsBlock/>
                         </div>
                     </div>
                     {formStateRender()}

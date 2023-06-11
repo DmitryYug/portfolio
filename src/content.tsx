@@ -25,7 +25,7 @@ interface CvBlockDataType {
 
 interface LinksTypes {
     navigation: { title: string, value: string }[]
-    social: { title: string, icon: React.ReactElement }[]
+    social: { title: string, icon: React.ReactElement, link: string }[]
 }
 
 export const links: LinksTypes = {
@@ -36,9 +36,9 @@ export const links: LinksTypes = {
         {title: 'Contacts', value: 'contacts'},
     ],
     social: [
-        {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>},
-        {title: 'linkedIn', icon: <AiFillLinkedin color='#aab1b8' size={20}/>},
-        {title: 'facebook', icon: <AiFillFacebook color='#aab1b8' size={20}/>}
+        {title: 'gitHub', icon: <AiFillGithub color='#aab1b8' size={20}/>, link: 'https://github.com/DmitryYug'},
+        {title: 'linkedIn', icon: <AiFillLinkedin color='#aab1b8' size={20}/>, link: 'https://linkedin.com/in/dmitriy-yuganuk/'},
+        {title: 'facebook', icon: <AiFillFacebook color='#aab1b8' size={20}/>, link: 'https://facebook.com/dmitry.yuganuk.39'}
     ]
 }
 
@@ -140,11 +140,11 @@ export const projects: ProjectCardType[] = [
         demo: contactsProjectDemo
     },
     {
-        title: 'Html module for a big system',
-        url: 'http://some-url',
+        title: 'Html module for an enterprise system',
+        url: 'https://dmitryyug.github.io/RSG/',
         stack: ['HTML', 'Less', 'JQuery'],
         background: rsg,
-        info: 'Simple HTML project with jQuery UI elements logic',
+        info: 'HTML project with jQuery UI elements logic',
         features: ['Lorem ipsum dolor sit',  'amet, consectetur',  'adipisicing elit', 'Exercitationem illo, modi', 'Aperiam at ex obcaecati!'],
         demo: rsgDemo
     },
