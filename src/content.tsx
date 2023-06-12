@@ -32,7 +32,7 @@ export const links: LinksTypes = {
     navigation: [
         {title: 'CV', value: 'cv'},
         {title: 'Projects', value: 'projects'},
-        {title: 'Blog', value: 'blog'},
+        // {title: 'Blog', value: 'blog'},
         {title: 'Contacts', value: 'contacts'},
     ],
     social: [
@@ -126,7 +126,7 @@ export const projects: ProjectCardType[] = [
         title: 'App with info cards for beer company',
         deployUrl: 'https://dmitryyug.github.io/vicuesoft/',
         repositoryUrl: 'https://github.com/DmitryYug/vicuesoft',
-        stack: ['React', 'TypeScript', 'CSS modules'],
+        stack: ['React', 'TypeScript'],
         background: cardProject,
         info: 'React SPA with routing. TypeScript. API sandbox. State management - Redux',
         features: ['routing', 'pagination', 'api search'],
@@ -136,7 +136,7 @@ export const projects: ProjectCardType[] = [
         title: 'Private page with contacts, available after authorization',
         deployUrl: 'https://dmitryyug.github.io/takeoff-staff/',
         repositoryUrl: 'https://github.com/DmitryYug/takeoff-staff',
-        stack: ['React', 'TypeScript', 'CSS modules'],
+        stack: ['React', 'TypeScript'],
         background: contactsProject,
         info: 'React SPA with protected routing. TypeScript. Mock json placeholder data. Redux. CRUD operations with contacts',
         features: ['authorisation', 'protected routing', 'CRUD operations with contacts', 'MaterialUI'],

@@ -134,6 +134,9 @@
           .text-props(2rem);
           width: fit-content;
           margin: 10px auto;
+          @media (max-width: @mobile-vertical) {
+            .text-props(1.5rem);
+          }
         }
 
         button {
@@ -147,6 +150,9 @@
           align-self: center;
           width: 70%;
           height: auto;
+          @media (max-width: @mobile-horizontal) {
+            width: 100%;
+          }
         }
 
         .info-block {
@@ -185,19 +191,18 @@
             margin-left: 20px;
             margin-top: 30px;
             @media (max-width: @mobile-horizontal) {
-              margin: 0;
+              margin-left: 0;
             }
             .item {
               .flex-column(flex-start, flex-start);
-              @media (max-width: @mobile-horizontal) {
-                .flex-column(center, flex-start);
-              }
               .text-props(1.3rem);
               color: @card-description-color;
               position: relative;
               margin-bottom: 20px;
-
-
+              @media (max-width: @mobile-vertical) {
+                .text-props(1rem);
+                color: @card-description-color;
+              }
               &:after {
                 .divider(95%, 1px, -5px, 0);
               }
@@ -207,9 +212,13 @@
                 color: @title-color;
                 flex: 0 0 30%;
                 margin-bottom: 10px;
+                @media (max-width: @mobile-vertical) {
+                  .text-props(1.2rem);
+                }
               }
               a {
                 color: @card-description-color;
+                word-break: break-word;
               }
 
               #stackList {

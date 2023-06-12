@@ -67,7 +67,6 @@ export const Form: React.FC<ContactsPropsType> = (props) => {
                            pattern: /(.+)@(.+){2,}\.(.+){2,}/
                        }
                    )}
-
             />
             <label htmlFor="comment">
                 <span>Whats on your mind?</span>
@@ -75,9 +74,11 @@ export const Form: React.FC<ContactsPropsType> = (props) => {
             </label>
             <textarea placeholder="Let`s discuss your project"
                       id="comment"
+                      rows={5}
                       {...register("comment", {
                           required: true
                       })}
+                      style={{ resize: 'none'}}
             />
             <div className="d-flex-start">
                 <MyButton className="is-rounded is-green"

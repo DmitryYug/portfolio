@@ -18,8 +18,6 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
 
     const [sendingStatus, setSendingStatus] = useState<SendingStatusTypes>("new");
 
-    const footerIconsColor = "#aab1b8";
-
     const formStateRender = () => {
         if (sendingStatus === "new") {
             return <Form sendingStatusHandler={(status) => setSendingStatus(status)}/>;
@@ -38,7 +36,7 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                 <div className="loader">
                     <Progress type="circle" percent={100}
                               status={sendingStatus === "success" ? "success" : "exception"}/>
-                    <div className='status-message'>
+                    <div className="status-message">
                         {message}
                     </div>
                     <MyButton title="new message"
@@ -61,20 +59,23 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                     <div className="contact-form-info">
                         <div className="address">
                             <h3>address</h3>
-                            <HiLocationMarker color="#20c997" size="20"/>
-                            <span style={{ marginLeft: '10px'}}>Israel, Tel-Aviv district</span>
+                            <div className="d-flex-start" style={{marginBottom: "10px"}}>
+                                <HiLocationMarker color="#20c997" size="20"/>
+                                <span style={{marginLeft: "10px"}}>Israel, Tel-Aviv district</span>
+                            </div>
                         </div>
                         <div className="contact-me">
                             <h3>contact me</h3>
                             <div className="d-flex-start" style={{marginBottom: "10px"}}>
                                 <AiFillPhone color="#20c997" size="20"/>
-                                <a href='tel:+972557703312' style={{marginLeft: "10px"}}>
-                                +972-55-770-33-12
-                            </a>
+                                <a href="tel:+972557703312" style={{marginLeft: "10px"}}>
+                                    +972-55-770-33-12
+                                </a>
                             </div>
                             <div className="d-flex-start" style={{marginBottom: "10px"}}>
                                 <HiOutlineMail color="#20c997" size="20"/>
-                                <a href='mailto:dmitriyyuganuk@gmail.com' style={{marginLeft: "10px"}}>dmitriyyuganuk@gmail.com</a>
+                                <a href="mailto:dmitriyyuganuk@gmail.com"
+                                   style={{marginLeft: "10px"}}>dmitriyyuganuk@gmail.com</a>
                             </div>
                         </div>
                         <div className="social">
