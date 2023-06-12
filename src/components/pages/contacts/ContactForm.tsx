@@ -1,10 +1,12 @@
 import React, {useState} from "react";
-import {Title} from "../../Title";
-import {AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillPhone} from "react-icons/ai";
-import {HiOutlineMail} from "react-icons/hi";
-import {SendingStatusTypes} from "../../../types/Types";
-import {Form} from "./Form";
 import {Progress, Spin} from "antd";
+import {AiFillPhone} from "react-icons/ai";
+import {HiLocationMarker, HiOutlineMail} from "react-icons/hi";
+
+import {SendingStatusTypes} from "../../../types/Types";
+
+import {Title} from "../../Title";
+import {Form} from "./Form";
 import MyButton from "../../MyButton";
 import {SocialIconsBlock} from "../../navigation/SocialIconsBlock";
 
@@ -59,19 +61,20 @@ export const ContactForm: React.FC<ContactsPropsType> = () => {
                     <div className="contact-form-info">
                         <div className="address">
                             <h3>address</h3>
-                            <span>Israel, Tel-Aviv district</span>
+                            <HiLocationMarker color="#20c997" size="20"/>
+                            <span style={{ marginLeft: '10px'}}>Israel, Tel-Aviv district</span>
                         </div>
                         <div className="contact-me">
                             <h3>contact me</h3>
                             <div className="d-flex-start" style={{marginBottom: "10px"}}>
                                 <AiFillPhone color="#20c997" size="20"/>
-                                <span style={{marginLeft: "10px"}}>
+                                <a href='tel:+972557703312' style={{marginLeft: "10px"}}>
                                 +972-55-770-33-12
-                            </span>
+                            </a>
                             </div>
                             <div className="d-flex-start" style={{marginBottom: "10px"}}>
                                 <HiOutlineMail color="#20c997" size="20"/>
-                                <span style={{marginLeft: "10px"}}>dmitriyyuganuk@gmail.com</span>
+                                <a href='mailto:dmitriyyuganuk@gmail.com' style={{marginLeft: "10px"}}>dmitriyyuganuk@gmail.com</a>
                             </div>
                         </div>
                         <div className="social">

@@ -76,7 +76,9 @@ export const Cv: React.FC<CvPropsType> = () => {
                        subtitle='Cv'
                 />
                 <p className='content'>
-                    I am a skilled front-end engineer with 3 years of experience, specializing in creating web interfaces using React, Vue, TypeScript, and JavaScript.
+                    I am a skilled front-end engineer with 3 years of experience,
+                    specializing in creating web interfaces using React, Vue, TypeScript, and JavaScript.
+                    Available for project-based work, part-time engagements, and personal mentoring. Open to considering full-time offers.
                 </p>
                 <div className='content cv-wrapper'>
                     <Collapse defaultActiveKey={['skills']}

@@ -11,7 +11,8 @@ export const Projects: React.FC<ProjectsPropsType> = () => {
     const renderProjectCards = projects.map((card, i) => (
         <ProjectCard key={card.title + i}
                      title={card.title}
-                     url={card.url}
+                     deployUrl={card.deployUrl}
+                     repositoryUrl={card.repositoryUrl}
                      background={card.background}
                      stack={card.stack}
                      info={card.info}

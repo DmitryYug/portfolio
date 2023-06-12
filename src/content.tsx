@@ -114,7 +114,8 @@ export const cv: CvBlockDataType = {
 export const projects: ProjectCardType[] = [
     {
         title: 'Web site for IT company',
-        url: 'https://dmitryyug.github.io/nt-dev-landing-lorem/',
+        deployUrl: 'https://dmitryyug.github.io/nt-dev-landing-lorem/',
+        repositoryUrl: 'https://github.com/DmitryYug/nt-dev-landing-lorem',
         stack: ['React', 'Less', 'Firebase'],
         background: ntDevLanding,
         info: 'Web site for a company I`ve been working in',
@@ -123,7 +124,8 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'App with info cards for beer company',
-        url: 'https://dmitryyug.github.io/vicuesoft/',
+        deployUrl: 'https://dmitryyug.github.io/vicuesoft/',
+        repositoryUrl: 'https://github.com/DmitryYug/vicuesoft',
         stack: ['React', 'TypeScript', 'CSS modules'],
         background: cardProject,
         info: 'React SPA with routing. TypeScript. API sandbox. State management - Redux',
@@ -132,7 +134,8 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'Private page with contacts, available after authorization',
-        url: 'https://dmitryyug.github.io/takeoff-staff/',
+        deployUrl: 'https://dmitryyug.github.io/takeoff-staff/',
+        repositoryUrl: 'https://github.com/DmitryYug/takeoff-staff',
         stack: ['React', 'TypeScript', 'CSS modules'],
         background: contactsProject,
         info: 'React SPA with protected routing. TypeScript. Mock json placeholder data. Redux. CRUD operations with contacts',
@@ -141,11 +144,12 @@ export const projects: ProjectCardType[] = [
     },
     {
         title: 'Html module for an enterprise system',
-        url: 'https://dmitryyug.github.io/RSG/',
+        deployUrl: 'https://dmitryyug.github.io/RSG/',
+        repositoryUrl: 'https://github.com/DmitryYug/RSG',
         stack: ['HTML', 'Less', 'JQuery'],
         background: rsg,
         info: 'HTML project with jQuery UI elements logic',
-        features: ['Lorem ipsum dolor sit',  'amet, consectetur',  'adipisicing elit', 'Exercitationem illo, modi', 'Aperiam at ex obcaecati!'],
+        features: ['slider',  'modal windows',  'accordions', 'date pickers', 'forms'],
         demo: rsgDemo
     },
 ]

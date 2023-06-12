@@ -30,12 +30,21 @@ export const ProjectCardModalContent = (props: ProjectCardModalPropsType) => {
                 </div>
                 <div className="text-container">
                     <div className="item">
-                        <label htmlFor="url">Url:</label>
-                        <a href={props.content.url}
+                        <label htmlFor="url"> Deployment link:</label>
+                        <a href={props.content.deployUrl}
                            id="url"
                            target='_blank'
                         >
-                            {props.content.url}
+                            {props.content.deployUrl}
+                        </a>
+                    </div>
+                    <div className="item">
+                        <label htmlFor="url"> Repository link:</label>
+                        <a href={props.content.repositoryUrl}
+                           id="url"
+                           target='_blank'
+                        >
+                            {props.content.repositoryUrl}
                         </a>
                     </div>
                     <div className="item">
