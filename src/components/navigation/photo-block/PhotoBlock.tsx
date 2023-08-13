@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '../../../assets/test-sidebar-avatar-1.jpg'
+import avatar from '../../../assets/photo_2023-08-03_12-01-35.jpg'
 import {animateScroll as scroll} from 'react-scroll'
 
 
@@ -11,6 +11,7 @@ export const PhotoBlock = () => {
         >
             <div className='side-photo'>
                 <img src={avatar} alt=""/>
+                <div className="side-photo color-wrapper"></div>
             </div>
             <div className='avatar-subtitle'>
                 <p>Dmitriy</p>

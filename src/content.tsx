@@ -16,6 +16,7 @@ import ntDevLandingDemo from "./assets/project-cards/nt-dev-landing/demo.mp4";
 import rsgDemo from "./assets/project-cards/rsg/demo.mp4";
 import cardProjectDemo from "./assets/project-cards/cardsProject/demo.mp4";
 import contactsProjectDemo from "./assets/project-cards/contactsProject/demo1.mp4";
+import {SiTypescript} from "react-icons/all";
 
 interface CvBlockDataType {
     skills: SkillCardType[]
@@ -74,7 +75,7 @@ export const cv: CvBlockDataType = {
         {
             title: 'Udemy Academy',
             period: '2018-2019',
-            speciality: 'HTML, JavaScript for beginners'
+            speciality: 'HTML, JavaScript'
         },
         {
             title: 'IT-incubator',
@@ -90,7 +91,7 @@ export const cv: CvBlockDataType = {
     experience: [
         {
             orgTitle: 'Freelance',
-            period: '2020-2022',
+            period: '2019-2022',
             position: 'Frontend developer',
             duties: [
                 'Developed over 20 fast and SEO-optimized websites, delivering high-quality results',

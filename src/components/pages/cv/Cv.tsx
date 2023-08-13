@@ -76,7 +76,7 @@ export const Cv: React.FC<CvPropsType> = () => {
                        subtitle='Cv'
                 />
                 <p className='content'>
-                    I am a skilled front-end engineer with 3 years of experience,
+                    I am a skilled front-end engineer with 4 years of experience,
                     specializing in creating web interfaces using React, Vue, TypeScript, and JavaScript.  <br/>
                     Available for project-based work, part-time engagements, and personal mentoring. Open to considering full-time offers.
                 </p>
@@ -89,7 +89,7 @@ export const Cv: React.FC<CvPropsType> = () => {
                         {renderCollapseItems}
                     </Collapse>
                 </div>
-                <a href={'https://drive.google.com/file/d/1qDerKsP8HvxlB1Ty-PpNPMptFhS6Vt9y/view?usp=sharing'}
+                <a href={'https://drive.google.com/file/d/1hsXgyWgFG0b-f_626cZ4FfHal_sZxgK2/view?usp=drive_link'}
                    target='_blank'
                    rel="noreferrer"
 
